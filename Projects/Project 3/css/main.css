@@ -1,0 +1,255 @@
+/*** Universal ****/
+
+* {
+box-sizing: border-box;	
+}
+
+/*** Layout and Presentation ***/
+
+body  {
+	font-family: 'Merriweather', serif;	
+}
+
+header  {
+    background-color: #19324d;
+	color: white;
+	min-height: 10vh;	
+}
+
+h1 {
+	display: inline-block;
+	font-size: 2em;	
+	padding-top: 15px;
+}
+
+h2  {
+	padding-top: 40px;
+	padding-bottom: 25px;
+	font-size: 1.75em;
+	margin: 5px;
+	
+}
+
+.header-border {
+	border-top: solid #19324d 5px;
+	padding: 3px 0;
+    border-bottom: solid #19324d 2px;
+	margin-top: 30px;
+	margin-bottom: 27px;
+	
+}
+
+legend  {
+	margin-bottom: 25px;
+    color: #19324d;
+	font-weight: bold;	
+	
+}
+
+label {
+	color: #465A70;
+	
+}
+input[placeholder="Required   "] {
+	text-align: right;	
+    }
+
+input,
+textarea,
+select  {
+	background-color: #D8D9DB;
+	opacity: .5;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+	opacity: 1;
+	
+}
+
+div.input: focus,
+div.textarea: focus,
+div.select: focus {
+	opacity: 1;
+}
+
+div.top input,
+div.top textarea,
+div.top select {
+	margin: 20px 0;
+	padding: 10px 10px;	
+	width: 100%;
+}
+
+select  {
+	padding-right: 25px;
+	
+}
+
+label[for="zipcode"] {
+	width: 40%;
+}
+	
+.addresspadding {
+	padding-right: 20px;	
+}
+
+
+.legendborder  {
+	border: solid #19324d 2px;
+	margin: 20px 0;	
+}
+
+.bottommargin {
+	margin-bottom: 15px;
+}
+
+
+div.bottom label,
+div.bottom input,
+div.bottom textarea {
+	margin: 15px 0;
+	
+}
+
+input[type=checkbox]:checked + label {
+  color: black;
+  font-weight: bold;
+} 
+
+input[type=radio]:checked + label {
+  color: black;
+  font-weight: bold;
+} 
+
+#java {
+   margin-bottom: 25px;	
+}
+
+textarea[id="topic"]{
+  width: 100%;
+  height: 75px;  
+}
+
+button {
+	min-height: 10vh;
+	width: 100%;
+	border-radius: 5px;
+	background-color: #00AFAF;
+	font-weight: bold;
+	color: white;
+	font-size: 1.3em;	
+}
+
+footer {
+	margin: 25px;
+	font-size: 15px;
+	color: #465A70;
+	font-style: italic;
+}
+
+
+
+/***** Clearfix  *****/
+
+.clearfix:after  {
+	content: "";
+	display: table;
+	clear: both;
+	
+}
+
+/**** DRY rules ******/
+
+.center {
+	text-align: center;
+	margin: 0 auto;	
+}
+
+.main_color {
+	color: #19324d;
+	font-weight: bold;
+} 
+
+.left {
+	text-align: left;	
+}
+
+.width {
+	width: 90%;
+    margin: 0 auto;    
+}
+
+.bottommargin {
+	margin-bottom: 20px;
+}
+
+
+
+
+/**** Media Query  ****/
+
+@media (min-width: 768px) {
+.width {
+	width: 50%;	
+}
+
+h2  {
+	padding-bottom: 10px;	
+}
+.hide::before {
+	content: "";
+    display: none;	
+}	
+
+div.top label {
+	display: inline-block;
+	width: 25%;
+	float: left;
+	clear: left;
+	max-height: 7vh;
+	margin: 10px 0;
+	padding: 20px 0;
+	
+}
+div.top input,
+div.top textarea,
+div.top select {
+	margin: 10px 0;	
+    display: inline-block;	
+	width: 70%;
+	clear: right;
+	float: right;	
+	max-height: 7vh;
+	vertical-align: top;
+	padding: 10px 0;	
+}
+
+#full_name {
+	padding-top: 30px;
+}
+
+#email_add {
+	padding-top: 15px;	
+}
+
+#phone_num {
+	padding-top: 15px;
+}
+
+#city_lay {
+	padding-top: 17px;
+}
+
+#state_lay {
+	padding-top: 17px;	
+}
+
+label[for="zipcode"]{
+	padding-top: 3px;	
+}
+}
+
+
+
