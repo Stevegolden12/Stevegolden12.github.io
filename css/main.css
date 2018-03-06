@@ -1,0 +1,251 @@
+/* Main CSS file for Portfolio index and projects page for Steve Golden */
+/*index page CSS */
+  @import url('https://fonts.googleapis.com/css?family=Bitter');
+body{
+  font-family: 'Bitter', serif;
+  color: #0275d8;
+}
+
+#navItems{
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#navItems:visited{
+  color: #025aa5;
+}
+
+#navItems:hover{
+  color: #d86502;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+#gridLayout{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(15rem, min-content) min-content min-content;
+  grid-template-areas:
+    "mainPicture"
+    "personalDesc"
+    "treehouseImg";
+  margin: 0 auto;
+}
+
+.blocks {
+  display: none;
+}
+
+#blockOne{
+  grid-area: blockOne;
+}
+#blockTwo{
+  grid-area: blockTwo;
+}
+#blockThree{
+  grid-area: blockThree;
+}
+#blockFour{
+  grid-area: blockFour;
+}
+#blockFive{
+  grid-area: blockFive;
+}
+#blockSix{
+  grid-area: blockSix;
+}
+
+
+#omahaPic{
+  margin: 0 auto;
+  width: 370px;
+  grid-area: mainPicture;
+}
+
+#personalDesc{
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  grid-area: personalDesc;
+}
+
+#treehouseImg{
+  grid-area: treehouseImg;
+}
+
+#footerLogoWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+#footerLogoWrapper li{
+  margin-right: 5px;
+}
+
+.footerLogo {
+  width: 45px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.footerLogo:hover {
+  background-color: #02d8d0;
+}
+
+/* Project.html 368px*/
+
+#projectGridLayout{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px repeat(8, 20%);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: 0 10px;
+  justify-items: center;
+}
+
+#projectHead{
+  font-size: 40px;
+}
+
+.projectEach{
+  display: grid;
+  justify-items: center;
+  border: 1px solid black;
+}
+
+.projectTitle{
+  font-size: 16px;
+}
+
+.imgLayout{
+  width: 100%;
+}
+
+.projectDesc{
+  text-align: center;
+  width: 300px;
+}
+
+@media(min-width: 768px){
+/* index.html 768px */
+#gridLayout{
+  grid-template-columns: 15% 60% 15%;
+  grid-template-rows: 275px 60px 275px;
+  grid-template-areas:
+    "blockOne mainPicture blockTwo"
+    "blockThree personalDesc blockFour"
+    "blockFive personalDesc blockSix"
+    "treehouseImg treehouseImg treehouseImg";
+  grid-row-gap: 10px;
+  justify-content: space-around;
+}
+
+.blocks{
+  display: block;
+  background-color: #80acd2;
+}
+
+.blocks:nth-of-type(odd):hover{
+  transform: rotate(4deg);
+  transition: 3s;
+}
+
+.blocks:nth-of-type(even):hover{
+  transform: rotate(-4deg);
+  transition: 2s;
+}
+
+#omahaPic{
+  order: -1;
+}
+
+#personalDesc{
+  font-size: 30px;
+}
+
+#treehouseImg{
+  margin-top: 13px;
+}
+
+footer{
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.footerLogo {
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/* Project.html 768px*/
+
+#projectGridLayout{
+  grid-template-columns: 48% 48%;
+  grid-column-gap: 2rem;
+}
+
+#projectHead{
+  grid-column: span 2;
+}
+
+}
+
+/* index.html ONLY for 678px breakpoint */
+@media (min-width: 678px) and (max-width: 1023px){
+ #omahaPic:hover ~ #blockOne,
+ #omahaPic:hover ~ #blockTwo,
+ #omahaPic:hover ~ #blockFive,
+ #omahaPic:hover ~ #blockSix {
+   height: 295px;
+ }
+  #omahaPic:hover ~ #blockThree,
+  #omahaPic:hover ~ #blockFour {
+  height: 40px;
+  align-self: end;
+  }
+}
+
+@media (min-width: 1024px){
+/* index.html 1024px */
+#gridLayout{
+  grid-template-columns: 5% 5% 38% 38% 5% 5%;
+  grid-template-rows: 9% 9% 18% 18% 9% 9% 20%;
+  grid-template-areas:
+    ". blockOne blockOne mainPicture . ."
+    ". blockOne blockOne mainPicture blockTwo blockTwo"
+    "blockThree blockThree personalDesc mainPicture blockTwo blockTwo"
+    "blockThree blockThree personalDesc blockFour blockFour ."
+    ". . personalDesc blockFour blockFour ."
+    "treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg";
+    grid-row-gap: 5px;
+    grid-column-gap: 0;
+ }
+
+ .blocks:nth-of-type(even):hover{
+   transform: rotate(2deg);
+   transition: 2s;
+ }
+
+ .footerLogo {
+   width: 75px;
+   height: 50px;
+   border-radius: 5px;
+ }
+
+/* Project.html 768px*/
+
+#projectGridLayout{
+  grid-template-columns: 31% 31% 31%;
+  grid-column-gap: 2rem;
+}
+
+#projectHead{
+  grid-column: span 3;
+}
+}
