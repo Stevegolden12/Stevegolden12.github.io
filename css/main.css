@@ -2,9 +2,12 @@
 /*index page CSS */
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
-body {
-    font-family: 'Bitter', serif;
-    color: #0275d8;
+:root {
+    --font-color: #0275d8;
+    --hover-color: #a59f02;
+    --visited-color: #025aa5;
+    --block-color: #80acd2;
+    --border-color: #025aa5;
 }
 
 #navItems {
@@ -15,11 +18,11 @@ body {
 }
 
     #navItems:visited {
-        color: #025aa5;
+        color: var(--visited-color);
     }
 
     #navItems:hover {
-        color: #a59f02;
+        color: var(--hover-color);
     }
 
 .index__header-layout {
@@ -100,7 +103,7 @@ body {
 }
 
     .headerLogo:hover {
-        background-color: #a59f02;
+        background-color: var(--hover-color);
     }
 
 /* Project.html 368px*/
@@ -122,7 +125,7 @@ body {
 .projectEach {
     display: grid;
     justify-items: center;
-    border: 1px solid #025aa5;
+    border: 1px solid var(--border-color);
 }
 
 .projectTitle {
@@ -154,7 +157,7 @@ body {
 
     .blocks {
         display: block;
-        background-color: #80acd2;
+        background-color: var(--block-color);
     }
 
         .blocks:nth-of-type(odd):hover {
