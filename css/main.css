@@ -10,18 +10,18 @@
     --border-color: #025aa5;
 }
 
-#navItems {
+.index__navItems {
     font-size: 30px;
     text-decoration: none;
     text-align: center;
     padding-left: 15px;
 }
 
-    #navItems:visited {
+    .index__navItems:visited {
         color: var(--visited-color);
     }
 
-    #navItems:hover {
+    .index__navItems:hover {
         color: var(--hover-color);
     }
 
@@ -31,7 +31,7 @@
     margin: 20px 0 20px 0;
 }
 
-#gridLayout {
+.index__intro--gridLayout {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: minmax(15rem, min-content) min-content min-content;
@@ -39,31 +39,31 @@
     margin: 0 auto;
 }
 
-.blocks {
+.index__blocks-layout {
     display: none;
 }
 
-#blockOne {
+.index__blockOne {
     grid-area: blockOne;
 }
 
-#blockTwo {
+.index__blockTwo {
     grid-area: blockTwo;
 }
 
-#blockThree {
+.index__blockThree {
     grid-area: blockThree;
 }
 
-#blockFour {
+.index__blockFour {
     grid-area: blockFour;
 }
 
-#blockFive {
+.index__blockFive {
     grid-area: blockFive;
 }
 
-#blockSix {
+.index__blockSix {
     grid-area: blockSix;
 }
 
@@ -74,11 +74,12 @@
     grid-area: mainPicture;
 }
 
-#personalDesc {
+.index__personalDesc {
     font-size: 25px;
     padding: 10px;
     text-align: center;
     grid-area: personalDesc;
+    color: var(--font-color);
 }
 
 #treehouseImg {
@@ -86,13 +87,13 @@
     margin-top: 13px;
 }
 
-#headerLogoWrapper {
+.index__headerLogoWrapper {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
-    #headerLogoWrapper li {
+    .index__headerLogoWrapper li {
         margin-right: 5px;
     }
 
@@ -106,8 +107,6 @@
         background-color: var(--hover-color);
     }
 
-/* Project.html 368px*/
-
 #projectGridLayout {
     display: grid;
     grid-template-columns: 100%;
@@ -120,9 +119,10 @@
 
 #projectHead {
     font-size: 40px;
+    color: var(--font-color);
 }
 
-.projectEach {
+.index__projectEach {
     display: grid;
     justify-items: center;
     border: 1px solid var(--border-color);
@@ -143,11 +143,11 @@
 
 @media(min-width: 768px) {
 
-    #navItems {
+    .index__navItems {
         font-size: 43px;
     }
 
-    #gridLayout {
+    .index__intro--gridLayout {
         grid-template-columns: 15% 60% 15%;
         grid-template-rows: 275px 60px 275px;
         grid-template-areas: "blockOne mainPicture blockTwo" "blockThree personalDesc blockFour" "blockFive personalDesc blockSix" "treehouseImg treehouseImg treehouseImg";
@@ -155,17 +155,17 @@
         justify-content: space-around;
     }
 
-    .blocks {
+    .index__blocks-layout {
         display: block;
         background-color: var(--block-color);
     }
 
-        .blocks:nth-of-type(odd):hover {
+        .index__blocks-layout:nth-of-type(odd):hover {
             transform: rotate(4deg);
             transition: 3s;
         }
 
-        .blocks:nth-of-type(even):hover {
+        .index__blocks-layout:nth-of-type(even):hover {
             transform: rotate(-4deg);
             transition: 2s;
         }
@@ -174,7 +174,7 @@
         order: -1;
     }
 
-    #personalDesc {
+    .index__personalDesc {
         font-size: 30px;
     }
 
@@ -205,15 +205,15 @@
 }
 
 @media (min-width: 678px) and (max-width: 1023px) {
-    #omahaPic:hover ~ #blockOne,
-    #omahaPic:hover ~ #blockTwo,
-    #omahaPic:hover ~ #blockFive,
-    #omahaPic:hover ~ #blockSix {
+    #omahaPic:hover ~ .index__blockOne,
+    #omahaPic:hover ~ .index__blockTwo,
+    #omahaPic:hover ~ .index__blockFive,
+    #omahaPic:hover ~ .index__blockSix {
         height: 295px;
     }
 
-    #omahaPic:hover ~ #blockThree,
-    #omahaPic:hover ~ #blockFour {
+    #omahaPic:hover ~ .index__blockThree,
+    #omahaPic:hover ~ .index__blockFour {
         height: 40px;
         align-self: end;
     }
@@ -221,7 +221,7 @@
 
 @media (min-width: 1024px) {
 
-    #gridLayout {
+    .index__intro--gridLayout {
         grid-template-columns: 5% 5% 38% 38% 5% 5%;
         grid-template-rows: 9% 9% 18% 18% 9% 9% 20%;
         grid-template-areas: ". blockOne blockOne mainPicture . ." ". blockOne blockOne mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc blockFour blockFour ." ". . personalDesc blockFour blockFour ." "treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg";
@@ -229,9 +229,13 @@
         grid-column-gap: 0;
     }
 
-    .blocks:nth-of-type(even):hover {
+    .index__blocks-layout:nth-of-type(even):hover {
         transform: rotate(2deg);
         transition: 2s;
+    }
+
+    .omahaPic .index__blockSix {
+        opacity: 0;
     }
 
     .headerLogo {
