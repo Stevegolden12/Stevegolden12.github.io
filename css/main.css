@@ -107,7 +107,7 @@
         background-color: var(--hover-color);
     }
 
-#projectGridLayout {
+.index__projectGridLayout {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50px repeat(8, 20%);
@@ -128,11 +128,11 @@
     border: 1px solid var(--border-color);
 }
 
-.projectTitle {
+.index__projectTitle {
     font-size: 16px;
 }
 
-.imgLayout {
+.index__imgLayout {
     width: 100%;
 }
 
@@ -189,7 +189,7 @@
         border-radius: 5px;
     }
 
-    #projectGridLayout {
+    .index__projectGridLayout {
         grid-template-columns: 48% 48%;
         grid-column-gap: 2rem;
         margin: 0 10px;
@@ -244,7 +244,7 @@
         border-radius: 5px;
     }
 
-    #projectGridLayout {
+    .index__projectGridLayout {
         grid-template-columns: 31% 31% 31%;
         grid-column-gap: 2rem;
     }
