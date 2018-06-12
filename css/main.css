@@ -93,9 +93,15 @@
     list-style: none;
 }
 
-    .index__headerLogoWrapper li {
-        margin-right: 5px;
-    }
+.index__headerLogoWrapper li {
+    margin-right: 5px;
+}
+
+.index__hover_grow:hover,
+.index__hover_grow li:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
 
 .headerLogo {
     width: 45px;
@@ -103,9 +109,9 @@
     border-radius: 5px;
 }
 
-    .headerLogo:hover {
-        background-color: var(--hover-color);
-    }
+.headerLogo:hover {
+    background-color: var(--hover-color);
+}
 
 .index__projectGridLayout {
     display: grid;
@@ -117,17 +123,12 @@
     justify-items: center;
 }
 
-#projectHead {
-    font-size: 40px;
-    color: var(--font-color);
-}
+    #projectHead {
+        font-size: 40px;
+        color: var(--font-color);
+    }
 
-.index__projectEach {
-    display: grid;
-    justify-items: center;
-    border: 1px solid var(--border-color);
-}
-
+<<<<<<< HEAD
 .index__projectTitle {
     font-size: 16px;
 }
@@ -135,15 +136,29 @@
 .index__imgLayout {
     width: 100%;
 }
+=======
+    .index__projectEach {
+        display: grid;
+        justify-items: center;
+        border: 1px solid var(--border-color);
+    }
 
-.projectDesc {
-    text-align: center;
-    width: 300px;
-}
+    .projectTitle {
+        font-size: 16px;
+    }
+>>>>>>> gh-pages
 
-@media(min-width: 768px) {
+    .imgLayout {
+        width: 100%;
+    }
 
-    .index__navItems {
+    .index__projectDesc {
+        text-align: center;
+        width: 300px;
+    }
+
+    @media(min-width: 768px) {
+        .index__navItems {
         font-size: 43px;
     }
 
