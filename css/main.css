@@ -68,7 +68,7 @@
 }
 
 
-#omahaPic {
+.index__omahaPic {
     margin: 0 auto;
     width: 370px;
     grid-area: mainPicture;
@@ -93,9 +93,9 @@
     list-style: none;
 }
 
-.index__headerLogoWrapper li {
-    margin-right: 5px;
-}
+    .index__headerLogoWrapper li {
+        margin-right: 5px;
+    }
 
 .index__hover_grow:hover,
 .index__hover_grow li:hover {
@@ -109,9 +109,9 @@
     border-radius: 5px;
 }
 
-.headerLogo:hover {
-    background-color: var(--hover-color);
-}
+    .headerLogo:hover {
+        background-color: var(--hover-color);
+    }
 
 .index__projectGridLayout {
     display: grid;
@@ -123,11 +123,20 @@
     justify-items: center;
 }
 
-    #projectHead {
-        font-size: 40px;
-        color: var(--font-color);
-    }
+#projectHead {
+    font-size: 40px;
+    color: var(--font-color);
+}
 
+<<<<<<< HEAD
+.index__projectTitle {
+    font-size: 16px;
+}
+
+.index__imgLayout {
+    width: 100%;
+}
+=======
 <<<<<<< HEAD
 .index__projectTitle {
     font-size: 16px;
@@ -147,18 +156,31 @@
         font-size: 16px;
     }
 >>>>>>> gh-pages
+>>>>>>> master
 
-    .imgLayout {
-        width: 100%;
-    }
+.index__projectEach {
+    display: grid;
+    justify-items: center;
+    border: 1px solid var(--border-color);
+}
 
-    .index__projectDesc {
-        text-align: center;
-        width: 300px;
-    }
+.projectTitle {
+    font-size: 16px;
+}
 
-    @media(min-width: 768px) {
-        .index__navItems {
+.imgLayout {
+    width: 100%;
+}
+
+.index__projectDesc {
+    text-align: center;
+    width: 300px;
+}
+
+/* 768px breakpoint*/
+
+@media(min-width: 768px) {
+    .index__navItems {
         font-size: 43px;
     }
 
@@ -185,7 +207,7 @@
             transition: 2s;
         }
 
-    #omahaPic {
+    .index__omahaPic {
         order: -1;
     }
 
@@ -218,17 +240,19 @@
         margin-top: 0;
     }
 }
+/* end of 768px breakpoint */
 
+/* Specific breakpoints within the 678px and 1020px area for the grid on top*/
 @media (min-width: 678px) and (max-width: 1023px) {
-    #omahaPic:hover ~ .index__blockOne,
-    #omahaPic:hover ~ .index__blockTwo,
-    #omahaPic:hover ~ .index__blockFive,
-    #omahaPic:hover ~ .index__blockSix {
+    .index__omahaPic:hover ~ .index__blockOne,
+    .index__omahaPic:hover ~ .index__blockTwo,
+    .index__omahaPic:hover ~ .index__blockFive,
+    .index__omahaPic:hover ~ .index__blockSix {
         height: 295px;
     }
 
-    #omahaPic:hover ~ .index__blockThree,
-    #omahaPic:hover ~ .index__blockFour {
+    .index__omahaPic:hover ~ .index__blockThree,
+    .index__omahaPic:hover ~ .index__blockFour {
         height: 40px;
         align-self: end;
     }
@@ -249,7 +273,7 @@
         transition: 2s;
     }
 
-    .omahaPic .index__blockSix {
+    .index__omahaPic .index__blockSix {
         opacity: 0;
     }
 
