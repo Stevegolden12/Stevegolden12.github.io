@@ -128,6 +128,7 @@
     color: var(--font-color);
 }
 
+<<<<<<< HEAD
 .index__projectTitle {
     font-size: 16px;
 }
@@ -135,6 +136,27 @@
 .index__imgLayout {
     width: 100%;
 }
+=======
+<<<<<<< HEAD
+.index__projectTitle {
+    font-size: 16px;
+}
+
+.index__imgLayout {
+    width: 100%;
+}
+=======
+    .index__projectEach {
+        display: grid;
+        justify-items: center;
+        border: 1px solid var(--border-color);
+    }
+
+    .projectTitle {
+        font-size: 16px;
+    }
+>>>>>>> gh-pages
+>>>>>>> master
 
 .index__projectEach {
     display: grid;
