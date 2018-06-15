@@ -128,36 +128,6 @@
     color: var(--font-color);
 }
 
-<<<<<<< HEAD
-.index__projectTitle {
-    font-size: 16px;
-}
-
-.index__imgLayout {
-    width: 100%;
-}
-=======
-<<<<<<< HEAD
-.index__projectTitle {
-    font-size: 16px;
-}
-
-.index__imgLayout {
-    width: 100%;
-}
-=======
-    .index__projectEach {
-        display: grid;
-        justify-items: center;
-        border: 1px solid var(--border-color);
-    }
-
-    .projectTitle {
-        font-size: 16px;
-    }
->>>>>>> gh-pages
->>>>>>> master
-
 .index__projectEach {
     display: grid;
     justify-items: center;
@@ -168,7 +138,7 @@
     font-size: 16px;
 }
 
-.imgLayout {
+.index__imgLayout {
     width: 100%;
 }
 
@@ -176,8 +146,6 @@
     text-align: center;
     width: 300px;
 }
-
-/* 768px breakpoint*/
 
 @media(min-width: 768px) {
     .index__navItems {
@@ -240,9 +208,7 @@
         margin-top: 0;
     }
 }
-/* end of 768px breakpoint */
 
-/* Specific breakpoints within the 678px and 1020px area for the grid on top*/
 @media (min-width: 678px) and (max-width: 1023px) {
     .index__omahaPic:hover ~ .index__blockOne,
     .index__omahaPic:hover ~ .index__blockTwo,
