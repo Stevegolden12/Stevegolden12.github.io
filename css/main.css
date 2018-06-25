@@ -169,18 +169,30 @@
   font-family: 'Lato', sans-serif;
 }
 
-.mainBlog__main-layout {
-  width: 95%;
-  height: 400px;
-  margin: 0 auto;
-  border: 3px solid var(--block-color);
-}
-
 .mainBlog__home {
   padding-top: 15px;
 }
 
+.mainBlog__main-layout {
+  width: 95%;
+  height: 500px;
+	margin: 0 auto;
+  border: 3px solid var(--block-color);
+	background-color: #CCC;
+	height: 20%;
+  padding-bottom: 20px;
+}
+
+.mainBlog__title{
+  text-align: center;
+}
+
+.mainBlog__bodyText{
+  margin: 0 15%;
+}
+
 /* index.html med breakpoint */
+
 @media(min-width: 768px) {
   .index__navItems {
         font-size: 43px;
@@ -258,6 +270,7 @@
     }
 }
 
+/* Breakpoints for large size 1024px */
 @media (min-width: 1024px) {
 
     .index__intro--gridLayout {
