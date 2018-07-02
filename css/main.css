@@ -181,6 +181,7 @@
 	background-color: #CCC;
 	height: 20%;
   padding-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .mainBlog__title{
@@ -189,6 +190,10 @@
 
 .mainBlog__bodyText{
   margin: 0 15%;
+}
+
+.mainBlog__topMargin{
+  margin-top: 15px;
 }
 
 /* index.html med breakpoint */
@@ -304,4 +309,9 @@
     #projectHead {
         grid-column: span 3;
     }
+
+		.mainBlog__main-layout{
+		  width: 70%;
+			font-size: 22px;
+		}
 }
