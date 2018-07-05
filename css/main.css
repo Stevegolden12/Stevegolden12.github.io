@@ -156,6 +156,10 @@
 }
 
 /* blogMain.html small breakpoint */
+.mainBlog__headerLogoWrapper-lMargin {
+  -webkit-padding-start: 25px;
+}
+
 .mainBlog__navItems {
   font-size: 30px;
   text-decoration: none;
