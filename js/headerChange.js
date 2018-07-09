@@ -6,9 +6,10 @@ const HEADER = $('HEADER');
 
 addEventListener('scroll', function () {
   if (HEADER.offset().top > HEADER[0].clientHeight) {
-    HEADER[0].style.backgroundColor = "#DDA0DD";
+    HEADER[0].style.borderBottom = "solid 1px #DDA0DD";
   } else {
-    HEADER[0].style.backgroundColor = "white";
+    /* Removes the bottom border when header goes to the top of page*/
+    HEADER[0].style.borderBottom = "solid 1px white";
   }
 });
 
