@@ -104,10 +104,14 @@
     margin-right: 5px;
  }
 
+.index__hover_grow {
+  display: inline-block;
+}
+
 .index__hover_grow:hover,
 .index__hover_grow li:hover {
-    transform: scale(1.1);
-    transition: all .2s ease-in-out;
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
 }
 
 .index__headerLogo {
