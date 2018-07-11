@@ -202,7 +202,25 @@
   margin-bottom: 30px;
 }
 
-.mainBlog__title{
+.mainBlog__main-layout h2 {
+  font-size: 2rem;
+  -webkit-margin-after: 0.5rem;
+}
+
+.mainBlog__main-layout h3 {
+  font-size: 1rem;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.mainBlog__main-layout h4 {
+  -webkit-margin-before: 0;
+  font-size: .8rem;
+}
+
+
+
+.mainBlog__title {
   text-align: center;
 }
 
