@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 :root {
-    --font-color: #0275d8;
-    --hover-color: #a59f02;
-    --visited-color: #025aa5;
-    --block-color: #80acd2;
-    --border-color: #025aa5;
+  --font-color: #0275d8;
+  --hover-color: #a59f02;
+  --visited-color: #025aa5;
+  --block-color: #0275d8;
+  --border-color: #025aa5;
 }
 
 /* index.html small breakpoint */
@@ -40,10 +40,10 @@
 .index__intro--gridLayout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(15rem, min-content) min-content min-content;
-    grid-template-areas: "mainPicture" "personalDesc" "treehouseImg";
+    grid-template-areas: "mainPicture" "personalDesc" "personalDesc";
     margin: 0 auto;
     margin-top: 90px;
+    min-height: 83vh;
 }
 
 .index__blocks-layout {
@@ -76,17 +76,18 @@
 
 
 .index__omahaPic {
-    margin: 0 auto;
-    width: 370px;
+    background-color: var(--block-color);
     grid-area: mainPicture;
 }
 
 .index__personalDesc {
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px;
     text-align: center;
     grid-area: personalDesc;
-    color: var(--font-color);
+		color: white;
+    background-color: var(--font-color);
+		align-self: stretch;
 }
 
 #treehouseImg {
@@ -132,7 +133,7 @@
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   margin: 0 20px;
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 #projectHead {
@@ -243,28 +244,17 @@
         font-size: 43px;
     }
 
-    .index__intro--gridLayout {
-        grid-template-columns: 15% 60% 15%;
-        grid-template-rows: 275px 60px 275px;
-        grid-template-areas: "blockOne mainPicture blockTwo" "blockThree personalDesc blockFour" "blockFive personalDesc blockSix" "treehouseImg treehouseImg treehouseImg";
-        grid-row-gap: 10px;
-        justify-content: space-around;
-    }
+  .index__intro--gridLayout {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 110px 60px 275px;
+    grid-template-areas: "blockOne mainPicture blockTwo" "blockThree personalDesc blockFour" "blockFive personalDesc blockSix" "treehouseImg treehouseImg treehouseImg";
+    justify-content: space-around;
+  }
 
     .index__blocks-layout {
         display: block;
         background-color: var(--block-color);
     }
-
-        .index__blocks-layout:nth-of-type(odd):hover {
-            transform: rotate(4deg);
-            transition: 3s;
-        }
-
-        .index__blocks-layout:nth-of-type(even):hover {
-            transform: rotate(-4deg);
-            transition: 2s;
-        }
 
     .index__omahaPic {
         order: -1;
@@ -272,6 +262,7 @@
 
     .index__personalDesc {
         font-size: 30px;
+        align-self: stretch;
     }
 
     footer {
@@ -307,36 +298,17 @@
   }
 }
 
-@media (min-width: 678px) and (max-width: 1023px) {
-    .index__omahaPic:hover ~ .index__blockOne,
-    .index__omahaPic:hover ~ .index__blockTwo,
-    .index__omahaPic:hover ~ .index__blockFive,
-    .index__omahaPic:hover ~ .index__blockSix {
-        height: 295px;
-    }
-
-    .index__omahaPic:hover ~ .index__blockThree,
-    .index__omahaPic:hover ~ .index__blockFour {
-        height: 40px;
-        align-self: end;
-    }
-}
-
 /* Breakpoints for large size 1024px */
 @media (min-width: 1024px) {
 
-    .index__intro--gridLayout {
-        grid-template-columns: 5% 5% 38% 38% 5% 5%;
-        grid-template-rows: 9% 9% 18% 18% 9% 9% 20%;
-        grid-template-areas: ". blockOne blockOne mainPicture . ." ". blockOne blockOne mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc blockFour blockFour ." ". . personalDesc blockFour blockFour ." "treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg";
-        grid-row-gap: 5px;
-        grid-column-gap: 0;
-    }
+  .index__intro--gridLayout {
+    grid-template-columns: 5% 5% 40% 40% 5% 5%;
+    grid-template-rows: 10% 10% 20% 20% 10% 10% 20%;
+    grid-template-areas: "blockOne blockOne blockOne mainPicture blockTwo blockTwo" "blockOne blockOne blockOne mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc mainPicture blockTwo blockTwo" "blockThree blockThree personalDesc blockFour blockFour blockFour" "blockThree blockThree personalDesc blockFour blockFour blockFour" "treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg treehouseImg";
+    grid-column-gap: 0;
+    min-height: 100vh;
+  }
 
-    .index__blocks-layout:nth-of-type(even):hover {
-        transform: rotate(2deg);
-        transition: 2s;
-    }
 
     .index__omahaPic .index__blockSix {
         opacity: 0;
@@ -349,9 +321,7 @@
     }
 
     .index__projectGridLayout {
-        grid-template-columns: 31% 31% 31%;
-        grid-column-gap: 2rem;
-        padding-top: 90px;
+        grid-template-columns: 34% 33% 33%;
     }
 
     #projectHead {
