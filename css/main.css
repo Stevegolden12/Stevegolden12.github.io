@@ -40,8 +40,7 @@
 .index__intro--gridLayout {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: minmax(15rem, min-content) min-content min-content;
-    grid-template-areas: "mainPicture" "personalDesc" "treehouseImg";
+    grid-template-areas: "personalDesc" "personalDesc";
     margin: 0 auto;
     margin-top: 90px;
 }
@@ -76,8 +75,7 @@
 
 
 .index__omahaPic {
-    margin: 0 auto;
-    width: 370px;
+    background-color: var(--block-color);
     grid-area: mainPicture;
 }
 
@@ -86,7 +84,9 @@
     padding: 10px;
     text-align: center;
     grid-area: personalDesc;
-    color: var(--font-color);
+		color: white;
+    background-color: var(--font-color);
+		align-self: center;
 }
 
 #treehouseImg {
@@ -132,7 +132,7 @@
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   margin: 0 20px;
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 #projectHead {
