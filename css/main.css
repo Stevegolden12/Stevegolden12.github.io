@@ -5,9 +5,10 @@
 :root {
   --font-color: #0275d8;
   --hover-color: #a59f02;
-  --visited-color: #025aa5;
+  --visited-color: #ECC9DC;
   --block-color: #0275d8;
   --border-color: #025aa5;
+	--header-color: #0275d8;
 }
 
 /* index.html small breakpoint */
@@ -17,24 +18,25 @@
     text-decoration: none;
     text-align: center;
     padding-left: 15px;
+		color: white;
 }
 
-    .index__navItems:visited {
-        color: var(--visited-color);
-    }
+  .index__navItems:visited {
+      color: var(--visited-color);
+  }
 
-    .index__navItems:hover {
-        color: var(--hover-color);
-    }
+  .index__navItems:hover {
+      color: var(--hover-color);
+  }
 
 .index__header-layout {
     display: flex;
     justify-content: space-between;
-     position: fixed;
+    position: fixed;
     width: 100%;
     top: 0;
-    padding: 20px 0;
-    background-color: white;
+    padding: 28px 0;
+    background-color: var(--header-color);
 }
 
 .index__intro--gridLayout {
@@ -161,6 +163,11 @@
 }
 
 /* blogMain.html small breakpoint */
+
+#mainBlog__header-layout {
+    padding: 15px 0;
+}
+
 .mainBlog__headerLogoWrapper-lMargin {
   -webkit-padding-start: 25px;
 }
