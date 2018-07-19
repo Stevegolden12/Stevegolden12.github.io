@@ -162,7 +162,7 @@
     width: 300px;
 }
 
-/* blogMain.html small breakpoint */
+/* blogMain.html small breakpoint desk/labtops*/
 
 #mainBlog__header-layout {
     padding: 0;
@@ -188,7 +188,7 @@
 }
 
 .mainBlog_body {
-  font-family: 'Lato', sans-serif;
+  font: 1.2rem 'Lato', sans-serif; 
 }
 
 .mainBlog__home {
@@ -200,7 +200,7 @@
 }
 
 .mainBlog__main-layout {
-  width: 95%;
+  font-size: 1.5rem;
   height: 500px;
   margin: 0 auto;
   border: 3px solid var(--block-color);
@@ -226,14 +226,12 @@
   font-size: .8rem;
 }
 
-
-
 .mainBlog__title {
   text-align: center;
 }
 
 .mainBlog__bodyText{
-  margin: 0 15%;
+  margin: 0 1%;
 }
 
 .mainBlog__topMargin{
@@ -242,6 +240,13 @@
 
 #treehouseImg {
   padding-top: 70px;
+}
+
+/* blogMain.html small breakpoint mobile devices*/
+@media only screen and (min-width: 320px) and (min-height: 550px) and (-webkit-min-device-pixel-ratio: 2) {
+  .mainBlog__main-layout {
+    font-size: 3.5rem;
+  }
 }
 
 /* index.html med breakpoint */
@@ -300,6 +305,18 @@
     }
 
 /* mainBlog page med breakpoint 768px */
+
+  .mainBlog__main-layout {
+    width: 95%;
+    height: 500px;
+    margin: 0 auto;
+    border: 3px solid var(--block-color);
+    background-color: #CCC;
+    height: 20%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
   .mainBlog__blogWrapper {
     padding-top: 110px;
   }
