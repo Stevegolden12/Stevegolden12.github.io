@@ -14,7 +14,7 @@
 /* index.html small breakpoint */
 
 .index__navItems {
-    font-size: 30px;
+    font-size: 1.5rem;
     text-decoration: none;
     text-align: center;
     padding-left: 15px;
@@ -165,7 +165,7 @@
 /* blogMain.html small breakpoint desk/labtops*/
 
 #mainBlog__header-layout {
-    padding: 0;
+   padding: 0;
 }
 
 .mainBlog__headerLogoWrapper-lMargin {
@@ -173,7 +173,7 @@
 }
 
 .mainBlog__navItems {
-  font-size: 30px;
+  font-size: 2.5rem;
   text-decoration: none;
   text-align: center;
   padding-left: 15px;
