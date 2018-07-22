@@ -170,6 +170,11 @@
 
 .mainBlog__headerLogoWrapper-lMargin {
   -webkit-padding-start: 25px;
+	margin: 7px 0 0 0;
+}
+
+#mainBlog__LnavItems{
+	font-size: 4rem;
 }
 
 .mainBlog__navItems {
@@ -187,12 +192,13 @@
   color: var(--hover-color);
 }
 
-.mainBlog_body {
-  font: 1.2rem 'Lato', sans-serif; 
+#main__headerLogo{
+  width: 100px;
+	height: 60px;
 }
 
-.mainBlog__home {
-  padding-top: 15px;
+.mainBlog_body {
+  font: 1.2rem 'Lato', sans-serif; 
 }
 
 .mainBlog__blogWrapper {
