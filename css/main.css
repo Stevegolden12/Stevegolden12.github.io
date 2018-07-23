@@ -245,7 +245,7 @@
 }
 
 #treehouseImg {
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 /* blogMain.html small breakpoint mobile devices*/
@@ -311,7 +311,7 @@
 
     #treehouseImg {
         margin-top: 0;
-        padding-top: 80px;
+        padding-top: 50px;
     }
 
 /* mainBlog page med breakpoint 768px */
@@ -356,7 +356,8 @@
     }
 
     .index__projectGridLayout {
-        grid-template-columns: 34% 33% 33%;
+        grid-template-columns: 32% 32% 32%;
+        grid-column-gap: 1.3rem;
     }
 
     #projectHead {
@@ -367,10 +368,6 @@
 		  width: 70%;
 			font-size: 22px;
 		}
-
-  #treehouseImg {
-    padding-top: 90px;
-  }
 
   /* mainBlog page large breakpoint 1024px */
   .mainBlog__blogWrapper {
