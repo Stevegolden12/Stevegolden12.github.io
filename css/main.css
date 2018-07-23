@@ -174,7 +174,7 @@
 }
 
 #mainBlog__LnavItems{
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 .mainBlog__navItems {
@@ -193,8 +193,8 @@
 }
 
 #main__headerLogo{
-  width: 100px;
-	height: 60px;
+  width: 75px;
+  height: 45px;
 }
 
 .mainBlog_body {
@@ -202,7 +202,7 @@
 }
 
 .mainBlog__blogWrapper {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .mainBlog__main-layout {
@@ -259,7 +259,7 @@
 
 @media(min-width: 768px) {
   .index__navItems {
-        font-size: 43px;
+    font-size: 3rem;
     }
 
   .index__intro--gridLayout {
@@ -287,6 +287,10 @@
         margin-top: 20px;
         padding-bottom: 20px;
     }
+
+		.index__headerLogoWrapper{
+		  margin-top: 5px;
+		}
 
     .index__headerLogo {
         width: 60px;
@@ -323,9 +327,6 @@
     margin-bottom: 30px;
   }
 
-  .mainBlog__blogWrapper {
-    padding-top: 110px;
-  }
 }
 
 /* Breakpoints for large size 1024px */
