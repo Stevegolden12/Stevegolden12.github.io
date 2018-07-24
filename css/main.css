@@ -9,6 +9,8 @@
   --block-color: #0275d8;
   --border-color: #025aa5;
 	--header-color: #0275d8;
+  --project-bkgrd: #0275d8;
+  --project-text: white;
 }
 
 /* index.html small breakpoint */
@@ -146,15 +148,21 @@
 .index__projectEach {
     display: grid;
     justify-items: center;
-    border: 1px solid var(--border-color);
+    background-color: var(--project-bkgrd);
+    border-radius: 25px;
+    color: var(--project-text);
 }
 
-.projectTitle {
-    font-size: 16px;
+.index__projectEach a {
+  text-align: center;
+}
+
+.index__projectTitle {
+    font-size: 1.2rem;
 }
 
 .index__imgLayout {
-    width: 100%;
+  width: 90%;
 }
 
 .index__projectDesc {
