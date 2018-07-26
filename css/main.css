@@ -11,6 +11,7 @@
 	--header-color: #0275d8;
   --project-bkgrd: #0275d8;
   --project-text: white;
+  --treehouse-img-bkgnd-color: gray;
 }
 
 /* index.html small breakpoint */
@@ -170,10 +171,14 @@
     width: 300px;
 }
 
-/* blogMain.html small breakpoint desk/labtops*/
+#treehouseImg {
+  padding-bottom: 1px;
+  background-color: var(--treehouse-img-bkgnd-color);
+}
 
+/* blogMain.html small breakpoint desk/labtops*/
 #mainBlog__header-layout {
-   padding: 0;
+  padding: 0;
 }
 
 .mainBlog__headerLogoWrapper-lMargin {
