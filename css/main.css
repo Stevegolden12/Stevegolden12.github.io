@@ -168,7 +168,8 @@
 
 .index__projectDesc {
     text-align: center;
-    width: 300px;
+    width: 90%;
+    font-size: 1.5rem;
 }
 
 #treehouseImg {
@@ -321,6 +322,10 @@
     #projectHead {
         grid-column: span 2;
     }
+
+		.index__projectDesc {
+			height: 100px;
+		}
 
     #treehouseImg {
         margin-top: 0;
