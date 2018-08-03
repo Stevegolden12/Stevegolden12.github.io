@@ -380,21 +380,26 @@
         border-radius: 5px;
     }
 
-    .index__projectGridLayout {
-        grid-template-columns: 32% 32% 32%;
-        grid-column-gap: 1.3rem;
-    }
+  .index__personalDesc {
+    font-size: 35px;
+  }
+
+  .index__projectGridLayout {
+    grid-template-columns: 32% 32% 32%;
+    grid-column-gap: 1.3rem;
+  }
 
     #projectHead {
         grid-column: span 3;
     }
+
+  /* mainBlog page large breakpoint 1024px */
 
 		.mainBlog__main-layout{
 		  width: 70%;
 			font-size: 22px;
 		}
 
-  /* mainBlog page large breakpoint 1024px */
   .mainBlog__blogWrapper {
     padding-top: 120px;
   }
