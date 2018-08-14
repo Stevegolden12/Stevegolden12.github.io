@@ -267,9 +267,17 @@
 
 /* blogMain.html small breakpoint mobile devices*/
 @media only screen and (min-width: 320px) and (min-height: 550px) and (-webkit-min-device-pixel-ratio: 2) {
-  .mainBlog__main-layout {
-    font-size: 3.5rem;
+  .mainBlog__main-layout h2{
+    font-size: 6.5rem;
   }
+	.mainBlog__main-layout h3{
+	  font-size: 3rem;
+	}
+	.mainBlog__bodyText{
+	  font-size: 3.5rem;
+		line-height: 8rem;
+	}
+
 }
 
 /* index.html med breakpoint */
