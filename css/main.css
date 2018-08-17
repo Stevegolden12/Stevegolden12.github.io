@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 :root {
-  --font-color: #0275d8;
-  --hover-color: #a59f02;
-  --visited-color: #ECC9DC;
-  --block-color: #0275d8;
-  --border-color: #025aa5;
-	--header-color: #0275d8;
-  --project-bkgrd: #0275d8;
-  --project-text: white;
-  --treehouse-img-bkgnd-color: gray;
+  --font-color: hsl(208, 98%, 43%);
+  --hover-color: hsl(88, 45%, 50%);
+  --visited-color: hsl(328, 50%, 85%);
+  --block-color: hsl(208, 98%, 43%);
+  --border-color: hsl(208, 98%, 33%);
+	--header-color: hsl(208, 98%, 43%);
+  --project-bkgrd: hsl(208, 98%, 43%);
+  --project-text: 	hsl(0, 0%, 100%); /* white */
+  --treehouse-img-bkgnd-color: hsl(0, 0%, 50%); /* gray */
 }
 
 /* index.html small breakpoint */
