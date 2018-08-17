@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 :root {
+  /* Colors */
   --font-color: #0275d8;
   --hover-color: #a59f02;
   --visited-color: #ECC9DC;
@@ -411,4 +412,10 @@
   .mainBlog__blogWrapper {
     padding-top: 120px;
   }
+}
+
+@media (min-width: 1200px) {
+	.index__navItems {
+			font-size: 4rem;
+	}
 }
