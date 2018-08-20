@@ -262,6 +262,11 @@
   margin-top: 15px;
 }
 
+code{
+  display: block;
+  background-color: var(--project-text);
+}
+
 #treehouseImg {
   padding-top: 20px;
 }

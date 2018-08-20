@@ -31,6 +31,32 @@
 				<p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
     </article>
     -->
+		<article class="mainBlog__main-layout">
+     <h2 class="mainBlog__title">React Stateless Component</h2>
+			 <h3 class="mainBlog__title">by Steve Golden</h3>
+			 <h3 class="mainBlog__title">8/19/18 at 10:00p.m.</h3>
+				<p class="mainBlog__bodyText">One of the basic concepts on React is stateless components.  This is usually a JavaScript function with the ability to render elements into the DOM.    Super easy with just a little bit of a twist.  Note that I am going to use JSX notation when returning the element.  So first thing you want to do is make a JavaScript function like this:</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin"><code>const HelloWorld = function(){ };</code></p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">Now inside the usually there will be a return element with something you want to be render.  An example would be:</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">
+					<code>
+					const HelloWorld = function(){ </br>
+					 &nbsp;&nbsp;return(</br>
+					 &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;Hello World!&lt;/div&gt;</br>
+					 &nbsp;&nbsp;); </br>
+					}
+					</code>
+				</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">Super easy!! Also when you are rendering/targeting a component you have to add a tag around it like an HTML tag and a self closing / at the end.  An example of this is:  <ComponentName /> .  Remember that you have to render this component with something like the below:</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">
+				<code>
+				ReactDOM.render(      </br>
+			   &nbsp;&nbsp;&lt;HelloWorld/&gt,</br>
+				 &nbsp;&nbsp;getElementById(‘root’)</br>  
+				)
+				</code>
+				</p>
+		</article>
 	  <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">On Switching from HEX & RGB to HSL</h2>
 			 <h3 class="mainBlog__title">by Steve Golden</h3>
