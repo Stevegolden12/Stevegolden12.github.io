@@ -262,9 +262,19 @@
   margin-top: 15px;
 }
 
+.mainBlog_codeLayout{
+  background-color: var(--project-text);
+}
+
 code{
   display: block;
   background-color: var(--project-text);
+	padding-left: 5%;
+}
+
+#test{
+  margin: 0 auto;
+  width: 90%
 }
 
 #treehouseImg {
