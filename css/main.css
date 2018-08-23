@@ -450,3 +450,12 @@ code{
     padding-top: 120px;
   }
 }
+
+/* Adjustment for Banner on Index page for larger screens */
+
+@media (min-height: 800px) {
+  .index__intro--gridLayout{
+	  min-height: 93vh;
+		min-width: 100vw;
+	}
+}
