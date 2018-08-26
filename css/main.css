@@ -135,15 +135,15 @@
   display: grid;
   justify-items: center;
   grid-template-columns: 100%;
-  grid-template-rows: 50px repeat(8, 20%);
-  grid-row-gap: 10px;
+  grid-template-rows: 4rem repeat(8, 20%);
+  grid-row-gap: 20px;
   grid-column-gap: 10px;
   margin: 0 20px;
   padding-top: 20px;
 }
 
 #projectHead {
-    font-size: 40px;
+    font-size: 3rem;
     color: var(--font-color);
 }
 
@@ -365,11 +365,11 @@ code{
         grid-template-columns: 48% 48%;
         grid-column-gap: 2rem;
         margin: 0 10px;
-        padding-top: 80px;
-    }
+     }
 
     #projectHead {
         grid-column: span 2;
+				font-size: 4rem;
     }
 
 		.index__projectTitle {
