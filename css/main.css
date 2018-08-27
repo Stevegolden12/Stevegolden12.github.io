@@ -262,7 +262,11 @@
   margin-top: 15px;
 }
 
-.mainBlog_codeLayout{
+.mainBlog__img_center {
+  text-align: center;
+}
+
+.mainBlog_codeLayout {
   background-color: var(--project-text);
 }
 
@@ -315,6 +319,10 @@ code{
 	  font-size: 3.5rem;
 		line-height: 8rem;
 	}
+
+  .mainBlog__img_center img{
+    width: 90%;
+  }
 
 }
 
