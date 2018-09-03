@@ -440,7 +440,7 @@ code{
     }
 
   .index__personalDesc {
-    font-size: 35px;
+    font-size: 2.5rem;
   }
 
   .index__projectGridLayout {
@@ -462,6 +462,15 @@ code{
   .mainBlog__blogWrapper {
     padding-top: 120px;
   }
+}
+
+/* Breakpoints for large size 1280px */
+@media (min-width: 1280px) {
+
+ .index__personalDesc {
+    font-size: 2.9rem;
+  }
+
 }
 
 /* Adjustment for Banner on Index page for larger screens */
