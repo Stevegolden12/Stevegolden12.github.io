@@ -31,6 +31,29 @@
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
+	<article class="mainBlog__main-layout">
+  <h2 class="mainBlog__title">The beginner’s collection of powerful tips and tricks for React</h2>
+   <h3 class="mainBlog__title">by Steve Golden</h3>
+   <h3 class="mainBlog__title">9/3/18 at 10:30p.m.</h3>
+   <p class="mainBlog__bodyText">I wanted to talk about the article of <a href="https://medium.freecodecamp.org/the-beginners-collection-of-powerful-tips-and-tricks-for-react-f2e3833c6f12" target="_blank">"The beginner’s collection of powerful tips and tricks for React"</a>.  As someone who has started learning React just a while ago I felt that all his tips are really helpful in order to gain more proficiency in it.  Some are more relevant to where I am at this time but I know all of them will serve me well.  Going to summarize some of them below and maybe give a thought or two.</p>
+   <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Name your components</strong> because it makes it easier not only to know where to look but it gives you the programmer a better understanding of the structure of the code. The author mentions that it helps with tree shaking (Finding code that you do not need, removing it and improving performance) and helps in debugging.</p>
+   <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Prefer functional components</strong> is one of the authors tips.  They are right because from what others have said is you always want to keep most of your state in one place.  With functional components you can not have state which forces you to do that.</p>
+   <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Replacing divs with fragments</strong> is another of the author good ideas.  In React 16 they added fragments.  From what I know it was always a sticking point with React because for accessibility you rather have semantic html than non-semantic html tags like &lt;div&gt; all over the place.  Below is the example the author gives:</p>
+   <p class="mainBlog__bodyText mainBlog__topMargin">
+    <code>
+    </br>
+    const Login = () => //Div syntax  </br>																										
+     &lt;div&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/div&gt;; </br>
+     </br>
+    const Login = () => //Fragment syntax</br>
+     &lt;React.Fragment&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/React.Fragment&gt;;</br>
+     </br>
+    const Login = () => // Short-hand syntax</br>
+      &lt;&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/&gt;;</br>
+      </br>
+    </code>
+   </p>
+</article>
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">CSS Tips and Tricks Using Pseudo-Class</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
