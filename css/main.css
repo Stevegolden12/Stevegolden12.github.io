@@ -5,7 +5,7 @@
 :root {
   --font-color:    hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
   --hover-color:   hsl(92, 57%, 81%);						/* hsl(116, 30%, 50%) ; */
-  --visited-color: hsl(0, 0%, 90%);					    /* hsl(236, 30%, 80%); */
+  --visited-color: hsl(39, 100%, 80%);					/* hsl(236, 30%, 80%); */
   --block-color:   hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%); */
   --border-color:  hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
 	--header-color:  hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
