@@ -6,9 +6,9 @@ const HEADER = $('HEADER');
 
 addEventListener('scroll', function () {
   if (HEADER.offset().top > HEADER[0].clientHeight) {
-    HEADER[0].style.borderBottom = "solid 1px #ECC9DC";
+    HEADER[0].style.borderBottom = "solid 1px hsl(0, 0%, 90%)";
   } else {
-    HEADER[0].style.borderBottom = "solid 1px #0275d8";
+    HEADER[0].style.borderBottom = "solid 1px hsl(208, 98%, 26%)";
   }
 });
 
