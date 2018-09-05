@@ -327,11 +327,14 @@ code{
 
 }
 
-/* index.html med breakpoint */
+/* index.html 768px med breakpoint */
 
 @media(min-width: 768px) {
+  
+
   .index__navItems {
     font-size: 3rem;
+    padding-left: 12px;
     }
 
   .index__intro--gridLayout {
