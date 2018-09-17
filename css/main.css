@@ -5,6 +5,7 @@
 :root {
   --font-color:    hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
   --hover-color:   hsl(92, 57%, 81%);						/* hsl(116, 30%, 50%) ; */
+  --hover-image-color: hsl(92, 57%, 40%);	      /* hsl(116, 30%, 50%) ; Make darker*/
   --visited-color: hsl(39, 100%, 80%);					/* hsl(236, 30%, 80%); */
   --block-color:   hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%); */
   --border-color:  hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
@@ -33,13 +34,13 @@
   }
 
 .index__header-layout {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 10px 0;
-    background-color: var(--header-color);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 0;
+  background-color: var(--header-color);
 }
 
 .index__intro--gridLayout {
@@ -128,7 +129,7 @@
 }
 
 .index__headerLogo:hover {
-    background-color: var(--hover-color);
+    background-color: var(--hover-image-color);
 }
 
 .index__projectGridLayout {
