@@ -31,37 +31,41 @@
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
+    <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Props In React</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
       <h3 class="mainBlog__title">9/21/18 at 11:15p.m.</h3>
       <p class="mainBlog__bodyText">One of the fundamental concepts in React is Props.  Props are parameters/arguments that are passed from Parent Component to the Child Component.  One of the fundamental concepts in React is unilateral direction of props being able to be passed ‘downward’. Props will be taken as a parameter within the Child Component call.  Then it is passed to the Child component and used and/or passed again to another child component.   Below is an example of a Prop.</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
-        <code>  
+        <code>
           Class App extends React.Component{                                                 </br>
           &nbsp;&nbsp;render(){                                                              </br>
           &nbsp;&nbsp;&nbsp;&nbsp;return(                                                    </br>
           &nbsp;&nbsp;&nbsp;&nbsp;{/*  Below line of code text will be the <strong style="color: purple; font-size: 25px">
-  <i>prop name</i></strong> and “Hello World!” is a <strong style="color: orangered; font-size: 25px">
-  prop value</i></strong> which is a string in this case, that will be passed to the Child Component *} </br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: purple; font-size: 25px"><i>text</i></strong>=”<strong style="color: orangered; font-size: 25px">
-  Hello World!”</i></strong> /&gt;   </br>
-  &nbsp;&nbsp;&nbsp;&nbsp;);                                                         </br>
-  &nbsp;&nbsp;}                                                                      </br>
-  }                                                                                  </br>
-  </br>
-  {/*  In order to pass the props to the component we must have <strong style="color: green; font-size: 25px"><i>props</i></strong> as a parameter of the function */} </br>
-  function ChildComponent(<strong style="color: green; font-size: 25px;"><i>props</i></strong>){                                           </br>
-  &nbsp;&nbsp;return(                                                                </br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                                </br>
-  </br>
-  &nbsp;&nbsp;&nbsp;&nbsp;{/* In order to use the prop in a stateless functional component you will use props.<prop name>
-    the <strong style="color: purple; font-size: 25px"><i>prop name</i></strong> being what I called it in the Parent Component */}                           </br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>{props.<strong style="color: purple; font-size: 25px"><i>text</i></strong>}&lt;/h1&gt;                         </br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                                       </br>
-    );                                                                                         </br>
-    }                                                                                          </br>
-</code>
+            <i>prop name</i>
+          </strong> and “Hello World!” is a <strong style="color: orangered; font-size: 25px">
+            prop value</i>
+          </strong> which is a string in this case, that will be passed to the Child Component *} </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: purple; font-size: 25px"><i>text</i></strong>=”<strong style="color: orangered; font-size: 25px">
+            Hello World!”</i>
+          </strong> /&gt;   </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                         </br>
+          &nbsp;&nbsp;}                                                                      </br>
+          }                                                                                  </br>
+          </br>
+          {/*  In order to pass the props to the component we must have <strong style="color: green; font-size: 25px"><i>props</i></strong> as a parameter of the function */} </br>
+          function ChildComponent(<strong style="color: green; font-size: 25px;"><i>props</i></strong>){                                           </br>
+          &nbsp;&nbsp;return(                                                                </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                                </br>
+          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* In order to use the prop in a stateless functional component you will use props.<prop name>
+            the <strong style="color: purple; font-size: 25px"><i>prop name</i></strong> being what I called it in the Parent Component */}                           </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>{props.<strong style="color: purple; font-size: 25px"><i>text</i></strong>}&lt;/h1&gt;                         </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                                       </br>
+            );                                                                                         </br>
+            }                                                                                          </br>
+        </code>
       </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
