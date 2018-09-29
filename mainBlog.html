@@ -32,7 +32,57 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
-    <article class="mainBlog__main-layout">
+   <article class="mainBlog__main-layout">
+   <h2 class="mainBlog__title">State and Function/Method Props in React</h2>
+     <h3 class="mainBlog__title">by Steve Golden</h3>
+     <h3 class="mainBlog__title">9/28/18 at 11:30p.m.</h3>
+      <p class="mainBlog__bodyText">Props can not only be values you assign but they can also be variable and functions or methods are well. Usually when you are assigning a variable it will either be at the top of a functional stateless component (a function) or between the render and return method of a stateless or stateful component (Both are types of classes).  You will define a variable and set its value.  The value will be in {} when using JSX because it is JavaScript.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">For using function/method props in React the first thing is creating it.  Usually you will see methods within a class component. So after the constructor and before the render is where you would put the method at.  When defining a prop within the Parent Class add it to the call of the Child Class you are sending it to and use {} JSX again because it is JavaScript.  Usually when calling a method you will use the ‘this’ before the method.</p>
+			<p class="mainBlog__bodyText mainBlog__topMargin">Variable prop for a stateless functional component (function):</p>
+			<p class="mainBlog__bodyText mainBlog__topMargin">
+			  <code>
+				 Function ParentComponent(){
+				 Const name = ‘Mike William”;
+  
+				return(
+						<div>
+							<h1>My name is: {name}</h1>
+					 </div>
+					);
+				  } ;
+			  </code>
+				</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">Method prop for a stateless component (class):</p>
+				<p class="mainBlog__bodyText mainBlog__topMargin">
+					<code>
+					Class ParentComponent(){
+					  constructor(props){
+					  super(props);
+					  this.addName = this.addName.bind(this);
+					}
+
+					addName(){
+						 return “Mike Wililiams”;
+					}
+
+					render(){
+					return(
+						<div>
+						 <ChildComponent addname={this.addName} />
+					  </div>
+					);
+				 }
+				}
+
+			function ChildComponent(props){
+				Return <p>{props.addname}</p>
+			}
+
+			</code>
+		 </p>
+   </article>
+		
+		<article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Props In React</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
       <h3 class="mainBlog__title">9/21/18 at 11:15p.m.</h3>
