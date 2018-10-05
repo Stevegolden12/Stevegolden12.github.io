@@ -32,58 +32,92 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
-   <article class="mainBlog__main-layout">
-   <h2 class="mainBlog__title">Variable and Function/Method Props in React</h2>
-     <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">9/28/18 at 11:30p.m.</h3>
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">What is state in React and how do you call it?	Blog Title</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/5/2018 at 8:00p.m.</h3>
+      <p class="mainBlog__bodyText">One of the things that make React so powerful and useful is that it uses state.  State is where all information that you want to change in React is stored.  The only place you can have state is in a stateful component which is a class.  Functional components which are functions that are considered components cannot have state.  It makes sense because the place where you add state is in the constructor which can only be in classes not functions.</p>
+      <br />
+      <p class="mainBlog__bodyText mainBlog__topMargin">State is always going to be an object and is called by using this.state= {} .  In the object you will want to use key and value. In state, the key is the state name and the value is the state value.  Below is an example of a simple setting of a state name and value:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent extends React.Component{                        <br />
+          &nbsp;&nbsp;constructor(){                                            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                 <br />
+                                                                                <br />
+          {/* You will place the this.state between the super(props) and the ending bracket of the constructor */}  <br />
+                                                                                <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.state={                      <br />
+          {/* the '<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>' is the '<strong style="color: darkorange; font-size: 25px;">
+  <i>state name</i></strong> and <strong style="color: purple; font-size: 25px;">
+  <i>Steve</i></strong>' is the <strong style="color: purple; font-size: 25px;">
+  state value</i></strong>*/}    <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: darkorange; font-size: 25px;">
+  <i>
+    name</i></strong>: ‘<strong style="color: purple; font-size: 25px;">
+      Steve
+  </i>
+</strong>’            <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;}{/* End of state object */}                  <br />
+  &nbsp;&nbsp;}{/*End of constructor */}                                <br />
+  }{/*End of class */}                                                  <br />
+  <br />
+</code>
+      </p>
+    </article>  
+    
+    <article class="mainBlog__main-layout">      
+    <h2 class="mainBlog__title">Variable and Function/Method Props in React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/28/18 at 11:30p.m.</h3>
       <p class="mainBlog__bodyText">Props can not only be values you assign but they can also be variable and functions or methods as well. Usually when you are assigning a variable it will either be at the top of a functional stateless component (a function) or between the render and return method of a stateless or stateful component (Both are types of classes).  You will define a variable and set its value.  The value will be in {} when using JSX because it is JavaScript.</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">For using function/method props in React the first thing is creating it.  Usually you will see methods within a class component. So after the constructor and before the render is where you would put the method at.  When defining a prop within the Parent Class add it to the call of the Child Class you are sending it to and use {} JSX again because it is JavaScript.  Usually when calling a method you will use the ‘this’ before the method.</p>
-			<p class="mainBlog__bodyText mainBlog__topMargin">Variable prop for a stateless functional component (function):</p>
-			<p class="mainBlog__bodyText mainBlog__topMargin">
-			  <code>
-				 function ParentComponent(){                                    </br>
-				 {/* the orange <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> is the variable name*/} </br>
-				 &nbsp;&nbsp;const <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> = ‘Mike William”;												</br>
-  			 &nbsp;&nbsp;return(																						</br>
-				 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;																	</br>
-				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My name is: {<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>}&lt;/h1&gt;	</br>
-				 &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;																</br>
-				 &nbsp;&nbsp;);																									</br>
-				  } ;
-			  </code>
-				</p>
-				<p class="mainBlog__bodyText mainBlog__topMargin">Method prop for a stateless component (class):</p>
-				<p class="mainBlog__bodyText mainBlog__topMargin">
-					<code>
-					Class ParentComponent(){															</br>
-					&nbsp;&nbsp;constructor(props){												</br>
-					&nbsp;&nbsp;super(props);										           </br>
-					{/* The purple <strong style="color: purple; font-size: 25px;"><i>addName</i></strong> is the method name */} </br>
-					&nbsp;&nbsp;this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong> = this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>.bind(this);		</br>
-					&nbsp;&nbsp;}																					</br>
-																																</br>
-					&nbsp;&nbsp;<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>(){																</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;return “Mike Williams”;			</br>
-					&nbsp;&nbsp;}																					</br>
-																																</br>
-					&nbsp;&nbsp;render(){																	</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;return(												</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;							</br>
-					{/* The green <strong style="color: green; font-size: 25px;"><i>addName</i></strong> is the prop name */}																									</br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: green; font-size: 25px;"><i>addname</i></strong>={this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>} /&gt; </br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;					  </br>
-					&nbsp;&nbsp;&nbsp;&nbsp;);														</br>
-				  &nbsp;&nbsp;}																					</br>
-				  }																											</br>
-																																</br>
-			function ChildComponent(props){														</br>
-			&nbsp;&nbsp;Return &lt;p&gt;{props.<strong style="color: green; font-size: 25px;"><i>addname</i></strong>}&lt;/p&gt;								</br>			
-			}																													</br>
-			</code>
-		 </p>
-   </article>
-		
-		<article class="mainBlog__main-layout">
+      <p class="mainBlog__bodyText mainBlog__topMargin">Variable prop for a stateless functional component (function):</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          function ParentComponent(){                                    </br>
+          {/* the orange <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> is the variable name*/} </br>
+          &nbsp;&nbsp;const <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> = ‘Mike William”;												</br>
+          &nbsp;&nbsp;return(																						</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;																	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My name is: {<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>}&lt;/h1&gt;	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;																</br>
+          &nbsp;&nbsp;);																									</br>
+          } ;
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Method prop for a stateless component (class):</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent(){															</br>
+          &nbsp;&nbsp;constructor(props){												</br>
+          &nbsp;&nbsp;super(props);										           </br>
+          {/* The purple <strong style="color: purple; font-size: 25px;"><i>addName</i></strong> is the method name */} </br>
+          &nbsp;&nbsp;this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong> = this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>.bind(this);		</br>
+          &nbsp;&nbsp;}																					</br>
+          </br>
+          &nbsp;&nbsp;<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>(){																</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return “Mike Williams”;			</br>
+          &nbsp;&nbsp;}																					</br>
+          </br>
+          &nbsp;&nbsp;render(){																	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(												</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;							</br>
+          {/* The green <strong style="color: green; font-size: 25px;"><i>addName</i></strong> is the prop name */}																									</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: green; font-size: 25px;"><i>addname</i></strong>={this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>} /&gt; </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;					  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);														</br>
+          &nbsp;&nbsp;}																					</br>
+          }																											</br>
+          </br>
+          function ChildComponent(props){														</br>
+          &nbsp;&nbsp;Return &lt;p&gt;{props.<strong style="color: green; font-size: 25px;"><i>addname</i></strong>}&lt;/p&gt;								</br>
+          }																													</br>
+        </code>
+      </p>
+    </article>
+
+    <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Props In React</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
       <h3 class="mainBlog__title">9/21/18 at 11:15p.m.</h3>
