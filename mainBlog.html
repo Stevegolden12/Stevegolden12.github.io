@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Oct-5-18 >
+     < Main Blog Oct-21-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -34,7 +34,46 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
-    
+    <!-- Main Blog Oct-21-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Passing State and Props Through Components</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/21/18 at 11:00p.m</h3>
+      <p class="mainBlog__bodyText">If you have to pass information through multiple components you will have to use both state and props methods.  Usually the top/parent component will be your state since you will want your state information to be able to access the rest of your components.  In addition, you rather have your child components to likely be more props because the state should be in parent components.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">When passing the information you will use state syntax in the Parent Component and props syntax with the Child Component.  Once the information is passed to the Child Component it is no longer state but a prop. Below is an example of how it will work:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent extends React.Component{     </br>
+          &nbsp;&nbsp;constructor(props){                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.state={                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name='Tom Brady'                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
+          &nbsp;&nbsp;}                                                   </br>
+          &nbsp;&nbsp;render(){                                             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;
+          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ChildComponent <strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong>={this.state.name} /&gt;  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;/div&gt;                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                    </br>
+          &nbsp;&nbsp;}                                                     </br>
+          }                                                     </br>
+          </br>
+          Function ChildComponent(props){                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                               </br>
+          {/* Because we gave <strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong> as the <strong style="color: darkgreen; font-size: 25px;"><i>prop name</i></strong> in ParentComponent you have to use it instead of the state name*/} </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;p&gt;My favorite quarterback is {this.props.<strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong>}&lt;/p&gt;                                                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; );                                                          </br>
+          }                                                           </br>
+          </br>
+        </code>
+      </p>
+    </article>
+
     <!--- Main Blog Oct-12-18 -->
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Accessing State Directly in React</h2>
@@ -84,7 +123,8 @@
           {/* You will place the this.state between the super(props) and the ending bracket of the constructor */}  <br />
           <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.state={                      <br />
-          {/* the '<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>' is the '<strong style="color: darkorange; font-size: 25px;"><i>state name</i>
+          {/* the '<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>' is the '<strong style="color: darkorange; font-size: 25px;">
+            <i>state name</i>
           </strong> and <strong style="color: purple; font-size: 25px;">
             <i>Steve</i>
           </strong>' is the <strong style="color: purple; font-size: 25px;">
