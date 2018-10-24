@@ -136,11 +136,12 @@
   display: grid;
   justify-items: center;
   grid-template-columns: 100%;
-  grid-template-rows: 4rem repeat(8, 20%);
+  grid-template-rows: 4rem repeat(8, 13%);
   grid-row-gap: 20px;
   grid-column-gap: 10px;
   margin: 0 20px;
   padding-top: 20px;
+  padding-bottom: 23em;
 }
 
 #projectHead {
@@ -374,11 +375,13 @@ code{
         border-radius: 5px;
     }
 
-    .index__projectGridLayout {
-        grid-template-columns: 48% 48%;
-        grid-column-gap: 2rem;
-        margin: 0 10px;
-     }
+  .index__projectGridLayout {
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 4rem repeat(4, 24%);
+    grid-column-gap: 2rem;
+    margin: 0 10px;
+    padding-bottom: 7em;
+  }
 
     #projectHead {
         grid-column: span 2;
@@ -449,6 +452,7 @@ code{
 
   .index__projectGridLayout {
     grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 4rem repeat(3, 32%);
     grid-column-gap: 1.3rem;
   }
 
