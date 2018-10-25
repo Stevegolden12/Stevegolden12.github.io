@@ -141,7 +141,12 @@
   grid-column-gap: 10px;
   margin: 0 20px;
   padding-top: 20px;
-  padding-bottom: 23em;
+}
+/* Below code is to address the treehouse footer pushed to the bottom of the page ONLY in Chrome */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .index__projectGridLayout {
+    padding-bottom: 23em;
+  }
 }
 
 #projectHead {
