@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Oct-21-18 >
+     < Main Blog Nov-5-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -34,6 +34,39 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
+    <!-- Main Blog Oct-26-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Default Props for React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/26/18 at 1:00p.m</h3>
+      <p class="mainBlog__bodyText">Sometimes when you use props you will want to use default props to make it easier to use the component with the prop or always have a backup just in case you forget giving the prop.  In order to call a default prop you will after the component is made, below it call the Component and the property of defaultProp and assign it to an object.  Like any object you have to have a key which will be the prop name and its value which is the default prop value you want.  You can have multiple default prop values within the object. </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Here is the template of a defaultProps construction:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &lt;Component Name&gt;.defaultProps = {                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;prop name>&gt; &lt;default prop value&gt;   </br>
+          }                                                                       </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">An example of a defaultProps:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          const MyComponent = (props) => {                                                              </br>
+          &nbsp;&nbsp;&lt;p&gt;Welcome back {props.name}, you have {props.mcount} messages.&lt;/p&gt;   </br>
+          }                                                                                             </br>
+                                                                                                        </br>
+          MyComponent.defaultProps = {                                                                  </br>
+          &nbsp;&nbsp;name: ‘guest’,                                                                    </br>
+          &nbsp;&nbsp;mcount: 0                                                                         </br>
+          }                                                                                             </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><code>Welcome back guest, you have 0 messages.</code></p>
+    </article>
+
+
     <!-- Main Blog Oct-21-18 -->
 
     <article class="mainBlog__main-layout">
