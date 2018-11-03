@@ -38,35 +38,37 @@
     <!-- Main Blog Nov-2-18 -->
 
     <article class="mainBlog__main-layout">
-      <h2 class="mainBlog__title">Overriding default Props</h2>
+      <h2 class="mainBlog__title">Overriding Default Props</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
       <h3 class="mainBlog__title">11/2/18 at 1:00p.m</h3>
       <p class="mainBlog__bodyText">To override default Props you will just pass in a value to a prop through the component.  If you have multiple default props you can still use some of the default props.  Here is an example:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
-          Class Component extends React.Component{
-          constructor(){
-          super(props);
-          }
-          render(){
-          return(
-          <div>
-            <MyComponent name=”Jason Jones” />
-          </div>
-          );
-          }
-          }
-
-      const MyComponent = (props) => {
-      <p>Welcome back {props.name}, you have {props.mcount} messages.</p>
-      }
-
-      MyComponent.defaultProps = {
-      name: ‘guest’,
-      mcount: 0
-      }
-
-      </code>
+          Class Component extends React.Component{                                   <br />
+          &nbsp;&nbsp;constructor(){                                                  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                      <br />
+          &nbsp;&nbsp;}             <br />
+          &nbsp;&nbsp;render(){                                                                   <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                                          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                               <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/* Only passing the name prop not the mcount prop */}  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MyComponent name=”Jason Jones” /&gt;      <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                                <br />
+          &nbsp;&nbsp;}                                                                             <br />
+          }                                                                             <br />
+          <br />
+          const MyComponent = (props) =&gt; {            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;{/*  The name prop will be what we passed through the component and the mcount will be the default value */} </br>
+          &nbsp;&nbsp;&lt;p&gt;Welcome back {props.name}, you have {props.mcount} messages.&lt;/p&gt; <br />
+          }                                                                                   <br />
+          <br />
+          MyComponent.defaultProps = {                                                        <br />
+          &nbsp;&nbsp;name: ‘guest’,                                                          <br />
+          &nbsp;&nbsp; mcount: 0                                                              <br />
+          }                                                                                   <br />
+          <br />
+        </code>
       </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
@@ -85,7 +87,7 @@
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
           &lt;Component Name&gt;.defaultProps = {                                 </br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;prop name>&gt; &lt;default prop value&gt;   </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;prop name&gt; &lt;default prop value&gt;   </br>
           }                                                                       </br>
         </code>
       </p>
