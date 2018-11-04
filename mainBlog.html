@@ -33,8 +33,7 @@
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
-    <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt;-->
- 
+    <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
     <!-- Main Blog Nov-2-18 -->
 
     <article class="mainBlog__main-layout">
@@ -51,24 +50,24 @@
           &nbsp;&nbsp;render(){                                                                   <br />
           &nbsp;&nbsp;&nbsp;&nbsp;return(                                                          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                               <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/* Only passing the name prop not the mcount prop */}  </br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MyComponent name=”Jason Jones” /&gt;      <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/* Only passing the <span class="MainBlog_codeText_green">name prop</span> not the <span class="MainBlog_codeText_orange">mcount</span> prop */}  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MyComponent name=<span class="MainBlog_codeText_green">&#8220;Jason Jones”</span> /&gt;      <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                            <br />
           &nbsp;&nbsp;&nbsp;&nbsp;);                                                                <br />
           &nbsp;&nbsp;}                                                                             <br />
           }                                                                             <br />
           <br />
           const MyComponent = (props) =&gt; {            <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;{/*  The name prop will be what we passed through the component and the mcount will be the default value */} </br>
-          &nbsp;&nbsp;&lt;p&gt;Welcome back {props.name}, you have {props.mcount} messages.&lt;/p&gt; <br />
-          }                                                                                   <br />
-          <br />
-          MyComponent.defaultProps = {                                                        <br />
-          &nbsp;&nbsp;name: ‘guest’,                                                          <br />
-          &nbsp;&nbsp; mcount: 0                                                              <br />
-          }                                                                                   <br />
-          <br />
-        </code>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/*  The <span class="MainBlog_codeText_green">name prop</span> value will be what we passed through the component and the <span class="MainBlog_codeText_orange">mcount</span> value will be the default */} </br>
+  &nbsp;&nbsp;&lt;p&gt;Welcome back <span class="MainBlog_codeText_green">{props.name}</span>, you have <span class="MainBlog_codeText_orange">{props.mcount}</span> messages.&lt;/p&gt; <br />
+  }                                                                                   <br />
+  <br />
+  MyComponent.defaultProps = {                                                        <br />
+  &nbsp;&nbsp;name: ‘guest’,                                                          <br />
+  &nbsp;&nbsp;mcount: 0                                                              <br />
+  }                                                                                   <br />
+  <br />
+</code>
       </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">

@@ -266,7 +266,19 @@
   line-height: 1.5;
 }
 
-.mainBlog__topMargin{
+.MainBlog_codeText_orange {
+  color: orange;
+}
+
+.MainBlog_codeText_green {
+  color: green;
+}
+
+.MainBlog_codeText_purple {
+  color: purple;
+}
+
+.mainBlog__topMargin {
   margin-top: 15px;
 }
 
