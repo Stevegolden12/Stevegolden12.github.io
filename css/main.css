@@ -3,15 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 :root {
-  --font-color:    hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
-  --hover-color:   hsl(92, 57%, 81%);						/* hsl(116, 30%, 50%) ; */
-  --hover-image-color: hsl(92, 57%, 40%);	      /* hsl(116, 30%, 50%) ; Make darker*/
-  --visited-color: hsl(39, 100%, 80%);					/* hsl(236, 30%, 80%); */
-  --block-color:   hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%); */
-  --border-color:  hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
-	--header-color:  hsl(208, 98%, 26%);					/* hsl(356, 39.8%, 34.5%);*/
-  --project-bkgrd: hsl(208, 98%, 26%);		      /* hsl(356, 39.8%, 34.5%);*/
-  --project-text: hsl(0, 0%, 100%);             /* white */	
+  --font-color: hsl(356, 39.8%, 34.5%);       /*hsl(208, 98%, 26%);*/
+  --hover-color: hsl(120, 26%, 91%);          /*hsl(92, 57%, 81%);*/
+  --hover-image-color:  hsl(116, 30%, 50%);   /*hsl(92, 57%, 40%);*/
+  --visited-color: hsl(39, 100%, 85%);      /* hsl(236, 30%, 80%); */
+  --block-color: hsl(356, 39.8%, 34.5%);      /*hsl(208, 98%, 26%);*/
+  --border-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
+  --header-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
+  --project-bkgrd: hsl(356, 39.8%, 34.5%);    /*hsl(208, 98%, 26%);*/
+  --mainBlog-bkgrd: hsl(356, 26%, 88%);
+  --project-text: hsl(0, 0%, 100%); /* white */
   --treehouse-img-bkgnd-color: hsl(0, 0%, 50%); /* gray */
 }
 
@@ -235,7 +236,7 @@
   height: 500px;
   margin: 0 auto;
   border: 3px solid var(--block-color);
-  background-color: #CCC;
+  background-color: var(--mainBlog-bkgrd);
   height: 20%;
   padding-bottom: 20px;
   margin-bottom: 30px;
@@ -424,8 +425,7 @@ code{
     width: 95%;
     height: 500px;
     margin: 0 auto;
-    border: 3px solid var(--block-color);
-    background-color: #CCC;
+    border: 3px solid var(--block-color);   
     height: 20%;
     padding-bottom: 20px;
     margin-bottom: 30px;
