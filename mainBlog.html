@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Nov-14-18 >
+     < Main Blog Nov-18-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -34,12 +34,45 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Nov-11-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Fetching API Data with React.JS</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/11/18 at 6:00p.m.</h3>
+      <p class="mainBlog__bodyText">I was reading an article called, <a href="https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2" target="_blank">“Fetching API Data with React.JS”</a> this week by Ethan Jarrell. His example of fetching API data in React.JS was amazing so what I am going to do is show the code and try to explain a little of what is going on.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          componentDidMount(){                                                                      </br>
+          &nbsp;&nbsp;fetch(‘https://randomuser.me/api/?results=500’)                              </br>
+          &nbsp;&nbsp;.then(results=&gt;{                                                           </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return results.json();                                            </br>
+          &nbsp;&nbsp;}).then(data=&gt;{                                                            </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;let pictures = data.results.map((pic)=>{                          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {                                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div key={pic.results}&gt;             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src={pic.picture.medium} /&gt;  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}                                                     </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;})                                                                </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.setState({pictures: pictures});                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(“state”: this.state.pictures);                         </br>
+          &nbsp;&nbsp;})                                                                             </br>
+          }                                                                                         </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The whole fetch request is wrapped within a componentDidMount function.  This is called a lifestyle method.  The reason why we wrapped it is that we make sure that React is working properly before we request the information.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The fetch method itself takes a url the “https://ranomuser.me/api/” which is where we request the information.  The last part of that “?results=500” is going to give us back 500 “results" back.  The next part will be the first .then function linked to the fetch method which is a promise to return the results in a json format. </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The second .then is going to take all that information and sort through it with the map function.  So it will return 500 divs with a key of pic.results and an image with the src being pic.picture.medium and put it in an object called pictures.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Lastly, we are going to setState so that the pictures key within the state will be set to the information pictures that we just got from the API.</p>
+    </article>
+  -->
     <!-- Main Blog Nov-2-18 -->
 
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Overriding Default Props</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
-      <h3 class="mainBlog__title">11/2/18 at 1:00p.m</h3>
+      <h3 class="mainBlog__title">11/2/18 at 1:00p.m.</h3>
       <p class="mainBlog__bodyText">To override default Props you will just pass in a value to a prop through the component.  If you have multiple default props you can still use some of the default props.  Here is an example:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
@@ -59,15 +92,15 @@
           <br />
           const MyComponent = (props) =&gt; {            <br />
           &nbsp;&nbsp;&nbsp;&nbsp;{/*  The <span class="MainBlog_codeText_green">name prop</span> value will be what we passed through the component and the <span class="MainBlog_codeText_orange">mcount</span> value will be the default */} </br>
-  &nbsp;&nbsp;&lt;p&gt;Welcome back <span class="MainBlog_codeText_green">{props.name}</span>, you have <span class="MainBlog_codeText_brown">{props.mcount}</span> messages.&lt;/p&gt; <br />
-  }                                                                                   <br />
-  <br />
-  MyComponent.defaultProps = {                                                        <br />
-  &nbsp;&nbsp;name: ‘guest’,                                                          <br />
-  &nbsp;&nbsp;mcount: 0                                                              <br />
-  }                                                                                   <br />
-  <br />
-</code>
+          &nbsp;&nbsp;&lt;p&gt;Welcome back <span class="MainBlog_codeText_green">{props.name}</span>, you have <span class="MainBlog_codeText_brown">{props.mcount}</span> messages.&lt;/p&gt; <br />
+          }                                                                                   <br />
+          <br />
+          MyComponent.defaultProps = {                                                        <br />
+          &nbsp;&nbsp;name: ‘guest’,                                                          <br />
+          &nbsp;&nbsp;mcount: 0                                                              <br />
+          }                                                                                   <br />
+          <br />
+        </code>
       </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
