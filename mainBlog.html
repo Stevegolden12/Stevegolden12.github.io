@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Nov-18-18 >
+     < Main Blog Nov-25-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -34,6 +34,51 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+     <!-- Main Blog Nov-16-18-->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Typechecking With React PropTypes</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/16/18</h3>
+      <p class="mainBlog__bodyText">There are times when you will want to make props a certain type.  This will help validate your props and make it easier to catch type bugs errors within your React code.  In order to do this you will use propTypes.  Here is the format for a proptype declaration:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;<componentname>.propTypes = {                     </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;  &lt;propname&gt; : PropTypes.&lt;proptype&gt;.isRequired     </br>
+          &nbsp;&nbsp;   }                                                    </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The <proptype> can be of any of seven types. Here is a list of all of them (note only two are abbreviated the others are the same as their names:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <ul class="mainBlog__bodyText_listItem">
+          <li>Array: Array</li>
+          <li>Boolean: bool</li>
+          <li>Function: func</li>
+          <li>Number: number</li>
+          <li>Object: object</li>
+          <li>String: string</li>
+          <li>Symbol: symbol</li>
+        </ul>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Below is an example of how propTypes works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          function ShowName = (props) => {      </br>
+          &nbsp;&nbsp;return(                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;{props.name} &lt;/p&gt;                      </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                    </br>
+          &nbsp;&nbsp;);                                        </br>
+          }                                         </br>
+          </br>
+          Showname.propTypes = {                    </br>
+          Name: PropTypes.string.isRequired         </br>
+          }                                         </br>
+          </br>
+        </code>
+      </p>
+    </article>
+
     <!-- Main Blog Nov-11-18 -->
 
     <article class="mainBlog__main-layout">
@@ -66,7 +111,7 @@
       <p class="mainBlog__bodyText mainBlog__topMargin">The second .then is going to take all that information and sort through it with the map function.  So it will return 500 divs with a key of pic.results and an image with the src being pic.picture.medium and put it in an object called pictures.  </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Lastly, we are going to setState so that the pictures key within the state will be set to the information pictures that we just got from the API.</p>
     </article>
-  -->
+    -->
     <!-- Main Blog Nov-2-18 -->
 
     <article class="mainBlog__main-layout">
