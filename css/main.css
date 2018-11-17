@@ -267,6 +267,16 @@
   line-height: 1.5;
 }
 
+.mainBlog__bodyText_listItem {
+  list-style: none;
+ }
+
+.mainBlog__bodyText_listItem li {
+  text-align: center;
+  margin-left: -40px;
+}
+
+
 .MainBlog_codeText_brown {
   color: brown;
 }
