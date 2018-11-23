@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Nov-25-18 >
+     < Main Blog Dec-3-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -28,24 +28,57 @@
    </picture>
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">date</h3>
+     <h3 class="mainBlog__title">11/23/18 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
-     <!-- Main Blog Nov-16-18-->
+   
+    <!-- Main Blog Nov-23-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Directly putting JavaScript into React Render Method</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/23/18 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">One of the places you can put directly put JavaScript in React is between the render method and return in class components.  This is really nice when you do not need the JavaScript code very much enough to be in a function.  Also when you put the results of the JavaScript into the React code you will still need to use {} brackets.  Here is a quick example of how it works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          class App extends React.Component{                                            </br>
+          &nbsp;&nbsp;constructor(props){                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                         </br>
+          &nbsp;&nbsp;}                                                                 </br>
+          &nbsp;&nbsp;render(){                                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* Below is where you put JavaScript */}             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const name = “guest”                      </br> 
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* Above is where you put JavaScript */}             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; return(                                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Welcome {name}!&lt;/div&gt;    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                    </br>
+          &nbsp;&nbsp;}                                                                 </br>
+          }                                                                             </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Output:  Welcome guest!
+        </code>
+      </p>
+    </article>
+  -->
+    <!-- Main Blog Nov-16-18-->
 
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Typechecking With React PropTypes</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
-      <h3 class="mainBlog__title">11/16/18</h3>
+      <h3 class="mainBlog__title">11/16/18 at 6:00 p.m.</h3>
       <p class="mainBlog__bodyText">There are times when you will want to make props a certain type.  This will help validate your props and make it easier to catch type bugs errors within your React code.  In order to do this you will use propTypes.  Here is the format for a proptype declaration:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
-          &nbsp;&nbsp;<componentname>.propTypes = {                     </br>
-          &nbsp;&nbsp;&nbsp;&nbsp;  &lt;propname&gt; : PropTypes.&lt;proptype&gt;.isRequired     </br>
-          &nbsp;&nbsp;   }                                                    </br>
+          &nbsp;&nbsp;<componentname>
+            .propTypes = {                     </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  &lt;propname&gt; : PropTypes.&lt;proptype&gt;.isRequired     </br>
+            &nbsp;&nbsp;   }                                                    </br>
         </code>
       </p>
       <p class="mainBlog__bodyText mainBlog__topMargin">The <proptype> can be of any of seven types. Here is a list of all of them (note only two are abbreviated the others are the same as their names:</p>
@@ -84,7 +117,7 @@
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Fetching API Data with React.JS</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
-      <h3 class="mainBlog__title">11/11/18 at 6:00p.m.</h3>
+      <h3 class="mainBlog__title">11/11/18 at 6:00 p.m.</h3>
       <p class="mainBlog__bodyText">I was reading an article called, <a href="https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2" target="_blank">“Fetching API Data with React.JS”</a> this week by Ethan Jarrell. His example of fetching API data in React.JS was amazing so what I am going to do is show the code and try to explain a little of what is going on.</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
@@ -117,7 +150,7 @@
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Overriding Default Props</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
-      <h3 class="mainBlog__title">11/2/18 at 1:00p.m.</h3>
+      <h3 class="mainBlog__title">11/2/18 at 1:00 p.m.</h3>
       <p class="mainBlog__bodyText">To override default Props you will just pass in a value to a prop through the component.  If you have multiple default props you can still use some of the default props.  Here is an example:</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">
         <code>
