@@ -296,8 +296,12 @@
 .mainBlog__img_center {
   text-align: center;
 }
+.mainBlog__img_responsive {
+  max-width: 100%;
+  height: auto;
+}
 
-.mainBlog_codeLayout{
+.mainBlog_codeLayout {
   background-color: var(--project-text);
 }
 
