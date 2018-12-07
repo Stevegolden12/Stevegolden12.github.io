@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Dec-5-18 >
+     < Main Blog Dec-13-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -28,12 +28,47 @@
    </picture>
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">11/23/18 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">12/13/18 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Dec-6-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Using Image and Audio Files with React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/6/18 at 11 p.m.</h3>
+      <p class="mainBlog__bodyText">One of the tricker things so far when working with React is how files like image and audio ones have to be set up.  Easiest way to work with files is if you are calling them through a cdn or a http link.  So if you have an image it would be like normal non-React site:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+         &lt;img src=”https://www.sitename.com/imagename.png” alt="photo description"&gt;
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">If you are storing the file within the site files than the above example will not work.  One of the ways to make this work is to import the file within the code file you are using it for.  Than use the reference of that import in the source of the image or audio.  Below is an example:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          import <span class="MainBlog_codeText_green"><b>photo</b></span> from ‘img/employee-photo1.png’;                         </br>
+  </br>
+  class EmployeePhoto extends React.Component{                         </br>
+  &nbsp;&nbsp;constructor(props){                                      </br>
+  &nbsp;&nbsp;&nbsp;super(props);                                      </br>
+  &nbsp;&nbsp;}                                                        </br>
+  &nbsp;&nbsp;render(){                                                </br>
+  &nbsp;&nbsp;&nbsp;&nbsp;return(                                      </br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                      </br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src={<span class="MainBlog_codeText_green">photo</span>} alt=”Joe Smith employee” /&gt;   </br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                     </br>
+  &nbsp;&nbsp;&nbsp;&nbsp;);                                           </br>
+  &nbsp;&nbsp;}                                                        </br>
+  }                                                                    </br>
+</code>
+      </p>
+    </article>
+
+
+
     <!-- Main Blog Nov-29-18 -->
 
     <article class="mainBlog__main-layout">

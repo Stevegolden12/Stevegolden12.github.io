@@ -279,14 +279,17 @@
 
 .MainBlog_codeText_brown {
   color: brown;
+  font-weight: bold;
 }
 
 .MainBlog_codeText_green {
   color: darkgreen;
+  font-weight: bold;
 }
 
 .MainBlog_codeText_purple {
   color: purple;
+  font-weight: bold;
 }
 
 .mainBlog__topMargin {
