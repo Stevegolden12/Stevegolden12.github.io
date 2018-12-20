@@ -20,7 +20,7 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Dec-20-18 >
+     < Main Blog Dec-27-18 >
 
   <article class="mainBlog__main-layout">
    <picture>
@@ -28,12 +28,31 @@
    </picture>
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">12/20/18 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">12/27/18 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Dec-20-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">componentDidMount</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/20/18 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">componentDidMount (The lowercase c is intentionally, will be easier to remember the spelling of this if I make it consistent throughout this blog)  is a lifeCycle hook that is used in React.  LifeCycle hooks are functions that in the life of React on your site will trigger some code.  Mounting in React is considered when React first renders/you see the code for the first time on the screen.  For componentDidMount when React shows you the code for the first time whatever is in this method will trigger.  I will use the example from the <a href="https://reactjs.org/docs/state-and-lifecycle.html/" target="_blank">React documentation</a> on componentDidMount.   Should be noted that lifestyle methods like componentDidMount will be coded between the constructor(if the component has one) and the render/return (for function components there is no render just return)..  The below code is setting a timer:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;componentDidMount() {                               <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;this.timerID = setInterval(             <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;() => this.tick(),          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000                        <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                      <br />
+          &nbsp;&nbsp;}                                                   <br />
+        </code>                       
+      </p>
+    </article>
+
     <!-- Main Blog Dec-14-18 -->
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Passing Data from Child to Parent Components</h2>
@@ -60,13 +79,13 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}                                       </br>
           &nbsp;&nbsp;&nbsp;&nbsp;this.handleChange = this.handleChange.bind(this);   </br>
           &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
-                                                                                      </br>
+          </br>
           handleChange(newVal){                                                       </br>
           &nbsp;&nbsp;this.setState({                                                 </br>
           &nbsp;&nbsp;&nbsp;&nbsp; input: newVal,                                     </br>
           &nbsp;&nbsp;})                                                              </br>
           }                                                                           </br>
-                                                                                      </br>
+          </br>
           render(){                                                                   </br>
           &nbsp;&nbsp;return(                                                         </br>
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                         </br>
@@ -75,20 +94,20 @@
           &lt;/div&gt;                                                                </br>
           &nbsp;&nbsp;)                                                               </br>
           }                                                                           </br>
-                                                                                      </br>                    
+          </br>
           class ChildComponent extends React.Component{                               </br>
           &nbsp;&nbsp;constructor(props){                                             </br>
           &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                       </br>
           &nbsp;&nbsp;&nbsp;&nbsp; this.setState={                                    </br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; input: ‘Return’’                       </br>
           &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
-                                                                                      </br>
+          </br>
           &nbsp;&nbsp;&nbsp;&nbsp;this.cbackFunc = this.cbackFunc.bind(this);           </br>
           &nbsp;&nbsp;}                                                               </br>
           cbackFunc(){                                                                 </br>
           &nbsp;&nbsp;this.props.hChange(this.state.input);                           </br>
           }                                                                           </br>
-          render(){                                                                   </br>      
+          render(){                                                                   </br>
           &nbsp;&nbsp;return(                                                         </br>
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;div onClick={this.cbackFunc} /&gt;Click me&lt;/div&gt;</br>
           &nbsp;&nbsp;)                                                               </br>
