@@ -20,20 +20,38 @@
   </header>
   <main class="mainBlog__blogWrapper">
     <!--Template for blog posts
-     < Main Blog Jan-17-19 >
+     < Main Blog Jan-24-19 >
 
   <article class="mainBlog__main-layout">
-   <picture>
-     <img src="#" alt="#" />
-   </picture>
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">1/17/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">1/24/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Jan-17-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">D3: Select, Append, and Text</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/17/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">If you have worked with Vanilla JavaScript before you know about selecting, traversing, and manipulating the DOM.  Selecting is when you target a certain point in the DOM.  Traversing is moving from point to point within the DOM.  Manipulation is when you actually alter something within the DOM.  Usually you do that in that order which makes sense.  You cannot move or alter something if you have no place to start from.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">We are going to take that with the D3 library.  First thing you want to do is “select” a point of the DOM you want to either transverse or manipulate from.  We usually do this by starting off using “d3.” then using the select() method.  Also a big thing in JavaScript is chaining methods together and we are going to start chaining to the select() method.  The append() method will help us attached (manipulate) a DOM element to another DOM element.  Lastly we are also going to alter (manipulate) the DOM element we just append by using the text() method.  Below is an example of how this works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>d3.select(“ul”).append(“li”).text(“list item 1”)</code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Prefer to write this as the above and means the same thing:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;d3.select(“ul”)       //Selecting the first ul tag              <br />
+          &nbsp;&nbsp;.append(“li”)         //Add a li tag right after the ul tag     <br />
+          &nbsp;&nbsp;.text(“list item 1”); /*Change the text of the li tag of "list item 1" */ <br />
+        </code>
+      </p>
+    </article>
+  -->
     <!-- Main Blog Jan-10-19 -->
 
     <article class="mainBlog__main-layout">
