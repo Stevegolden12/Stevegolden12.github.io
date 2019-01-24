@@ -2,6 +2,7 @@
 body {
   --navLogoColor: hsl(188, 78%, 41%);
   --navLogoColorHover: hsl(188, 78%, 33%);
+  --codetag-color: hsl(332, 79%, 36%);
 }
 
 - /* link hover underline reset */
@@ -276,9 +277,9 @@ li:hover {
 }
 
 
-  #mainBlog__LnavItems {
-    font-size: 3rem;
-  }
+#mainBlog__LnavItems {
+  font-size: 3rem;
+}
 
 .mainBlog__navItems {
   font-size: 2.5rem;
@@ -357,6 +358,9 @@ li:hover {
   margin-left: -40px;
 }
 
+p code {
+  color: var(--codetag-color);
+}
 
 .MainBlog_codeText_brown {
   color: brown;
