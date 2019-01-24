@@ -3,17 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
 :root {
-  --font-color: hsl(356, 39.8%, 34.5%);       /*hsl(208, 98%, 26%);*/
-  --hover-color: hsl(120, 26%, 91%);          /*hsl(92, 57%, 81%);*/
-  --hover-image-color:  hsl(116, 30%, 50%);   /*hsl(92, 57%, 40%);*/
-  --visited-color: hsl(39, 100%, 85%);      /* hsl(236, 30%, 80%); */
-  --block-color: hsl(356, 39.8%, 34.5%);      /*hsl(208, 98%, 26%);*/
-  --border-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
-  --header-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
-  --project-bkgrd: hsl(356, 39.8%, 34.5%);    /*hsl(208, 98%, 26%);*/
+  --font-color: hsl(356, 39.8%, 34.5%); /*hsl(208, 98%, 26%);*/
+  --hover-color: hsl(120, 26%, 91%); /*hsl(92, 57%, 81%);*/
+  --hover-image-color: hsl(116, 30%, 50%); /*hsl(92, 57%, 40%);*/
+  --visited-color: hsl(39, 100%, 85%); /* hsl(236, 30%, 80%); */
+  --block-color: hsl(356, 39.8%, 34.5%); /*hsl(208, 98%, 26%);*/
+  --border-color: hsl(356, 39.8%, 34.5%); /*hsl(208, 98%, 26%);*/
+  --header-color: hsl(356, 39.8%, 34.5%); /*hsl(208, 98%, 26%);*/
+  --project-bkgrd: hsl(356, 39.8%, 34.5%); /*hsl(208, 98%, 26%);*/
   --mainBlog-bkgrd: hsl(356, 26%, 88%);
   --project-text: hsl(0, 0%, 100%); /* white */
   --treehouse-img-bkgnd-color: hsl(0, 0%, 50%); /* gray */
+  --codetag-color: hsl(332, 79%, 36%);
 }
 
 /* index.html small breakpoint */
@@ -274,6 +275,10 @@
 .mainBlog__bodyText_listItem li {
   text-align: center;
   margin-left: -40px;
+}
+
+p code {
+  color: var(--codetag-color);
 }
 
 
