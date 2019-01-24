@@ -1,0 +1,525 @@
+/* Main CSS file for Portfolio index and projects page for Steve Golden */
+/*index page CSS */
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+:root {
+  --font-color: hsl(356, 39.8%, 34.5%);       /*hsl(208, 98%, 26%);*/
+  --hover-color: hsl(120, 26%, 91%);          /*hsl(92, 57%, 81%);*/
+  --hover-image-color:  hsl(116, 30%, 50%);   /*hsl(92, 57%, 40%);*/
+  --visited-color: hsl(39, 100%, 85%);      /* hsl(236, 30%, 80%); */
+  --block-color: hsl(356, 39.8%, 34.5%);      /*hsl(208, 98%, 26%);*/
+  --border-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
+  --header-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
+  --project-bkgrd: hsl(356, 39.8%, 34.5%);    /*hsl(208, 98%, 26%);*/
+  --mainBlog-bkgrd: hsl(356, 26%, 88%);
+  --project-text: hsl(0, 0%, 100%); /* white */
+  --treehouse-img-bkgnd-color: hsl(0, 0%, 50%); /* gray */
+}
+
+/* index.html small breakpoint */
+
+.index__navItems {
+    font-size: 2.1rem;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 6px;
+		color: white;
+}
+
+  .index__navItems:visited {
+      color: var(--visited-color);
+  }
+
+  .index__navItems:hover {
+      color: var(--hover-color);
+  }
+
+.index__header-layout {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 10px 0;
+  background-color: var(--header-color);
+}
+
+.index__intro--gridLayout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "mainPicture" "personalDesc" "personalDesc";
+    margin: 0 auto;
+    margin-top: 53px;
+    min-height: 92vh;
+}
+
+.index__blocks-layout {
+    display: none;
+}
+
+.index__blockOne {
+    grid-area: blockOne;
+}
+
+.index__blockTwo {
+    grid-area: blockTwo;
+}
+
+.index__blockThree {
+    grid-area: blockThree;
+}
+
+.index__blockFour {
+    grid-area: blockFour;
+}
+
+.index__blockFive {
+    grid-area: blockFive;
+}
+
+.index__blockSix {
+    grid-area: blockSix;
+}
+
+
+.index__omahaPic {
+    background-color: var(--block-color);
+    grid-area: mainPicture;
+}
+
+.index__personalDesc {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    grid-area: personalDesc;
+		color: white;
+    background-color: var(--font-color);
+		align-self: stretch;
+}
+
+#treehouseImg {
+    grid-area: treehouseImg;
+    margin-top: 13px;
+}
+
+.index__headerLogoWrapper {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-top: 4px;
+}
+
+ .index__headerLogoWrapper li {
+    margin-right: 5px;
+ }
+
+.index__hover_grow {
+  display: inline-block;
+}
+
+.index__hover_grow:hover,
+.index__hover_grow li:hover {
+  transform: scale(1.1);
+  transition: all .2s ease-in-out;
+}
+
+.index__headerLogo {
+    width: 45px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.index__headerLogo:hover {
+    background-color: var(--hover-image-color);
+}
+
+.index__projectGridLayout {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem repeat(8, 13%);
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  margin: 0 20px;
+  padding-top: 20px;
+}
+/* Below code is to address the treehouse footer pushed to the bottom of the page ONLY in Chrome */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+  .index__projectGridLayout {
+    padding-bottom: 23em;
+  }
+}
+
+#projectHead {
+    font-size: 3rem;
+    color: var(--font-color);
+}
+
+.index__projectEach {
+    display: grid;
+    justify-items: center;
+    background-color: var(--project-bkgrd);
+    border-radius: 25px;
+    color: var(--project-text);
+}
+
+.index__projectEach a {
+  text-align: center;
+}
+
+.index__projectTitle {
+    text-align: center;
+    width: 90%;
+    font-size: 1.7rem;
+    padding-bottom: 5px;
+}
+
+.index__imgLayout {
+  width: 90%;
+}
+
+.index__projectDesc {
+    text-align: center;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+#treehouseImg {
+  padding-bottom: 1px;
+  background-color: var(--treehouse-img-bkgnd-color);
+}
+
+/* blogMain.html small breakpoint desk/labtops*/
+#mainBlog__header-layout {
+  padding: 0;
+}
+
+.mainBlog__headerLogoWrapper-lMargin {
+  -webkit-padding-start: 25px;
+	margin: 7px 0 0 0;
+}
+
+#mainBlog__LnavItems{
+	font-size: 3rem;
+}
+
+.mainBlog__navItems {
+  font-size: 2.5rem;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 15px;
+}
+
+.mainBlog__navItems:visited {
+  color: var(--visited-color);
+}
+
+.mainBlog__navItems:hover {
+  color: var(--hover-color);
+}
+
+#main__headerLogo{
+  width: 75px;
+  height: 45px;
+}
+
+.mainBlog_body {
+  font: 1.2rem 'Lato', sans-serif; 
+}
+
+.mainBlog__blogWrapper {
+  padding-top: 80px;
+}
+
+.mainBlog__main-layout {
+  font-size: 1.5rem;
+  height: 500px;
+  margin: 0 auto;
+  border: 3px solid var(--block-color);
+  background-color: var(--mainBlog-bkgrd);
+  height: 20%;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.mainBlog__main-layout h2 {
+  font-size: 2rem;
+  -webkit-margin-after: 0.5rem;
+}
+
+.mainBlog__main-layout h3 {
+  font-size: 1rem;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.mainBlog__main-layout h4 {
+  -webkit-margin-before: 0;
+  font-size: .8rem;
+}
+
+.mainBlog__title {
+  text-align: center;
+}
+
+.mainBlog__bodyText{
+  margin: 0 1%;
+  line-height: 1.5;
+}
+
+.mainBlog__bodyText_listItem {
+  list-style: none;
+ }
+
+.mainBlog__bodyText_listItem li {
+  text-align: center;
+  margin-left: -40px;
+}
+
+
+.MainBlog_codeText_brown {
+  color: brown;
+  font-weight: bold;
+}
+
+.MainBlog_codeText_green {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.MainBlog_codeText_purple {
+  color: purple;
+  font-weight: bold;
+}
+
+.mainBlog__topMargin {
+  margin-top: 15px;
+}
+
+.mainBlog__img_center {
+  text-align: center;
+}
+.mainBlog__img_responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainBlog_codeLayout {
+  background-color: var(--project-text);
+}
+
+code{
+  display: block;
+  background-color: var(--project-text);
+	padding-left: 5%;
+}
+
+#test{
+  margin: 0 auto;
+  width: 90%
+}
+
+#treehouseImg {
+  padding-top: 20px;
+}
+
+/* blogMain.html small breakpoint mobile devices*/
+@media only screen and (min-width: 320px) and (min-height: 550px) and (-webkit-min-device-pixel-ratio: 2) {
+  #mainBlog__header-layout {
+    padding: 20px 0 10px 10px;
+  }
+
+  .index__header-layout {
+    min-height: 5rem;
+    left: 0;
+  }
+
+  #mainBlog__LnavItems {
+    font-size: 3.5rem;
+  }
+
+  #main__headerLogo {
+    width: 100px;
+    height: 60px;
+  }
+
+  .mainBlog__blogWrapper {
+    margin-top: 70px;
+  }
+
+  .mainBlog__main-layout h2 {
+    font-size: 6.5rem;
+  }
+	.mainBlog__main-layout h3{
+	  font-size: 3rem;
+	}
+	.mainBlog__bodyText{
+	  font-size: 3.5rem;
+		line-height: 8rem;
+	}
+
+  .mainBlog__img_center img {
+    width: 90%;
+  }
+
+}
+
+/* index.html 768px med breakpoint */
+
+@media(min-width: 768px) {
+  
+
+  .index__navItems {
+    font-size: 3rem;
+    padding-left: 12px;
+    }
+
+  .index__intro--gridLayout {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "blockOne mainPicture blockTwo" "blockThree personalDesc blockFour" "blockFive personalDesc blockSix" "treehouseImg treehouseImg treehouseImg";
+    justify-content: space-around;
+  }
+
+    .index__blocks-layout {
+        display: block;
+        background-color: var(--block-color);
+    }
+
+    .index__omahaPic {
+        order: -1;
+    }
+
+    .index__personalDesc {
+        font-size: 30px;
+        align-self: stretch;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
+		.index__headerLogoWrapper{
+		  margin-top: 5px;
+		}
+
+    .index__headerLogo {
+        width: 60px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+  .index__projectGridLayout {
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 4rem repeat(4, 24%);
+    grid-column-gap: 2rem;
+    margin: 0 10px;
+    padding-bottom: 7em;
+  }
+
+    #projectHead {
+        grid-column: span 2;
+				font-size: 4rem;
+    }
+
+		.index__projectTitle {
+		  min-height: 60px;
+		}
+
+		.index__projectDesc {
+			height: 100px;
+		}
+
+    #treehouseImg {
+        margin-top: 0;
+        padding-top: 50px;
+    }
+
+/* mainBlog page med breakpoint 768px */
+
+  .mainBlog__main-layout {
+    width: 95%;
+    height: 500px;
+    margin: 0 auto;
+    border: 3px solid var(--block-color);   
+    height: 20%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .mainBlog__bodyText {
+    line-height: 2;
+  }
+
+}
+
+/* Breakpoints for large size 1024px */
+@media (min-width: 1024px) {
+
+  .index__intro--gridLayout {
+    grid-template-columns: 10% 10% 40% 40%;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-areas:  "blockOne blockOne blockOne blockOne" 
+                          "blockTwo personalDesc personalDesc blockFour" 
+                          "blockTwo personalDesc personalDesc blockFour" 
+                          "blockTwo blockThree blockThree blockThree";
+    grid-column-gap: 0;
+    min-height: 89vh;
+    margin-top: 73px;
+  }
+
+
+    .index__omahaPic .index__blockSix {
+        opacity: 0;
+    }
+
+    .index__headerLogo {
+        width: 75px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+  .index__personalDesc {
+    font-size: 2.5rem;
+  }
+
+  .index__projectGridLayout {
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 4rem repeat(3, 32%);
+    grid-column-gap: 1.3rem;
+  }
+
+    #projectHead {
+        grid-column: span 3;
+    }
+
+  /* mainBlog page large breakpoint 1024px */
+
+		.mainBlog__main-layout{
+		  width: 70%;
+			font-size: 22px;
+		}
+
+  .mainBlog__blogWrapper {
+    padding-top: 120px;
+  }
+}
+
+/* Breakpoints for large size 1280px */
+@media (min-width: 1280px) {
+
+ .index__personalDesc {
+    font-size: 2.4rem;
+  }
+
+}
+
+/* Adjustment for Banner on Index page for larger screens */
+
+@media (min-height: 800px) {
+  .index__intro--gridLayout{
+	  min-height: 93vh;
+		min-width: 100vw;
+	}
+}

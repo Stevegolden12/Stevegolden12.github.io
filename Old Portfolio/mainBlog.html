@@ -1,0 +1,862 @@
+﻿<!-- Main blog page for Steve Golden -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="mainBlog_body">
+  <header class="index__header-layout" id="mainBlog__header-layout">
+    <nav class="index__hover_grow"><a class="index__navItems" id="mainBlog__LnavItems" href="index.html">Portfolio</a></nav>
+    <nav>
+      <ul class="index__headerLogoWrapper mainBlog__headerLogoWrapper-lMargin">
+        <li class="index__hover_grow"><a href="https://twitter.com/sgolden2525"><svg class="index__headerLogo" id="main__headerLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.00006 244.18703" height="244.19" width="300"><path d="M94.72 243.18c112.46 0 173.96-93.168 173.96-173.96 0-2.646-.054-5.28-.173-7.903 11.938-8.63 22.314-19.4 30.498-31.66-10.955 4.87-22.744 8.147-35.11 9.625 12.622-7.57 22.313-19.543 26.885-33.817-11.813 7.004-24.895 12.093-38.824 14.84C240.8 8.423 224.916.99 207.326.99c-33.763 0-61.143 27.38-61.143 61.13 0 4.8.537 9.466 1.586 13.942-50.816-2.556-95.875-26.886-126.03-63.88-5.252 9.036-8.28 19.53-8.28 30.73 0 21.212 10.794 39.938 27.208 50.893-10.03-.31-19.454-3.063-27.69-7.646-.01.255-.01.505-.01.78 0 29.61 21.076 54.33 49.052 59.933-5.137 1.4-10.543 2.152-16.122 2.152-3.933 0-7.766-.387-11.49-1.103 7.783 24.293 30.354 41.97 57.114 42.465-20.926 16.402-47.287 26.17-75.937 26.17-4.93 0-9.798-.28-14.584-.845 27.06 17.344 59.19 27.464 93.723 27.464" fill="white" /></svg></></li>
+        <li class="index__hover_grow"><a href="https://www.linkedin.com/in/steve-golden-158692150/"><svg class="index__headerLogo" id="main__headerLogo" xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewBox="0 0 430.117 430.117"><path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z" fill="white" /></svg></a></li>
+        <li class="index__hover_grow"><a href="https://github.com/Stevegolden12"><svg class="index__headerLogo" id="main__headerLogo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="white" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /></svg></a></li>
+      </ul>
+  </header>
+  <main class="mainBlog__blogWrapper">
+    <!--Template for blog posts
+     < Main Blog Jan-24-19 >
+
+  <article class="mainBlog__main-layout">
+   <h2 class="mainBlog__title">Blog Title</h2>
+     <h3 class="mainBlog__title">by Steve Golden</h3>
+     <h3 class="mainBlog__title">1/24/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">Text</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
+  </article>
+  -->
+    <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Jan-17-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">D3: Select, Append, and Text</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/17/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">If you have worked with Vanilla JavaScript before you know about selecting, traversing, and manipulating the DOM.  Selecting is when you target a certain point in the DOM.  Traversing is moving from point to point within the DOM.  Manipulation is when you actually alter something within the DOM.  Usually you do that in that order which makes sense.  You cannot move or alter something if you have no place to start from.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">We are going to take that with the D3 library.  First thing you want to do is “select” a point of the DOM you want to either transverse or manipulate from.  We usually do this by starting off using “d3.” then using the select() method.  Also a big thing in JavaScript is chaining methods together and we are going to start chaining to the select() method.  The append() method will help us attached (manipulate) a DOM element to another DOM element.  Lastly we are also going to alter (manipulate) the DOM element we just append by using the text() method.  Below is an example of how this works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>d3.select(“ul”).append(“li”).text(“list item 1”)</code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Prefer to write this as the above and means the same thing:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;d3.select(“ul”)       //Selecting the first ul tag              <br />
+          &nbsp;&nbsp;.append(“li”)         //Add a li tag right after the ul tag     <br />
+          &nbsp;&nbsp;.text(“list item 1”); /*Change the text of the li tag of "list item 1" */ <br />
+        </code>
+      </p>
+    </article>
+  -->
+    <!-- Main Blog Jan-10-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">What is D3?</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/10/19 at 12 p.m.</h3>
+      <p class="mainBlog__bodyText">On the documentation page of D3 it states, “D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.” </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">To me D3 is a free JavaScript Library used for creating charts and graphs using data.  Since it makes use of SVG which is one of the best image types for size and is typically good for performance.  Also it is one of the most widely used libraries for what creating graphs and charts on the internet. With the library you will create SVGS combined with your datasets and CSS will make charts which you will attach to the DOM.  </p>
+    </article>
+
+    <!-- Main Blog Jan-3-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Accessibility guidelines for UX Designers: Device independent design</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/3/19 at 11 p.m.</h3>
+      <p class="mainBlog__bodyText">Going to continue to discuss the article “Accessibility guidelines for UX Designers’ by Avinash Kaur.  The second part of her guideline is device independent design.  <i><b>Just give the user more than one way to look at the content because no one way can be accessible to all people and some ways hinder accessibility</b></i>.  Avinash Kaur looks at 5 help with being device independent design:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <ul>
+          <li>Interaction</li>
+          <li>Sensory characteristics</li>
+          <li>Alternative to device motion</li>
+          <li>Complex pointer gestures</li>
+          <li>Orientation of content</li>
+        </ul>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">For <i><b>Interactions</b></i> you must make sure that the user knows there is new content if new content does show up and how to get out of the interaction..  In the W3C they mentioned custom tooltips and sub-menus that pop up and users as these types of interactions.  They suggest that if you do use these make sure the user knows what is going on.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">In the article they say, “Don’t provide instructions which rely solely on <i><b>sensory characteristics</b></i> of components such as shape, colour, size, visual location, orientation or sound”. An example of this is a pomodoro clock.  When the clock switches from work to break and break to work time there is a beep.  Those that are hearing impaired might have a challenge with this so a suggestion is to have a label above the time showing which side the timer is on.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">When working you always want to have <i><b>alternatives to device motion</b></i> and <i><b>complex pointer gestures</b></i>. So if there is a feature on your phone that if you tilt it will affect the app or site this will be a concern.  HOWEVER in the W3C they recognize that some of these effects are needed to use these features which is are the exceptions to this rule.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Lastly if you are working on the web make sure that your application/site can be viewed on either portrait or landscape.  This is called <i><b>orientation of content</b></i> and examples of this are people with vision problems wanting to see family pictures on their phone on landscape rather than portrait.  Or maybe instead of a family picture it is a bank check.  One of the examples in W3C mentions is a piano application that you want to use on landscape rather than portrait.   </p>
+    </article>
+
+    <!-- Main Blog Dec-29-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Accessibility Guidelines for UX Designers: Content and Structure</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/29/18 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">There is an article <a href="https://uxdesign.cc/accessibility-guidelines-for-a-ux-designer-c3ba775539be" target="_blank">“Accessibility guidelines for UX Designers’</a> by Avinash Kaur.  When she discusses accessibility it is not just about permanent disabilities but temporary disabilities like an injured arm. The author wanted to make a set guidelines for her UXD team (conformance level AA from the W3C).  The following are the first section topics for Avinash Kaur Content and Structure guidelines:  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <ul>
+          <li>Meaningful links</li>
+          <li>Use of color</li>
+          <li>Consistent Navigation</li>
+          <li>Consistent Components</li>
+          <li>Use of headings</li>
+          <li>Multiple Ways</li>
+        </ul>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><i><b>Meaningful links</b></i> are in the article, “links that says ‘Click here’ or content-free text like ‘More details’ applied to a list of links”.  An example the W3C websites gives is that in a list of books with multiple formats.  The first link give the book name, the second and third link name are the formats like “PDF” or “MP3”.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        In the article it mentions when marking important information you want to use a combination of text, color, and shapes.  You do not want to just have this information marked by <i><b>use of color</b></i>.
+        In the W3C website they gave an example of having red text for required field AND an icon with an alt tag of “Required”.
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Being <i><b>consistent</b></i> with your <i><b>Navigation and Components</b></i>.  The W3C website when talking about both of these on why this is important is that low vision people can use spatial memory and/or visual cues to help navigate the site.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><i><b>Use of headings</b></i> describe by the author, “Use descriptive and informative page title. Page headings and labels for form and interactive controls should be informative.”  The W3C has a very good example of using labels with input fields.  If asking for someone’s name have a label for “Full Name” or “First name”/”Last name” if using two fields.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Last guideline is that unless it is a checkout page you should <i><b>ALWAYS</b></i> have <i><b>multiple ways</b></i> to access your webpages.  One of the W3C examples is having a set of navigation links on each page.  Which also applies to the having consistent Navigation.  </p>
+
+    </article>
+    -->
+
+    <!-- Main Blog Dec-20-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">componentDidMount</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/20/18 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">componentDidMount (The lowercase c is intentionally, will be easier to remember the spelling of this if I make it consistent throughout this blog)  is a lifeCycle hook that is used in React.  LifeCycle hooks are functions that in the life of React on your site will trigger some code.  Mounting in React is considered when React first renders/you see the code for the first time on the screen.  For componentDidMount when React shows you the code for the first time whatever is in this method will trigger.  I will use the example from the <a href="https://reactjs.org/docs/state-and-lifecycle.html/" target="_blank">React documentation</a> on componentDidMount.   Should be noted that lifestyle methods like componentDidMount will be coded between the constructor(if the component has one) and the render/return (for function components there is no render just return)..  The below code is setting a timer:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;componentDidMount() {                               <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;this.timerID = setInterval(             <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;() => this.tick(),          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000                        <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                      <br />
+          &nbsp;&nbsp;}                                                   <br />
+        </code>
+      </p>
+    </article>
+
+    <!-- Main Blog Dec-14-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Passing Data from Child to Parent Components</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/14/18 at 8 a.m.</h3>
+      <p class="mainBlog__bodyText">One of React’s great strengths is also one of its greatest weaknesses.  Components are a wonderful way to code because it helps to separate code to make it easier to read and reuse.  The challenge with components is that while you are passing data it can get difficult to move it around components because every time data goes through a component you must make sure it passes through it.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The easiest way to do this is passing data Parent Component to Child Component.  This is where the Child component is used in the Parent Component.  There are times where you will need to pass data from the Child component to Parent Component.  This takes a little more work and understanding on how to do it.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The way if your going to work with React without any other libraries to pass data from Child to Parent Components is using functions and callback functions.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <ul>
+          <li>First step is to make a function in the Parent Component where you are going to setState and having a parameter of the value you are going to change.</li>
+          <li>Second Step is to pass the function to the Child component.</li>
+          <li>Third Step is to have a callback function which will be a function that is using the function passed from the Parent Component.  Yet this callback function will be used in the Child Component.</li>
+        </ul>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The following is an example of data passing through Child to Parent Component:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          class ParentComponent extends React.Component{                              </br>
+          &nbsp;&nbsp;constructor(props){                                             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props)                                        </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.state = {                          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input: ‘’,                  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}                                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.handleChange = this.handleChange.bind(this);   </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
+          </br>
+          handleChange(newVal){                                                       </br>
+          &nbsp;&nbsp;this.setState({                                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; input: newVal,                                     </br>
+          &nbsp;&nbsp;})                                                              </br>
+          }                                                                           </br>
+          </br>
+          render(){                                                                   </br>
+          &nbsp;&nbsp;return(                                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent hChange={this.handleChange} /&gt; </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;                                                    </br>
+          &lt;/div&gt;                                                                </br>
+          &nbsp;&nbsp;)                                                               </br>
+          }                                                                           </br>
+          </br>
+          class ChildComponent extends React.Component{                               </br>
+          &nbsp;&nbsp;constructor(props){                                             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; this.setState={                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; input: ‘Return’’                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
+          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.cbackFunc = this.cbackFunc.bind(this);           </br>
+          &nbsp;&nbsp;}                                                               </br>
+          cbackFunc(){                                                                 </br>
+          &nbsp;&nbsp;this.props.hChange(this.state.input);                           </br>
+          }                                                                           </br>
+          render(){                                                                   </br>
+          &nbsp;&nbsp;return(                                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div onClick={this.cbackFunc} /&gt;Click me&lt;/div&gt;</br>
+          &nbsp;&nbsp;)                                                               </br>
+          }                                                                           </br>
+          }                                                                           </br>
+        </code>
+      </p>
+    </article>
+
+
+    <!-- Main Blog Dec-6-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Using Image and Audio Files with React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">12/6/18 at 11 p.m.</h3>
+      <p class="mainBlog__bodyText">One of the tricker things so far when working with React is how files like image and audio ones have to be set up.  Easiest way to work with files is if you are calling them through a cdn or a http link.  So if you have an image it would be like normal non-React site:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &lt;img src=”https://www.sitename.com/imagename.png” alt="photo description"&gt;
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">If you are storing the file within the site files than the above example will not work.  One of the ways to make this work is to import the file within the code file you are using it for.  Than use the reference of that import in the source of the image or audio.  Below is an example:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          import <span class="MainBlog_codeText_green"><b>photo</b></span> from ‘img/employee-photo1.png’;                         </br>
+          </br>
+          class EmployeePhoto extends React.Component{                         </br>
+          &nbsp;&nbsp;constructor(props){                                      </br>
+          &nbsp;&nbsp;&nbsp;super(props);                                      </br>
+          &nbsp;&nbsp;}                                                        </br>
+          &nbsp;&nbsp;render(){                                                </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                      </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                      </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src={<span class="MainBlog_codeText_green">photo</span>} alt=”Joe Smith employee” /&gt;   </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                     </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                           </br>
+          &nbsp;&nbsp;}                                                        </br>
+          }                                                                    </br>
+        </code>
+      </p>
+    </article>
+
+
+
+    <!-- Main Blog Nov-29-18 -->
+
+    <article class="mainBlog__main-layout">
+
+      <h2 class="mainBlog__title">Component Lifecycle Methods</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/29/18 at 8 p.m.</h3>
+      <p class="mainBlog__bodyText">There are multiple methods that can used by components that will be used when certain situations or “lifecycle” happened within a component.  In the react documentation they have organized them into four main types: ‘Mounting’, ‘Updating’, ‘Unmounting’, and Error Handling.  Mounting in React documentation is “...when an instance of a component is being created and inserted into the DOM”.  Updating is when a certain condition of a prop or state is change to activate the Lifecycle methods.  Unmounting described in React documentation is, “...when a component is being removed from the DOM”.  Error Handling is those methods that help catch error and identify what is going on.  The below diagram comes from the React documentation of certain LifeCycle methods and when they are called:</p>
+      <picture class="mainBlog__topMargin">
+        <img src="img/React-lifecycle-diagram.png" class="mainBlog__img_responsive" alt="React lifecycle methods diargram" />
+      </picture>
+    </article>
+    -->
+
+    <!-- Main Blog Nov-23-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Directly putting JavaScript into React Render Method</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/23/18 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">One of the places you can put directly put JavaScript in React is between the render method and return in class components.  This is really nice when you do not need the JavaScript code very much enough to be in a function.  Also when you put the results of the JavaScript into the React code you will still need to use {} brackets.  Here is a quick example of how it works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          class App extends React.Component{                                            </br>
+          &nbsp;&nbsp;constructor(props){                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                         </br>
+          &nbsp;&nbsp;}                                                                 </br>
+          &nbsp;&nbsp;render(){                                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* Below is where you put JavaScript */}             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const name = “guest”                      </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* Above is where you put JavaScript */}             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; return(                                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;Welcome {name}!&lt;/div&gt;    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                    </br>
+          &nbsp;&nbsp;}                                                                 </br>
+          }                                                                             </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Output:  Welcome guest!
+        </code>
+      </p>
+    </article>
+    -->
+    <!-- Main Blog Nov-16-18-->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Typechecking With React PropTypes</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/16/18 at 6:00 p.m.</h3>
+      <p class="mainBlog__bodyText">There are times when you will want to make props a certain type.  This will help validate your props and make it easier to catch type bugs errors within your React code.  In order to do this you will use propTypes.  Here is the format for a proptype declaration:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &nbsp;&nbsp;<componentname>
+            .propTypes = {                     </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  &lt;propname&gt; : PropTypes.&lt;proptype&gt;.isRequired     </br>
+            &nbsp;&nbsp;   }                                                    </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The <proptype> can be of any of seven types. Here is a list of all of them (note only two are abbreviated the others are the same as their names:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <ul class="mainBlog__bodyText_listItem">
+          <li>Array: Array</li>
+          <li>Boolean: bool</li>
+          <li>Function: func</li>
+          <li>Number: number</li>
+          <li>Object: object</li>
+          <li>String: string</li>
+          <li>Symbol: symbol</li>
+        </ul>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Below is an example of how propTypes works:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          function ShowName = (props) => {      </br>
+          &nbsp;&nbsp;return(                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;{props.name} &lt;/p&gt;                      </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                    </br>
+          &nbsp;&nbsp;);                                        </br>
+          }                                         </br>
+          </br>
+          Showname.propTypes = {                    </br>
+          Name: PropTypes.string.isRequired         </br>
+          }                                         </br>
+          </br>
+        </code>
+      </p>
+    </article>
+
+    <!-- Main Blog Nov-11-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Fetching API Data with React.JS</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/11/18 at 6:00 p.m.</h3>
+      <p class="mainBlog__bodyText">I was reading an article called, <a href="https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2" target="_blank">“Fetching API Data with React.JS”</a> this week by Ethan Jarrell. His example of fetching API data in React.JS was amazing so what I am going to do is show the code and try to explain a little of what is going on.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          componentDidMount(){                                                                      </br>
+          &nbsp;&nbsp;fetch(‘https://randomuser.me/api/?results=500’)                              </br>
+          &nbsp;&nbsp;.then(results=&gt;{                                                           </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return results.json();                                            </br>
+          &nbsp;&nbsp;}).then(data=&gt;{                                                            </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;let pictures = data.results.map((pic)=>{                          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {                                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div key={pic.results}&gt;             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src={pic.picture.medium} /&gt;  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}                                                     </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;})                                                                </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.setState({pictures: pictures});                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log(“state”: this.state.pictures);                         </br>
+          &nbsp;&nbsp;})                                                                             </br>
+          }                                                                                         </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The whole fetch request is wrapped within a componentDidMount function.  This is called a lifestyle method.  The reason why we wrapped it is that we make sure that React is working properly before we request the information.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The fetch method itself takes a url the “https://ranomuser.me/api/” which is where we request the information.  The last part of that “?results=500” is going to give us back 500 “results" back.  The next part will be the first .then function linked to the fetch method which is a promise to return the results in a json format. </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The second .then is going to take all that information and sort through it with the map function.  So it will return 500 divs with a key of pic.results and an image with the src being pic.picture.medium and put it in an object called pictures.  </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Lastly, we are going to setState so that the pictures key within the state will be set to the information pictures that we just got from the API.</p>
+    </article>
+    -->
+    <!-- Main Blog Nov-2-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Overriding Default Props</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">11/2/18 at 1:00 p.m.</h3>
+      <p class="mainBlog__bodyText">To override default Props you will just pass in a value to a prop through the component.  If you have multiple default props you can still use some of the default props.  Here is an example:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class Component extends React.Component{                                   <br />
+          &nbsp;&nbsp;constructor(){                                                  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                      <br />
+          &nbsp;&nbsp;}             <br />
+          &nbsp;&nbsp;render(){                                                                   <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                                          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                               <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{/* Only passing the <span class="MainBlog_codeText_green">name prop</span> not the <span class="MainBlog_codeText_brown">mcount</span> prop */}  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MyComponent name=<span class="MainBlog_codeText_green">&#8220;Jason Jones”</span> /&gt;      <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                                <br />
+          &nbsp;&nbsp;}                                                                             <br />
+          }                                                                             <br />
+          <br />
+          const MyComponent = (props) =&gt; {            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;{/*  The <span class="MainBlog_codeText_green">name prop</span> value will be what we passed through the component and the <span class="MainBlog_codeText_orange">mcount</span> value will be the default */} </br>
+          &nbsp;&nbsp;&lt;p&gt;Welcome back <span class="MainBlog_codeText_green">{props.name}</span>, you have <span class="MainBlog_codeText_brown">{props.mcount}</span> messages.&lt;/p&gt; <br />
+          }                                                                                   <br />
+          <br />
+          MyComponent.defaultProps = {                                                        <br />
+          &nbsp;&nbsp;name: ‘guest’,                                                          <br />
+          &nbsp;&nbsp;mcount: 0                                                              <br />
+          }                                                                                   <br />
+          <br />
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>Welcome back Jason Jones, you have 0 messages.</code>
+      </p>
+    </article>
+
+    <!-- Main Blog Oct-26-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Default Props for React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/26/18 at 1:00p.m</h3>
+      <p class="mainBlog__bodyText">Sometimes when you use props you will want to use default props to make it easier to use the component with the prop or always have a backup just in case you forget giving the prop.  In order to call a default prop you will after the component is made, below it call the Component and the property of defaultProp and assign it to an object.  Like any object you have to have a key which will be the prop name and its value which is the default prop value you want.  You can have multiple default prop values within the object. </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Here is the template of a defaultProps construction:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          &lt;Component Name&gt;.defaultProps = {                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;prop name&gt; &lt;default prop value&gt;   </br>
+          }                                                                       </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">An example of a defaultProps:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          const MyComponent = (props) => {                                                              </br>
+          &nbsp;&nbsp;&lt;p&gt;Welcome back {props.name}, you have {props.mcount} messages.&lt;/p&gt;   </br>
+          }                                                                                             </br>
+          </br>
+          MyComponent.defaultProps = {                                                                  </br>
+          &nbsp;&nbsp;name: ‘guest’,                                                                    </br>
+          &nbsp;&nbsp;mcount: 0                                                                         </br>
+          }                                                                                             </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><code>Welcome back guest, you have 0 messages.</code></p>
+    </article>
+
+
+    <!-- Main Blog Oct-21-18 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Passing State and Props Through Components</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/21/18 at 11:00p.m</h3>
+      <p class="mainBlog__bodyText">If you have to pass information through multiple components you will have to use both state and props methods.  Usually the top/parent component will be your state since you will want your state information to be able to access the rest of your components.  In addition, you rather have your child components to likely be more props because the state should be in parent components.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">When passing the information you will use state syntax in the Parent Component and props syntax with the Child Component.  Once the information is passed to the Child Component it is no longer state but a prop. Below is an example of how it will work:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent extends React.Component{     </br>
+          &nbsp;&nbsp;constructor(props){                                 </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.state={                                         </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name='Tom Brady'                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}                                                   </br>
+          &nbsp;&nbsp;}                                                   </br>
+          &nbsp;&nbsp;render(){                                             </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;
+          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ChildComponent <strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong>={this.state.name} /&gt;  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;/div&gt;                                               </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                    </br>
+          &nbsp;&nbsp;}                                                     </br>
+          }                                                     </br>
+          </br>
+          Function ChildComponent(props){                       </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                               </br>
+          {/* Because we gave <strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong> as the <strong style="color: darkgreen; font-size: 25px;"><i>prop name</i></strong> in ParentComponent you have to use it instead of the state name*/} </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &lt;p&gt;My favorite quarterback is {this.props.<strong style="color: darkgreen; font-size: 25px;"><i>qname</i></strong>}&lt;/p&gt;                                                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp; );                                                          </br>
+          }                                                           </br>
+          </br>
+        </code>
+      </p>
+    </article>
+
+    <!--- Main Blog Oct-12-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Accessing State Directly in React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/12/18 at 8:00p.m.</h3>
+      <p class="mainBlog__bodyText">Accessing state in React in two ways.  First, is by directly calling the state or second by using assigning the value to a variable and accessing the variable.  For now I just want to talk about directly calling the state.  When calling state directly you will use the following structure:  this.state.<state name>.  Unlike props where you have to check if the component is a function or a class to see if you will use ‘this’.  State can only be used in classes so will always have this to start it.  Here is an example below:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class MyExample extends React.Component{                  <br />
+          &nbsp;&nbsp;Constructor{                                  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                     <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;this.state={                      <br />
+          {/* <strong style="color: darkgreen; font-size: 25px;"><i>count</i></strong> is the <strong style="color: darkgreen; font-size: 25px;"><i>state name</i></strong>*/}                            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: darkgreen; font-size: 25px;"><i>count</i></strong>: 10             <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;} {/* End of state.*/}            <br />
+          &nbsp;&nbsp;}                                             <br />
+          &nbsp;&nbsp;render(){                                     <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                           <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      <br />
+          &lt;p&gt;I like to count to {this.state.<strong style="color: darkgreen; font-size: 25px;"><i>count</i></strong>}.&lt;/p&gt;  <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                <br />
+          &nbsp;&nbsp;}                                             <br />
+          }                                                         <br />
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Output: I like to count to 10.
+        </code>
+      </p>
+    </article>
+
+    <!-- Main Blog Oct-5-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">What is state in React and how do you call it?</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">10/5/2018 at 8:00p.m.</h3>
+      <p class="mainBlog__bodyText">One of the things that make React so powerful and useful is that it uses state.  State is where all information that you want to change in React is stored.  The only place you can have state is in a stateful component which is a class.  Functional components which are functions that are considered components cannot have state.  It makes sense because the place where you add state is in the constructor which can only be in classes not functions.</p>
+      <br />
+      <p class="mainBlog__bodyText mainBlog__topMargin">State is always going to be an object and is called by using this.state= {} .  In the object you will want to use key and value. In state, the key is the state name and the value is the state value.  Below is an example of a simple setting of a state name and value:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent extends React.Component{                        <br />
+          &nbsp;&nbsp;constructor(){                                            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);                                 <br />
+          <br />
+          {/* You will place the this.state between the super(props) and the ending bracket of the constructor */}  <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.state={                      <br />
+          {/* the '<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>' is the '<strong style="color: darkorange; font-size: 25px;">
+            <i>state name</i>
+          </strong> and <strong style="color: purple; font-size: 25px;">
+            <i>Steve</i>
+          </strong>' is the <strong style="color: purple; font-size: 25px;">
+            state value</i>
+          </strong>*/}    <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: darkorange; font-size: 25px;">
+            <i>
+              name
+            </i>
+          </strong>: ‘<strong style="color: purple; font-size: 25px;">
+            Steve
+            </i>
+          </strong>’            <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;}{/* End of state object */}                  <br />
+          &nbsp;&nbsp;}{/*End of constructor */}                                <br />
+          }{/*End of class */}                                                  <br />
+          <br />
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Sept-28-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Variable and Function/Method Props in React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/28/18 at 11:30p.m.</h3>
+      <p class="mainBlog__bodyText">Props can not only be values you assign but they can also be variable and functions or methods as well. Usually when you are assigning a variable it will either be at the top of a functional stateless component (a function) or between the render and return method of a stateless or stateful component (Both are types of classes).  You will define a variable and set its value.  The value will be in {} when using JSX because it is JavaScript.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">For using function/method props in React the first thing is creating it.  Usually you will see methods within a class component. So after the constructor and before the render is where you would put the method at.  When defining a prop within the Parent Class add it to the call of the Child Class you are sending it to and use {} JSX again because it is JavaScript.  Usually when calling a method you will use the ‘this’ before the method.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Variable prop for a stateless functional component (function):</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          function ParentComponent(){                                    </br>
+          {/* the orange <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> is the variable name*/} </br>
+          &nbsp;&nbsp;const <strong style="color: darkorange; font-size: 25px;"><i>name</i></strong> = ‘Mike William”;												</br>
+          &nbsp;&nbsp;return(																						</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;																	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My name is: {<strong style="color: darkorange; font-size: 25px;"><i>name</i></strong>}&lt;/h1&gt;	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;																</br>
+          &nbsp;&nbsp;);																									</br>
+          } ;
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Method prop for a stateless component (class):</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class ParentComponent(){															</br>
+          &nbsp;&nbsp;constructor(props){												</br>
+          &nbsp;&nbsp;super(props);										           </br>
+          {/* The purple <strong style="color: purple; font-size: 25px;"><i>addName</i></strong> is the method name */} </br>
+          &nbsp;&nbsp;this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong> = this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>.bind(this);		</br>
+          &nbsp;&nbsp;}																					</br>
+          </br>
+          &nbsp;&nbsp;<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>(){																</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return “Mike Williams”;			</br>
+          &nbsp;&nbsp;}																					</br>
+          </br>
+          &nbsp;&nbsp;render(){																	</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(												</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;							</br>
+          {/* The green <strong style="color: green; font-size: 25px;"><i>addName</i></strong> is the prop name */}																									</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: green; font-size: 25px;"><i>addname</i></strong>={this.<strong style="color: purple; font-size: 25px;"><i>addName</i></strong>} /&gt; </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;					  </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);														</br>
+          &nbsp;&nbsp;}																					</br>
+          }																											</br>
+          </br>
+          function ChildComponent(props){														</br>
+          &nbsp;&nbsp;Return &lt;p&gt;{props.<strong style="color: green; font-size: 25px;"><i>addname</i></strong>}&lt;/p&gt;								</br>
+          }																													</br>
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Sept-21-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Props In React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/21/18 at 11:15p.m.</h3>
+      <p class="mainBlog__bodyText">One of the fundamental concepts in React is Props.  Props are parameters/arguments that are passed from Parent Component to the Child Component.  One of the fundamental concepts in React is unilateral direction of props being able to be passed ‘downward’. Props will be taken as a parameter within the Child Component call.  Then it is passed to the Child component and used and/or passed again to another child component.   Below is an example of a Prop.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Class App extends React.Component{                                                 </br>
+          &nbsp;&nbsp;render(){                                                              </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return(                                                    </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/*  Below line of code text will be the <strong style="color: purple; font-size: 25px">
+            <i>prop name</i>
+          </strong> and “Hello World!” is a <strong style="color: orangered; font-size: 25px">
+            prop value</i>
+          </strong> which is a string in this case, that will be passed to the Child Component *} </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ChildComponent <strong style="color: purple; font-size: 25px"><i>text</i></strong>=”<strong style="color: orangered; font-size: 25px">
+            Hello World!”</i>
+          </strong> /&gt;   </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);                                                         </br>
+          &nbsp;&nbsp;}                                                                      </br>
+          }                                                                                  </br>
+          </br>
+          {/*  In order to pass the props to the component we must have <strong style="color: green; font-size: 25px"><i>props</i></strong> as a parameter of the function */} </br>
+          function ChildComponent(<strong style="color: green; font-size: 25px;"><i>props</i></strong>){                                           </br>
+          &nbsp;&nbsp;return(                                                                </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;                                                </br>
+          </br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{/* In order to use the prop in a stateless functional component you will use props.<prop name>
+            the <strong style="color: purple; font-size: 25px"><i>prop name</i></strong> being what I called it in the Parent Component */}                           </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>{props.<strong style="color: purple; font-size: 25px"><i>text</i></strong>}&lt;/h1&gt;                         </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;                                                       </br>
+            );                                                                                         </br>
+            }                                                                                          </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Output: &lt;h1&gt;Hello World!&lt;/h1&gt;
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Sep-16-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Redux Actions</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/16/18 at 1:30a.m.</h3>
+      <p class="mainBlog__bodyText">Been learning about Redux and wanted to let you know about actions.  The <a href="https://redux.js.org/basics/actions" target="_blank">Redux documentation</a> has been great for learning and if you want to know more I recommend taking a look there. Actions in the document is defined as, “payloads of information that send data from your application to your store. They are the only source of information for the store”.  In JavaScript Actions are Objects.  Below is an example of an Action:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          const ADD_TODO = 'ADD_TODO'                   </br>
+          {                                             </br>
+          &nbsp;&nbsp;type: ADD_TODO,                   </br>
+          &nbsp;&nbsp;text: 'Build my first Redux app'  </br>
+          }
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        As per the documentation it mentions: In the action there will always be a type property that shows what type is being performed. Also after the type property you can have anything after it.  Even though it mentions you should have as little data in each object as possible.
+        Text
+      </p>
+    </article>
+    <!-- Main Blog Sept-8-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">The beginner’s collection of powerful tips and tricks for React part 2</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/8/18 at 11p.m.</h3>
+      <p class="mainBlog__bodyText">Want to further explore two more tips in the article, <a href="https://medium.freecodecamp.org/the-beginners-collection-of-powerful-tips-and-tricks-for-react-f2e3833c6f12" target="_blank">"The beginner’s collection of powerful tips and tricks for React"</a>.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">You need to <strong>bind component functions</strong> because when a function is created in the component and you try to use ‘this’, the function will be undefined.  Reasoning is because of how JavaScript works not React. For now there is one way that seems to be the prevailing way of doing this.  In the class constructor you will want to bind the function like this:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          </br>
+          Class ExampleClass extends React.component{</br>
+          &nbsp;&nbsp;construction(props){</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;super(props);</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;//The below statement will bind the function so you can use this</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;this.exampleFunction = this.exampleFunction.bind(this);</br>
+          &nbsp;&nbsp;}</br>
+          &nbsp;&nbsp;//rest of code below like the function</br>
+          }</br>
+          </br>
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The other advice is <strong>be careful while setting state</strong> especially when you need to change states in a particular order.  Again this is because of JavaScript. JavaScript works in an asynchronous nature meaning that functions/variables are processed at once.  The challenge is that certain items might need to be run in a correct order and unless you code for that it the order can be random.  The author of the article shows what is the best way and is described below:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          </br>
+          // Very bad pratice: do not use this.state and this.props in setState !</br>
+          this.setState({ answered: !this.state.answered, answer });</br>
+          </br>
+          // With quite big states: the tempatation becomes bigger</br>
+          // Here keep the current state and add answer property</br>
+          this.setState({ ...this.state, answer });</br>
+          </br>
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Sept-3-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">The beginner’s collection of powerful tips and tricks for React</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">9/3/18 at 10:30p.m.</h3>
+      <p class="mainBlog__bodyText">I wanted to talk about the article of <a href="https://medium.freecodecamp.org/the-beginners-collection-of-powerful-tips-and-tricks-for-react-f2e3833c6f12" target="_blank">"The beginner’s collection of powerful tips and tricks for React"</a>.  As someone who has started learning React just a while ago I felt that all his tips are really helpful in order to gain more proficiency in it.  Some are more relevant to where I am at this time but I know all of them will serve me well.  Going to summarize some of them below and maybe give a thought or two.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Name your components</strong> because it makes it easier not only to know where to look but it gives you the programmer a better understanding of the structure of the code. The author mentions that it helps with tree shaking (Finding code that you do not need, removing it and improving performance) and helps in debugging.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Prefer functional components</strong> is one of the authors tips.  They are right because from what others have said is you always want to keep most of your state in one place.  With functional components you can not have state which forces you to do that.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><strong>Replacing divs with fragments</strong> is another of the author good ideas.  In React 16 they added fragments.  From what I know it was always a sticking point with React because for accessibility you rather have semantic html than non-semantic html tags like &lt;div&gt; all over the place.  Below is the example the author gives:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          </br>
+          const Login = () => //Div syntax  </br>
+          &lt;div&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/div&gt;; </br>
+          </br>
+          const Login = () => //Fragment syntax</br>
+          &lt;React.Fragment&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/React.Fragment&gt;;</br>
+          </br>
+          const Login = () => // Short-hand syntax</br>
+          &lt;&gt;&lt;input name="login"/&gt;&lt;input name="password"/&gt;&lt;/&gt;;</br>
+          </br>
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Aug-26-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">CSS Tips and Tricks Using Pseudo-Class</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">8/26/18 at 10:15p.m.</h3>
+      <p class="mainBlog__bodyText">I saw this great article by Davecar Grave called, <a href="https://codeburst.io/css-tips-and-tricks-using-pseudo-class-fa83248bb6e0" target="_blank">“CSS Tips and Tricks Using Pseudo-Class”</a>.  I found most of this to be a good refresher course on CSS Pseduo-class. One of my favorite tricks that the author mentions is using a Psuedo-class and combining it with the sibling selector “+”.  What you will do is use one selector with a pseduo-class with the sibiling selector and another selector.  So when a certain “action” is done to a certain selector with the pseduo-class it will trigger the other selector and make it do a certain action.  The example that the author gives is this:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin mainBlog__img_center"><img data-src="https://cdn-images-1.medium.com/max/1600/1*mQCzRI2aaviEPQxE_aGrfw.gif" src="https://cdn-images-1.medium.com/max/1600/1*mQCzRI2aaviEPQxE_aGrfw.gif"></p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          </br>
+          .hover-target:hover + .hover-element{                                            </br>
+          &nbsp;&nbsp;: 1;                                                                 </br>
+          &nbsp;&nbsp;transform: translateX(0);                                            </br>
+          }                                                                                </br>
+          </br>
+          .hover-element{                                                                  </br>
+          &nbsp;&nbsp;border-radius: 5px;                                                  </br>
+          &nbsp;&nbsp;background: #c0392b;                                                 </br>
+          &nbsp;&nbsp;margin: 0px 10px;                                                    </br>
+          &nbsp;&nbsp;text-align: center;                                                  </br>
+          &nbsp;&nbsp;padding: 5px 10px;                                                   </br>
+          &nbsp;&nbsp;opacity: 0;                                                          </br>
+          &nbsp;&nbsp;transform: translateX(40px);                                         </br>
+          &nbsp;&nbsp;transition: all 1.5s ease;                                           </br>
+          }                                                                                </br>
+          </br>
+          &lt;div class=&quot;content&quot;&gt;                                            </br>
+          &nbsp;&nbsp;&lt;div class=&quot;hover-target&quot;&gt;HOVER ME&lt;/div&gt;       </br>
+          &nbsp;&nbsp;&lt;div class=&quot;hover-element&quot;&gt;I am hovering&lt;/div&gt; </br>
+          &lt;/div&gt;                                                                     </br>
+          </br>
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Aug-19-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">React Stateless Component</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">8/19/18 at 10:00p.m.</h3>
+      <p class="mainBlog__bodyText">One of the basic concepts on React is stateless components.  This is usually a JavaScript function with the ability to render elements into the DOM.    Super easy with just a little bit of a twist.  Note that I am going to use JSX notation when returning the element.  So first thing you want to do is make a JavaScript function like this:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"><code>const HelloWorld = function(){ };</code></p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Now inside the usually there will be a return element with something you want to be render.  An example would be:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          const HelloWorld = function(){ </br>
+          &nbsp;&nbsp;return(</br>
+          &nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;Hello World!&lt;/div&gt;</br>
+          &nbsp;&nbsp;); </br>
+          }
+        </code>
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Super easy!! Also when you are rendering/targeting a component you have to add a tag around it like an HTML tag and a self closing / at the end.  An example of this is:  <ComponentName /> .  Remember that you have to render this component with something like the below:</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          ReactDOM.render(      </br>
+          &nbsp;&nbsp;&lt;HelloWorld/&gt,</br>
+          &nbsp;&nbsp;getElementById(‘root’)</br>
+          )
+        </code>
+      </p>
+    </article>
+    <!-- Main Blog Aug-12-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">On Switching from HEX & RGB to HSL</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">8/12/18 at 10:20pm</h3>
+      <p class="mainBlog__bodyText">I read this great article by Sara Soueidan called, <a href="https://www.sarasoueidan.com/blog/hex-rgb-to-hsl/" target="_blank">&#34;On switching from HEX & RGB to HSL&#34;</a>.  First off, let me just give you an overview of what HSL means.  H is Hue which is just the color.  This is actually described between 1 and 360.  S is the saturation of amount of gray in the color.  The article mentions this will determine how rich or dull the color will be.  Also L stands for Brightness (my guess the L stands for Light) which is how much white is in the color.  Also there is an additional letter a where it can be opacity of the color.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The author mentions some great reasons why to switch over.  The main color value H or Hue will be between 1 and 360 with Hex and RGB you are looking at 3 to 6 digits.  Also the number is off a color wheel which is great for the second reason why you might want to switch.  As the color wheel things like complementary, Triadic, Tetradic color schemes are easy to figure out because they are simple calculations.  Complementary color are on the opposite side of a color wheel so with Hue they will be 180 more.  For Triadic is 120 each more and Tetradic color schemes are 90 more for each.</p>
+    </article>
+    <!-- Main Blog Aug-5-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">The Cost of JavaScript in 2018</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">8/5/2018 at 10:00p.m</h3>
+      <p class="mainBlog__bodyText">There is an amazing article that I read this week about you guess it, <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4" target="_blank"> &#34;The Cost of JavaScript in 2018&#34;.</a>  I recommend you read it but I do like to talk about some of what I took away from the article.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">First off, one of the big headlines is “Byte-for-byte, JavaScript is still the most expensive resource we send”.  It is a big deal and especially when you are using mobile for sites which everyone does now a days.  It is very important to really think about what and how we use JavaScript. That not all bytes are the same.  The same amount of HTML or CSS take a shorter time to parse, compile and execute than JavaScript. We should “Embrace performance budgets and learn to live within them.” The author recommends for mobile, aim for a JS budget of < 170KB minified/compressed.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Also is be aware of the global scale of websites.  What will be the difference of low, medium, high-end phones and the location/bandwidth they might have on them.  With bandwidth it is important to think about variance and non-ideal performance on bandwidths.  This will give you a range of what you want JS size to be at.  Another factor is who is your user, this can be important because it can change your range of JS depending on your audience.   It can narrow the range if you are only focus on a certain type of user.  Or widen it if you are trying to get more a larger section of users.</p>
+    </article>
+    <!-- Main Blog July-29-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Learning how to learn</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">7/29/18 at 9:45p.m</h3>
+      <p class="mainBlog__bodyText">I am still having trouble with some key concepts with ReactJS.  However I listen to this great podcast on <a href="https://freecodecamp.libsyn.com/ep-39-learning-how-to-learn-the-most-important-developer-skill" target="_blank">freeCodeCamp. Ep. 39 - Learning how to learn: the most important developer skill</a>. Written by Preethi Kasireddy.  She actually talks about how she learned ReactJS.  She mentioned that she really got those key concepts down before she started on actually practicing code in videos.  So I am going to go through the ReactJS documentation again and keep re-reading until I have those concepts down.  I will probably during this time start with some basic practicing code in video just to keep it different.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">One thing I have heard about learning is that there are different types and you have to figure out how you learn the best.  For me I like all the methods like reading documentation, watching video, practicing with video, and listening to podcasts.  However, I like to vary it up.  I seem to get more out of it when I have to change how I am learning.  It sounds counterproductive but it works for me. There is actually something I read in a podcast how your brain has a “rest mode” where you kind of go through the motions in order to save energy.  I think changing up the learning methods kind of shocks me out of being in it and improves learning in that time.</p>
+    </article>
+    <!-- Main Blog July-22-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">ReactDOM.render</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">7/22/18 at 11:30p.m</h3>
+      <p class="mainBlog__bodyText">What I learned this week is ReactDOM.render(). In order for put anything you do in React on the screen you seem to have to use ReactDOM.render(). In order for ReactDOM.render to work you will need to add this method to the file.  So at the top of the file you should write if you are using ES6 with npm:  “import ReactDOM from 'react-dom”. When you do this your able to use ReactDOM.render();</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin"> The reference of this in the documentation is ReactDOM.render(element, container[, callback]).  The element is what you are going to put on the screen.  The container is how you are going to attached the element to the page. The example they give is a simple one: “ReactDOM.render(“Hello, World!”, getElementByID(“root”)); What this will do is add Hello, World Text below the tag element in HTML with the id of “root”.</p>
+    </article>
+    <!-- Main Blog July-15-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Create-react-app</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">7/15/18 at 11:30p.m</h3>
+      <p class="mainBlog__bodyText">I found this great package that lets you run ReactJS apps very simple and quickly.  The name of it is create-react-app.  Just a couple of steps and you can start making and running react apps for development.  You need to have node.js installed on your computer.  Going to assume that you already know that but here is <a href="https://nodejs.org/en/download/" target="_blank">node.js download page.</a></p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">Once it is downloaded you want to go into your command line. If you do not know where that is at.</p>
+      <ol class="mainBlog__bodyText mainBlog__topMargin">
+        <li>On Windows 10 just right-click the Windows Icon in the lower left of the screen.</li>
+        <li>Click on Search</li>
+        <li>Type in search bar: “command prompt” and it will show up.</li>
+        <li>Click on the choice.</li>
+      </ol>
+      <p class="mainBlog__bodyText mainBlog__topMargin">The tricky part is next and that is finding out where your files are located on your computer.  I go through GitHub so if you are using Github for Desktop. If you click on the repositories and it will show you a list of all depositories.  Just hover over the repository and it will give you the file address.  Going to assume you know how to move around in the command prompt. This is super important:  You want to go into the directory just before the repository and I will explain.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        In order for the command to work you need to tell it what folder to put the package in.  If you are in the folder itself you will not be able to do that.  So the command for this package is:“npm init react-app &#60;folder name&#62;”. Once this is done.  Go into the folder itself and type: “npm start” that will let you have a development site in your web browser.  You will need to have the command prompt going as long as your developing. Once you are done with the development site go back to the command prompt and hit Ctrl + C to stop deployment.  Enjoy!!
+      </p>
+    </article>
+    <!-- Main Blog July-8-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Stuck in First Gear</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h4 class="mainBlog__title">7/8/18 at 10:12p.m</h4>
+      <p class="mainBlog__bodyText">I am still in basic stages of learning ReactJS this week.  Starting to get ReactDOM.render down pretty good but moving forward has been slow.  Maybe it was Fourth of July or all the concepts that come with ReactJS.  This is just a part of coding.  Those times when you are stuck and no matter how you see it there is no answer at that point of time.  I am grateful because one thing I have gotten from coding so far is the ability to deal with frustration much better.  I took a day off yesterday and did some other non-coding related things and came back to it today.  That helped me out a good deal.</p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">My initial frustration is gone because I know that I did learn some ReactJS. Failure is the best learning tool at times and this was no exception.  This week I did a lot of reading the ReactJS documentation which is amazing.  However I think I will need other types of learning so I have a few video tutorials I will watch.  Also some of these are demos so I will go step by step through it and build it.  I enjoy learning how to learn and I was watching a video this week about the best couple of ways to learn is actually demos, practicing it, and building stuff.  Not sure I am at building stuff point yet but I think demos and practicing will be my goals.</p>
+    </article>
+    <!-- Main Blog July-1-18 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Frameworks</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">7/1/18 at 10:05p.m</h3>
+      <p class="mainBlog__bodyText">
+        I have learned a decent amount of HTML, CSS, JavaScript.  I understand the basics and played with bootstrap.  Not my favorite thing BootStrap but I can see the quickness of building something in it.  Ironically I can also see the headaches of maintain it as well.  So I am to a point that I need to learn a JS framework.  The most difficult part was trying to figure out if I go React or Vue.  My feeling is that in a few years that Vue will probably pass React but at this time I feel that React will be the best possible jumping off point now.
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        I have played around with it for the last few days and a couple of things have stand out.  I will get a MUCH better understanding of JavaScript because React really seems to utilize a lot of JS is.  For me it is confusing because I am still trying to grasp the benefits of React. Coming from building pages from scratch.  I wonder why I need React so much but I know that in huge sites compartmentalization will help.  Also there seems to have programming functionality in HTML so that is interesting too.  All in all it should be very eye opening.
+      </p>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        Right now I am trying to find the right tutorials and instruction in learning React.  FreeCodeCamp is too vague but I will be using it as a secondary learning tool.  PluralSight has been disappointing.  It is the video tutorials but like 1 to 3 years old and do not seem like they are using all the new features and there is no uniformity in the video courses.  I am going to check some other places out.  I heard great things about Udacity but they are super expensive.
+      </p>
+    </article>
+    <article class="mainBlog__main-layout">
+      <!-- Main Blog June-24-18 -->
+      <h2 class="mainBlog__title">Where to begin</h2>
+      <h3 class="mainBlog__title">by Steve Golden </h3>
+      <h4 class="mainBlog__title">6/24/18 at 8:05p.m.</h4>
+      <p class="mainBlog__bodyText">This is my first blog post.  I have talked about it for a while now and there are many things that are uncertain about blogging.  I don’t know if I will be any good at it.  I am not sure if I am doing this for the right reasons.  I don’t know if I have enough knowledge to impart that can help people when it comes to web development yet.  However, I am certain about one thing:  I do not want to stay still on this nor my learning when it comes to web development.  This is my first step on some journey and hopefully you can glean something meaningful for yourself.</p>
+    </article>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/headerChange.js"></script>
+</body>
+</html>

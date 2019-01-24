@@ -1,0 +1,90 @@
+/* This is the main css file for the Technical Documentation Page by Steve Golden */
+
+:root {
+  --bodyfont-color: #4d4e53;
+  --headfont-color: #000000;
+  --hoverlink-color: lavender;
+  --codebkgnd-color: #DCDCDC;
+}
+
+/* index.html selectors */
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--bodyfont-color);
+  font-family: 'Open Sans',Arial,sans-serif;
+}
+
+.index__navWrapper {
+  position: fixed;
+}
+
+.index__linkCol h1 {
+  text-align: center;
+}
+
+header {
+  color: var(--headfont-color);
+  font-weight: bold;
+}
+
+#navbar ul {
+  padding-left: 0;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 24px;
+  text-align: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--bodyfont-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: var(--hoverlink-color);
+}
+
+.nav-link:visited{
+  color: var(--bodyfont-color);
+}
+
+p {
+  padding-left: 15px;
+}
+
+code {
+  background-color: var(--codebkgnd-color);
+  display: block;
+  margin-left: 40px;
+}
+
+/*Medium breakpoint 678px */
+@media (min-width: 678px) {
+  /* Changing the top nav as a sidebar with flex-direction */
+  body {
+    flex-direction: row;
+  }
+
+  .index__linkCol {
+    min-width: 290px;
+    border-right: 1px solid black;
+  }
+
+  #navbar ul {
+    padding-left: 10px;
+  }
+
+  #navbar ul li {
+    font-size: 20px;
+    margin-bottom: 15px; 
+    text-align: left;
+  }
+
+  #main-doc {
+    padding-left: 20px;
+  }
+}/*end of the 678px breakpoint*/

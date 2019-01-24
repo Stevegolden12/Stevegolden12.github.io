@@ -1,67 +1,185 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
+<html>
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Steve Golden Portfolio">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Steve Golden">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steve Golden Projects</title>
-  <link href ="css/app.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <title>Steve Golden Portfolio</title>
 </head>
 <body>
-  <header><a id="navItems" href="index.html">You rather take another look at my home page!</a></header>
-  <main id="projectGridLayout">
-    <div id="projectHead">Projects</div>
+  <div class="projects__mainWrapper">
+    <div class="projects__title">Projects</div>
+    <main class="projects__cardlProjects">
+      <section class="projects__react text-center">
+        <div class="projects__sectionTitles">React</div>
+        <div class="projects__ReactWrapper">
+          <!-- Calculator React -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="http://smooth-bike.surge.sh/" target="_blank"><img class="card-img-top" src="./img/jsCalc-react.png" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Calculator</h5>
+                <p class="card-text">Used React, JavaScript, CSS, and HTML to make a calculator</p>
+              </div>
+            </div>
+            </div>
+          <!-- Drum Machine React -->
+            <div class="projects-card-layout">
+              <div class="card" style="width: 18rem;">
+                <a href="http://crooked-acoustics.surge.sh/" target="_blank"><img class="card-img-top" src="./img/drumMachine-react.png" alt="Project Image"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Drum Machine</h5>
+                  <p class="card-text">Used React, JavaScript, CSS, and HTML to make a drum machine</p>
+                </div>
+              </div>
+            </div>
+            <div class="projects-card-layout">
+              <div class="card" style="width: 18rem;">
+                <a href="http://irate-cattle.surge.sh" target="_blank"><img class="card-img-top" src="./img/randomQuote-react.png" alt="Project Image"></a>
+                <div class="card-body">
+                  <h5 class="card-title">Random Quote Machine</h5>
+                  <p class="card-text">Built a random quote machine using React and JavaScript</p>
+                </div>
+              </div>
+            </div>
+          <!-- Markdown Previewer React -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="http://luxuriant-story.surge.sh" target="_blank"><img class="card-img-top" src="./img/markdownpreview-react.png" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Markdown Previewer</h5>
+                <p class="card-text">Created a markdown previewer using React, JavaScript, and Marked.js</p>
+              </div>
+            </div>
+          </div>
+          <!-- Pomodoro Clock React -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="http://greasy-rose.surge.sh" target="_blank"><img class="card-img-top" src="./img/pomodoroClock-react.png" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Pomodoro Clock</h5>
+                <p class="card-text">Made a pomodoro clock with React and JavaScript</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects__javaScript text-center">
+        <div class="projects__sectionTitles">JavaScript</div>
+        <div class="projects__javaScriptWrapper">
+        <!-- API Gallery Project-10 -->
+        <div class="projects-card-layout">
+          <div class="card" style="width: 18rem;">
+            <a href="./Projects/Project%2010/index.html" target="_blank"><img class="card-img-top" src="./img/Project-10.jpg" alt="Project Image"></a>
+            <div class="card-body">
+              <h5 class="card-title">API gallery</h5>
+              <p class="card-text">Added different API's with a lightbox using HTML, CSS, and JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <!-- Chart.JS Project-9 -->
+        <div class="projects-card-layout">
+          <div class="card" style="width: 18rem;">
+            <a href="./Projects/Project%209/index.html" target="_blank"><img class="card-img-top" src="./img/Project-9.jpg" alt="Project Image"></a>
+            <div class="card-body">
+              <h5 class="card-title">Interactive Chart.js front page</h5>
+              <p class="card-text">Developed an interactive page using Chart.js using HTML, CSS, and JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <!-- Lightbox Search Project-4 -->
+        <div class="projects-card-layout">
+          <div class="card" style="width: 18rem;">
+            <a href="./Projects/Project%204/index.html" target="_blank"><img class="card-img-top" src="./img/Project-4.jpg" alt="Project Image"></a>
+            <div class="card-body">
+              <h5 class="card-title">Interactive image gallery with lightbox</h5>
+              <p class="card-text">Developed an image gallery using HTML, CSS, and JavaScript search box with a lightbox plugin</p>
+            </div>
+          </div>
+        </div>
+        <!-- Interactive Video Player Project-7 -->
+        <div class="projects-card-layout">
+          <div class="card" style="width: 18rem;">
+            <a href="./Projects/Project%207/index.html" target="_blank"><img class="card-img-top" src="./img/Project-7.jpg" alt="Project Image"></a>
+            <div class="card-body">
+              <h5 class="card-title">Interactive Video Player</h5>
+              <p class="card-text">Built a working video player that text was highlighted to follow using HTML, CSS, and JavaScript</p>
+            </div>
+          </div>
+        </div>
+  </div> <!-- JS Wrapper -->
+  </section>
+      <section class="projects__htmlCSS text-center">
+        <div class="projects__sectionTitles">HTML and CSS</div>
+        <div class="projects__htmlCSSWrapper">
+          <!-- Accessibility Project-8 -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="./Projects/Project%208/index.html" target="_blank"><img class="card-img-top" src="./img/Project-8.jpg" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Accessibility site with multiple forms</h5>
+                <p class="card-text">Ensured that the site meet with accessibility standards with HTML, CSS, and JavaScript in mind</p>
+              </div>
+            </div>
+          </div>
+          <!-- Form Page Project-3 -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="./Projects/Project%203/index.html" target="_blank"><img class="card-img-top" src="./img/Project-3.jpg" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Form page</h5>
+                <br/>
+                <p class="card-text">Created a clean form page with multiple types of fields with HTML and CSS</p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="./Projects/PortfolioHomePage/index.html" target="_blank"><img class="card-img-top" src="./img/PortfolioHomePage.png" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Portfolio Page</h5>
+                <br/>
+                <p class="card-text">Example of Portfolio page with HTML, CSS, and JavaScript</p>
+                <br/>
+              </div>
+            </div>
+          </div>
+          <!-- Technical Document -->
+          <div class="projects-card-layout">
+            <div class="card" style="width: 18rem;">
+              <a href="./Projects/TechDoCPage/index.html" target="_blank"><img class="card-img-top" src="./img/techDocPage.png" alt="Project Image"></a>
+              <div class="card-body">
+                <h5 class="card-title">Technical Document</h5>
+                <p class="card-text">Created a sleak Technical Document Page with fixed sidebar and links to each section using HTML and CSS</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- HTMLCSS Wrapper -->
+      </section>
+  </main>
+  <nav class="projects__mainNav">
+    <div class="projects__mainNavWrapper">
+      <ul class="projects__navLinks">
+        <li><a href="index.html" target="_blank" title="Home" class="fas fa-home"></a></li>
+        <li><a href="https://twitter.com/sgolden2525" target="_blank" title="Twitter" class="fab fa-twitter-square"></a></li>
+        <li><a href="https://www.linkedin.com/in/stevegoldens/" target="_blank" title="LinkedIn" class="fab fa-linkedin"></a></li>
+        <li><a href="https://github.com/Stevegolden12" target="_blank" title="Github" class="fab fa-github-alt"></a></li>
+        <li><a href="mainBlog.html" title="Blog" class="fas fa-blog"></a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
 
-    <section class="projectEach"><div class="projectTitle">Anime/Manga Search Page</div>
-    <a href="Projects/Manga%20Search/index.html"><img class="imgLayout" src="img/Manga%20search%20image.png" alt="Manga search project picture"></a>
-    <div class="projectDesc">Added a random anime or manga with an API and improved lightbox</div>
-    </section>
-
-    <section class="projectEach"><div class="projectTitle">API gallery</div>
-  	<a href="Projects/Project%2010/index.html"><img class="imgLayout" src="img/Project-10.jpg" alt="API gallery picture"></a>
-    <div class="projectDesc">Added different API's with a lightbox using HTML, CSS, and JavaScript</div>
-    </section>
-
-
-    <section class="projectEach"><div class="projectTitle">Accessibilty site with mutliple forms</div>
-  	<a href="Projects/Project%208/index.html"><img class="imgLayout" src="img/Project-8.jpg" alt="Accessibilty site with mutliple forms picture"></a>
-    <div class="projectDesc">Ensured that the site meet with accessiblity standards with HTML, CSS, and JavaScript in mind</div></section>
-
-
-    <section class="projectEach"><div class="projectTitle">Interactive Chart.js front page</div>
-  	<a href="Projects/Project%209/index.html"><img class="imgLayout" src="img/Project-9.jpg" alt="Interactive Chart.js front page picture"></a>
-  <div class="projectDesc">Developed an interactive page using Chart.js using HTML, CSS, and JavaScript</div></section>
-
-
-      <section class="projectEach"><div class="projectTitle">Interactive image gallery with lightbox</div>
-  	<a href="Projects/Project%204/index.html"><img class="imgLayout" src="img/Project-4.jpg" alt="Interactive image gallery with lightbox picture"></a>
-  <div class="projectDesc">Developed an image gallery using HTML, CSS, and JavaScript search box with a lightbox plugin</div></section>
-
-
-    <section class="projectEach"><div class="projectTitle">Form page</div>
-  	<a href="Projects/Project%203/index.html"><img class="imgLayout" src="img/Project-3.jpg" alt="Form page picture"></a>
-  <div class="projectDesc">Created a simple and clean form page with multiple types of fields with HTML and CSS</div></section>
-
-      <section class="projectEach"><div class="projectTitle">Interactive Video Player</div>
-  	<a href="Projects/Project%207/index.html"><img class="imgLayout" src="img/Project-7.jpg" alt="Form page picture"></a>
-  <div class="projectDesc">Built a working video player that text was highlighted to follow using HTML, CSS, and JavaScript</div></section>
-
-
-    <section class="projectEach"><div class="projectTitle">Mock portfolio front page</div>
-  	<a href="Projects/Project%205/index.html"><img class="imgLayout" src="img/Project-5.jpg" alt="Front page with SVGs picture"></a>
-  <div class="projectDesc">Developed a mock porfolio using HTML and CSS focused on layout with navigation and images</div></section>
-
-
-    <section class="projectEach"><div class="projectTitle">Front page with SVGs</div>
-  	<a href="Projects/Project%206/index.html"><img class="imgLayout" src="img/Project-6.jpg" alt="Front page with SVGs picture"></a>
-  <div class="projectTitle">Replacing and manlipulating scalable vector graphics with transformations and animations</div></section>
-
-</main>
-
-<footer id="indexFooter">
-  <ul id="footerLogoWrapper">
-    <li><a href="https://twitter.com/sgolden2525"><svg class="footerLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.00006 244.18703" height="244.19" width="300"><path d="M94.72 243.18c112.46 0 173.96-93.168 173.96-173.96 0-2.646-.054-5.28-.173-7.903 11.938-8.63 22.314-19.4 30.498-31.66-10.955 4.87-22.744 8.147-35.11 9.625 12.622-7.57 22.313-19.543 26.885-33.817-11.813 7.004-24.895 12.093-38.824 14.84C240.8 8.423 224.916.99 207.326.99c-33.763 0-61.143 27.38-61.143 61.13 0 4.8.537 9.466 1.586 13.942-50.816-2.556-95.875-26.886-126.03-63.88-5.252 9.036-8.28 19.53-8.28 30.73 0 21.212 10.794 39.938 27.208 50.893-10.03-.31-19.454-3.063-27.69-7.646-.01.255-.01.505-.01.78 0 29.61 21.076 54.33 49.052 59.933-5.137 1.4-10.543 2.152-16.122 2.152-3.933 0-7.766-.387-11.49-1.103 7.783 24.293 30.354 41.97 57.114 42.465-20.926 16.402-47.287 26.17-75.937 26.17-4.93 0-9.798-.28-14.584-.845 27.06 17.344 59.19 27.464 93.723 27.464" fill="#0275d8"/></svg></a></li>
-    <li><a href="https://www.linkedin.com/in/steve-golden-158692150/"><svg class="footerLogo" xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewBox="0 0 430.117 430.117"><path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z" fill="#0275d8"/></svg></a></li>
-    <li><a href="https://github.com/Stevegolden12"><svg class="footerLogo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" fill="#0275d8" stroke="#0275d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a></li>
-  </ul>
-</footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

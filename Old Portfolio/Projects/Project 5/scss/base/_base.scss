@@ -1,0 +1,13 @@
+/* Universal Selector */
+* {
+       box-sizing: border-box;
+}
+
+header {
+	@extend %centered;
+	margin-bottom: 5px;		
+}
+
+footer {
+	font-size: .85em;
+}
