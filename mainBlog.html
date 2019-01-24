@@ -1,8 +1,4 @@
 ﻿<!-- Main blog page for Steve Golden -->
-<!--- Finish steps to do 
-  1.  Change CSS coloring and design for blog post
-  2.  Check responsiveness of page
-  -->
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -13,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <link href="css/mainBlog.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="mainBlog_body">
   <header class="mainBlog__header-layout">
@@ -29,22 +26,65 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog Jan-24-19 >
+     < Main Blog Jan-31-19 >
 
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">1/24/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">1/31/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-012419" class="collapse">
+       <div id="mainBlog-013119" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
-      <div class="mainBlog__button-collaspe">
       </div>
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-012419">Show Post</button>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-013119">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Jan-24-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Handling data in D3</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/24/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">As D3 is for graphs and charts it is natural that you want to add data to them.  Going to show you one way how to manually add data with D3.  First declare an array called dataset and add 2 values to it. Next in html we are going to make an unordered list and 3 list items.  With JavaScript we are going to add a d3.selectAll on the list items.  Then use a new method called data and call the array dataset within.  </p>
+      <div id="mainBlog-012419" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            &lt;body>                 </br>
+            &nbsp;&nbsp;&lt;ul></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;/li>           </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;/li>           </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;/li>           </br>
+            &nbsp;&nbsp;&lt;/ul>                  </br>
+            &lt;script>               </br>
+            const dataset = [1, 2];   </br>
+                                      </br>
+            d3.selectAll("li")        </br>
+            &nbsp;&nbsp;.data(dataset)            </br>
+            &nbsp;&nbsp;.text(dataset);           </br>
+            &lt;/script>              </br>
+            &lt;/body>                               </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          This connects the data to this what we selected and in this case it is the list items.  Each value will link to an list item tag.  You might see a problem right now that we have 2 values and 3 list items.  So what is going to happen?  Well the following is the output:
+          <br/>
+          <ul>
+            <li>1,2</li>
+            <li>1,2</li>
+            <li></li> 
+          </ul>
+
+          The above result is because the dataset links to the first two list items.  Then the text method adds the full dataset to both of link lists.
+
+        </p>
+        </div>
+        <div class="mainBlog__button-collaspe">
+           <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-012419">Show Post</button>
+      </div>
+    </article>
     <!-- Main Blog Jan-17-19 -->
 
     <article class="mainBlog__main-layout">
@@ -80,10 +120,10 @@
       <p class="mainBlog__bodyText">On the documentation page of D3 it states, “D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.” </p>
       <div id="mainBlog-011019" class="collapse">
         <p class="mainBlog__bodyText mainBlog__topMargin">To me D3 is a free JavaScript Library used for creating charts and graphs using data.  Since it makes use of SVG which is one of the best image types for size and is typically good for performance.  Also it is one of the most widely used libraries for what creating graphs and charts on the internet. With the library you will create SVGS combined with your datasets and CSS will make charts which you will attach to the DOM.  </p>
-       </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-011019">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-011019">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Jan-3-19 -->
@@ -107,10 +147,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">In the article they say, “Don’t provide instructions which rely solely on <i><b>sensory characteristics</b></i> of components such as shape, colour, size, visual location, orientation or sound”. An example of this is a pomodoro clock.  When the clock switches from work to break and break to work time there is a beep.  Those that are hearing impaired might have a challenge with this so a suggestion is to have a label above the time showing which side the timer is on.</p>
         <p class="mainBlog__bodyText mainBlog__topMargin">When working you always want to have <i><b>alternatives to device motion</b></i> and <i><b>complex pointer gestures</b></i>. So if there is a feature on your phone that if you tilt it will affect the app or site this will be a concern.  HOWEVER in the W3C they recognize that some of these effects are needed to use these features which is are the exceptions to this rule.</p>
         <p class="mainBlog__bodyText mainBlog__topMargin">Lastly if you are working on the web make sure that your application/site can be viewed on either portrait or landscape.  This is called <i><b>orientation of content</b></i> and examples of this are people with vision problems wanting to see family pictures on their phone on landscape rather than portrait.  Or maybe instead of a family picture it is a bank check.  One of the examples in W3C mentions is a piano application that you want to use on landscape rather than portrait.   </p>
-       </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-010319">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-010319">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Dec-29-18 -->
@@ -139,10 +179,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">Being <i><b>consistent</b></i> with your <i><b>Navigation and Components</b></i>.  The W3C website when talking about both of these on why this is important is that low vision people can use spatial memory and/or visual cues to help navigate the site.</p>
         <p class="mainBlog__bodyText mainBlog__topMargin"><i><b>Use of headings</b></i> describe by the author, “Use descriptive and informative page title. Page headings and labels for form and interactive controls should be informative.”  The W3C has a very good example of using labels with input fields.  If asking for someone’s name have a label for “Full Name” or “First name”/”Last name” if using two fields.</p>
         <p class="mainBlog__bodyText mainBlog__topMargin">Last guideline is that unless it is a checkout page you should <i><b>ALWAYS</b></i> have <i><b>multiple ways</b></i> to access your webpages.  One of the W3C examples is having a set of navigation links on each page.  Which also applies to the having consistent Navigation.  </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-122918">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-122918">Show Post</button>
+      </div>
     </article>
     -->
 
@@ -164,10 +204,10 @@
             &nbsp;&nbsp;}                                                   <br />
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-122018">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-122018">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Dec-14-18 -->
@@ -233,10 +273,10 @@
             }                                                                           </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-121418">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-121418">Show Post</button>
+      </div>
     </article>
 
 
@@ -272,10 +312,10 @@
             }                                                                    </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-120618">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-120618">Show Post</button>
+      </div>
     </article>
 
 
@@ -292,10 +332,10 @@
         <picture class="mainBlog__topMargin">
           <img src="img/React-lifecycle-diagram.png" class="mainBlog__img_responsive" alt="React lifecycle methods diargram" />
         </picture>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-112818">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-112818">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Nov-23-18 -->
@@ -328,10 +368,10 @@
             Output:  Welcome guest!
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-112318">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-112318">Show Post</button>
+      </div>
     </article>
     -->
     <!-- Main Blog Nov-16-18-->
@@ -379,10 +419,10 @@
             </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-111618">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-111618">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Nov-11-18 -->
@@ -417,10 +457,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">The fetch method itself takes a url the “https://ranomuser.me/api/” which is where we request the information.  The last part of that “?results=500” is going to give us back 500 “results" back.  The next part will be the first .then function linked to the fetch method which is a promise to return the results in a json format. </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">The second .then is going to take all that information and sort through it with the map function.  So it will return 500 divs with a key of pic.results and an image with the src being pic.picture.medium and put it in an object called pictures.  </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">Lastly, we are going to setState so that the pictures key within the state will be set to the information pictures that we just got from the API.</p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-111118">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-111118">Show Post</button>
+      </div>
     </article>
     -->
     <!-- Main Blog Nov-2-18 -->
@@ -463,10 +503,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           <code>Welcome back Jason Jones, you have 0 messages.</code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-110218">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-110218">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Oct-26-18 -->
@@ -500,10 +540,10 @@
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">Output will be:</p>
         <p class="mainBlog__bodyText mainBlog__topMargin"><code>Welcome back guest, you have 0 messages.</code></p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-102618">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-102618">Show Post</button>
+      </div>
     </article>
 
 
@@ -546,10 +586,10 @@
             </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-102118">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-102118">Show Post</button>
+      </div>
     </article>
 
     <!--- Main Blog Oct-12-18 -->
@@ -578,15 +618,15 @@
             }                                                         <br />
           </code>
         </p>
-        </div>
-        <p class="mainBlog__bodyText mainBlog__topMargin">
-          <code>
-            Output: I like to count to 10.
-          </code>
-        </p>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-101218">Show Post</button>
-        </div>
+      </div>
+      <p class="mainBlog__bodyText mainBlog__topMargin">
+        <code>
+          Output: I like to count to 10.
+        </code>
+      </p>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-101218">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Oct-5-18 -->
@@ -628,10 +668,10 @@
             <br />
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-100518">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-100518">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Sept-28-18 -->
@@ -685,10 +725,10 @@
             }																													</br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-092818">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-092818">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Sept-21-18 -->
@@ -733,10 +773,10 @@
             Output: &lt;h1&gt;Hello World!&lt;/h1&gt;
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-092118">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-092118">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Sep-16-18 -->
@@ -758,10 +798,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           As per the documentation it mentions: In the action there will always be a type property that shows what type is being performed. Also after the type property you can have anything after it.  Even though it mentions you should have as little data in each object as possible.
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-091618">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-091618">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Sept-8-18 -->
@@ -799,10 +839,10 @@
             </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-090818">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-090818">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Sept-3-18 -->
@@ -829,10 +869,10 @@
             </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-090318">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-090318">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Aug-26-18 -->
@@ -869,10 +909,10 @@
             </br>
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-082618">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-082618">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Aug-19-18 -->
@@ -902,10 +942,10 @@
             )
           </code>
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-081918">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-081918">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Aug-12-18 -->
@@ -916,10 +956,10 @@
       <p class="mainBlog__bodyText">I read this great article by Sara Soueidan called, <a href="https://www.sarasoueidan.com/blog/hex-rgb-to-hsl/" target="_blank">&#34;On switching from HEX & RGB to HSL&#34;</a>.  First off, let me just give you an overview of what HSL means.  H is Hue which is just the color.  This is actually described between 1 and 360.  S is the saturation of amount of gray in the color.  The article mentions this will determine how rich or dull the color will be.  Also L stands for Brightness (my guess the L stands for Light) which is how much white is in the color.  Also there is an additional letter a where it can be opacity of the color.</p>
       <div id="mainBlog-081218" class="collapse">
         <p class="mainBlog__bodyText mainBlog__topMargin">The author mentions some great reasons why to switch over.  The main color value H or Hue will be between 1 and 360 with Hex and RGB you are looking at 3 to 6 digits.  Also the number is off a color wheel which is great for the second reason why you might want to switch.  As the color wheel things like complementary, Triadic, Tetradic color schemes are easy to figure out because they are simple calculations.  Complementary color are on the opposite side of a color wheel so with Hue they will be 180 more.  For Triadic is 120 each more and Tetradic color schemes are 90 more for each.</p>
-       </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-081218">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-081218">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog Aug-5-18 -->
@@ -931,10 +971,10 @@
       <div id="mainBlog-080518" class="collapse">
         <p class="mainBlog__bodyText mainBlog__topMargin">First off, one of the big headlines is “Byte-for-byte, JavaScript is still the most expensive resource we send”.  It is a big deal and especially when you are using mobile for sites which everyone does now a days.  It is very important to really think about what and how we use JavaScript. That not all bytes are the same.  The same amount of HTML or CSS take a shorter time to parse, compile and execute than JavaScript. We should “Embrace performance budgets and learn to live within them.” The author recommends for mobile, aim for a JS budget of < 170KB minified/compressed.</p>
         <p class="mainBlog__bodyText mainBlog__topMargin">Also is be aware of the global scale of websites.  What will be the difference of low, medium, high-end phones and the location/bandwidth they might have on them.  With bandwidth it is important to think about variance and non-ideal performance on bandwidths.  This will give you a range of what you want JS size to be at.  Another factor is who is your user, this can be important because it can change your range of JS depending on your audience.   It can narrow the range if you are only focus on a certain type of user.  Or widen it if you are trying to get more a larger section of users.</p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-080518">Show Rest</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-080518">Show Rest</button>
+      </div>
     </article>
 
     <!-- Main Blog July-29-18 -->
@@ -983,11 +1023,11 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           In order for the command to work you need to tell it what folder to put the package in.  If you are in the folder itself you will not be able to do that.  So the command for this package is:“npm init react-app &#60;folder name&#62;”. Once this is done.  Go into the folder itself and type: “npm start” that will let you have a development site in your web browser.  You will need to have the command prompt going as long as your developing. Once you are done with the development site go back to the command prompt and hit Ctrl + C to stop deployment.  Enjoy!!
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-071518">Show Rest</button>
-        </div>
-</article>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-071518">Show Rest</button>
+      </div>
+    </article>
 
     <!-- Main Blog July-8-18 -->
     <article class="mainBlog__main-layout">
@@ -997,10 +1037,10 @@
       <p class="mainBlog__bodyText">I am still in basic stages of learning ReactJS this week.  Starting to get ReactDOM.render down pretty good but moving forward has been slow.  Maybe it was Fourth of July or all the concepts that come with ReactJS.  This is just a part of coding.  Those times when you are stuck and no matter how you see it there is no answer at that point of time.  I am grateful because one thing I have gotten from coding so far is the ability to deal with frustration much better.  I took a day off yesterday and did some other non-coding related things and came back to it today.  That helped me out a good deal.</p>
       <div id="mainBlog-070818" class="collapse">
         <p class="mainBlog__bodyText mainBlog__topMargin">My initial frustration is gone because I know that I did learn some ReactJS. Failure is the best learning tool at times and this was no exception.  This week I did a lot of reading the ReactJS documentation which is amazing.  However I think I will need other types of learning so I have a few video tutorials I will watch.  Also some of these are demos so I will go step by step through it and build it.  I enjoy learning how to learn and I was watching a video this week about the best couple of ways to learn is actually demos, practicing it, and building stuff.  Not sure I am at building stuff point yet but I think demos and practicing will be my goals.</p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-070818">Show Rest</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-070818">Show Rest</button>
+      </div>
     </article>
 
     <!-- Main Blog July-1-18 -->
@@ -1018,10 +1058,10 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           Right now I am trying to find the right tutorials and instruction in learning React.  FreeCodeCamp is too vague but I will be using it as a secondary learning tool.  PluralSight has been disappointing.  It is the video tutorials but like 1 to 3 years old and do not seem like they are using all the new features and there is no uniformity in the video courses.  I am going to check some other places out.  I heard great things about Udacity but they are super expensive.
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-          <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-070118">Show Post</button>
-        </div>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-070118">Show Post</button>
+      </div>
     </article>
 
     <!-- Main Blog June-24-18 -->
@@ -1030,7 +1070,7 @@
       <h3 class="mainBlog__title">by Steve Golden </h3>
       <h4 class="mainBlog__title">6/24/18 at 8:05p.m.</h4>
       <p class="mainBlog__bodyText">This is my first blog post.  I have talked about it for a while now and there are many things that are uncertain about blogging.  I don’t know if I will be any good at it.  I am not sure if I am doing this for the right reasons.  I don’t know if I have enough knowledge to impart that can help people when it comes to web development yet.  However, I am certain about one thing:  I do not want to stay still on this nor my learning when it comes to web development.  This is my first step on some journey and hopefully you can glean something meaningful for yourself.</p>
-     </article>
+    </article>
 
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
