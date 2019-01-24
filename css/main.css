@@ -1,207 +1,284 @@
-/* Main CSS file for Portfolio index and projects page for Steve Golden */
-/*index page CSS */
-@import url('https://fonts.googleapis.com/css?family=Bitter');
 
-:root {
-  --font-color: hsl(356, 39.8%, 34.5%);       /*hsl(208, 98%, 26%);*/
-  --hover-color: hsl(120, 26%, 91%);          /*hsl(92, 57%, 81%);*/
-  --hover-image-color:  hsl(116, 30%, 50%);   /*hsl(92, 57%, 40%);*/
-  --visited-color: hsl(39, 100%, 85%);      /* hsl(236, 30%, 80%); */
-  --block-color: hsl(356, 39.8%, 34.5%);      /*hsl(208, 98%, 26%);*/
-  --border-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
-  --header-color: hsl(356, 39.8%, 34.5%);     /*hsl(208, 98%, 26%);*/
-  --project-bkgrd: hsl(356, 39.8%, 34.5%);    /*hsl(208, 98%, 26%);*/
-  --mainBlog-bkgrd: hsl(356, 26%, 88%);
-  --project-text: hsl(0, 0%, 100%); /* white */
-  --treehouse-img-bkgnd-color: hsl(0, 0%, 50%); /* gray */
+body {
+  --navLogoColor: hsl(188, 78%, 41%);
+  --navLogoColorHover: hsl(188, 78%, 33%);
 }
 
-/* index.html small breakpoint */
-
-.index__navItems {
-    font-size: 2.1rem;
-    text-decoration: none;
-    text-align: center;
-    padding-left: 6px;
-		color: white;
+- /* link hover underline reset */
+li:hover {
+  text-decoration: none;
 }
 
-  .index__navItems:visited {
-      color: var(--visited-color);
-  }
-
-  .index__navItems:hover {
-      color: var(--hover-color);
-  }
-
-.index__header-layout {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 10px 0;
-  background-color: var(--header-color);
+.fas:hover {
+  text-decoration: none;
 }
 
-.index__intro--gridLayout {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "mainPicture" "personalDesc" "personalDesc";
-    margin: 0 auto;
-    margin-top: 53px;
-    min-height: 92vh;
-}
-
-.index__blocks-layout {
-    display: none;
-}
-
-.index__blockOne {
-    grid-area: blockOne;
-}
-
-.index__blockTwo {
-    grid-area: blockTwo;
-}
-
-.index__blockThree {
-    grid-area: blockThree;
-}
-
-.index__blockFour {
-    grid-area: blockFour;
-}
-
-.index__blockFive {
-    grid-area: blockFive;
-}
-
-.index__blockSix {
-    grid-area: blockSix;
-}
-
-
-.index__omahaPic {
-    background-color: var(--block-color);
-    grid-area: mainPicture;
-}
-
-.index__personalDesc {
-    font-size: 30px;
-    padding: 10px;
-    text-align: center;
-    grid-area: personalDesc;
-		color: white;
-    background-color: var(--font-color);
-		align-self: stretch;
-}
-
-#treehouseImg {
-    grid-area: treehouseImg;
-    margin-top: 13px;
-}
-
-.index__headerLogoWrapper {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding-top: 4px;
-}
-
- .index__headerLogoWrapper li {
-    margin-right: 5px;
- }
-
-.index__hover_grow {
-  display: inline-block;
-}
-
-.index__hover_grow:hover,
-.index__hover_grow li:hover {
-  transform: scale(1.1);
-  transition: all .2s ease-in-out;
-}
-
-.index__headerLogo {
-    width: 45px;
-    height: 30px;
-    border-radius: 5px;
-}
-
-.index__headerLogo:hover {
-    background-color: var(--hover-image-color);
-}
-
-.index__projectGridLayout {
+.index__mainWrapper {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 100%;
-  grid-template-rows: 4rem repeat(8, 13%);
-  grid-row-gap: 20px;
-  grid-column-gap: 10px;
-  margin: 0 20px;
-  padding-top: 20px;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    'leftCol mCol rightCol';
+  height: 100vh;
 }
-/* Below code is to address the treehouse footer pushed to the bottom of the page ONLY in Chrome */
-@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-  .index__projectGridLayout {
-    padding-bottom: 23em;
+
+.index__leftCol {
+  grid-area: leftCol;
+}
+
+/* card Flip */
+.scene {
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background-image: url(../img/mandala.svg)
+}
+
+.card__face--back {
+  transform: rotateY( 180deg );
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0 33% 0;
+  grid-template-areas: 'bCTop' 'bCMid' 'bCBtm';
+  grid-row-gap: 33%;
+  transition: grid-row-gap 3s;
+  animation: back-and-forth 5s 2s;
+}
+
+/* Works in combination with the CardFlip function in main.js */
+@keyframes back-and-forth {
+  /* Svg in the center */
+  0% {
+    grid-row-gap: 33%;    
+  }
+  /* Svg moves towards the top of page */
+  33% {
+    grid-row-gap: 0%;
+    }
+  /* Svg moves towards the bottom of the page */
+  66% {
+    grid-row-gap: 66%;
+  }
+  /* Svg moves just past the center" */
+  85% {
+    grid-row-gap: 30%;
+  }
+  /* Svg gently moves to the center */
+  100% {
+    grid-row-gap: 33%;
   }
 }
 
-#projectHead {
-    font-size: 3rem;
-    color: var(--font-color);
+.index__backCardTop {
+  grid-area: bCTop;
 }
 
-.index__projectEach {
-    display: grid;
-    justify-items: center;
-    background-color: var(--project-bkgrd);
-    border-radius: 25px;
-    color: var(--project-text);
+.index__backCardMid {
+  background-image: url(../img/mandala.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-area: bCMid;
 }
 
-.index__projectEach a {
+.index__backCardBtm {
+  grid-area: bCBtm;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+/* end of card flip*/
+
+.index__middleCol {
+  grid-area: mCol;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 10px;
+}
+
+.index__mainText {
+  font-size: 3vmax
+}
+
+.index__lookproject {
+  font-size: 2vmax;
   text-align: center;
 }
 
-.index__projectTitle {
-    text-align: center;
-    width: 90%;
-    font-size: 1.7rem;
-    padding-bottom: 5px;
+.index__projectForm {
+  text-align: center;
 }
 
-.index__imgLayout {
-  width: 90%;
+.index__projectButton {
+  font-size: 2vmax;
 }
 
-.index__projectDesc {
-    text-align: center;
-    width: 90%;
-    font-size: 1.5rem;
+.index__rightCol {
+  grid-area: rightCol;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
 }
 
-#treehouseImg {
-  padding-bottom: 1px;
-  background-color: var(--treehouse-img-bkgnd-color);
+.index__navLinks {
+  list-style: none;
+  padding: 0;
 }
+
+.index__navLinks li:nth-child(n+2) {
+  padding-top: 125%;
+}
+
+.fas,
+.fab {
+  text-decoration: none;
+  font-size: 5vmax;
+  color: var(--navLogoColor);
+}
+
+  .fas:hover,
+  .fab:hover {
+    text-decoration: none;
+    font-size: 6vmax;
+    color: var(--navLogoColorHover);    
+  }
+
+/* Projects Page */
+.projects__mainWrapper{
+  display: grid;
+  grid-auto-columns: 90% 10%;
+  grid-auto-rows: auto 1fr;
+  grid-template-areas:
+    'productTitle projectsMainNav' 
+    'cardProjects projectsMainNav';
+  height: 100vh;
+}
+
+.projects__title {
+  grid-area: productTitle;
+  text-align: center;
+  font-size: 4vmax;
+}
+
+.projects__sectionTitles{
+  font-size: 3vmax;
+}
+
+.projects__cardProjects {
+  grid-area: cardProjects;
+  display: grid;
+}
+
+.projects-card-layout {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.card-img-top {
+  height: 15%;
+  max-height: 156px;
+}
+
+.projects__ReactWrapper,
+.projects__javaScriptWrapper,
+.projects__htmlCSSWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects__htmlCSS {
+}
+
+.projects__mainNav {
+  grid-area: projectsMainNav;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.projects__mainNavWrapper {
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: 100%;
+}
+
+
+.projects__navLinks {
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
 
 /* blogMain.html small breakpoint desk/labtops*/
+.mainBlog_body {
+  font: 1.2rem 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "mainBlog-header mainBlog-header" 
+    "mainBlog-blog mainBlog-blog";
+}
+
 #mainBlog__header-layout {
   padding: 0;
+  grid-area: mainBlog-header;
 }
 
 .mainBlog__headerLogoWrapper-lMargin {
   -webkit-padding-start: 25px;
-	margin: 7px 0 0 0;
+  margin: 7px 0 0 0;
 }
 
-#mainBlog__LnavItems{
-	font-size: 3rem;
+.mainBlog__nav-list {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
+
+.mainBlog__nav-list li a {
+  font-size: 5vmax;
+  color: var(--navLogoColor);
+  text-decoration: none;
+}
+
+.mainBlog__nav-list li a:hover {
+  font-size: 6vmax;
+  color: var(--navLogoColorHover);
+}
+
+
+  #mainBlog__LnavItems {
+    font-size: 3rem;
+  }
 
 .mainBlog__navItems {
   font-size: 2.5rem;
@@ -218,20 +295,23 @@
   color: var(--hover-color);
 }
 
-#main__headerLogo{
+#main__headerLogo {
   width: 75px;
   height: 45px;
 }
 
-.mainBlog_body {
-  font: 1.2rem 'Lato', sans-serif; 
+.mainBlog__blog-title {
+  text-align: center;
+  font-size: 6vmax;
+  margin-bottom: 10px;
 }
 
 .mainBlog__blogWrapper {
-  padding-top: 80px;
+  grid-area: mainBlog-blog;
 }
 
 .mainBlog__main-layout {
+  width: 95%;
   font-size: 1.5rem;
   height: 500px;
   margin: 0 auto;
@@ -240,6 +320,7 @@
   height: 20%;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 .mainBlog__main-layout h2 {
@@ -262,14 +343,14 @@
   text-align: center;
 }
 
-.mainBlog__bodyText{
+.mainBlog__bodyText {
   margin: 0 1%;
   line-height: 1.5;
 }
 
 .mainBlog__bodyText_listItem {
   list-style: none;
- }
+}
 
 .mainBlog__bodyText_listItem li {
   text-align: center;
@@ -299,6 +380,7 @@
 .mainBlog__img_center {
   text-align: center;
 }
+
 .mainBlog__img_responsive {
   max-width: 100%;
   height: auto;
@@ -308,20 +390,23 @@
   background-color: var(--project-text);
 }
 
-code{
+code {
   display: block;
   background-color: var(--project-text);
-	padding-left: 5%;
+  padding-left: 5%;
 }
 
-#test{
+#test {
   margin: 0 auto;
   width: 90%
 }
 
-#treehouseImg {
-  padding-top: 20px;
+.mainBlog__button-collaspe {
+  text-align: center;
+  margin-bottom: 10px;
 }
+
+
 
 /* blogMain.html small breakpoint mobile devices*/
 @media only screen and (min-width: 320px) and (min-height: 550px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -350,99 +435,52 @@ code{
   .mainBlog__main-layout h2 {
     font-size: 6.5rem;
   }
-	.mainBlog__main-layout h3{
-	  font-size: 3rem;
-	}
-	.mainBlog__bodyText{
-	  font-size: 3.5rem;
-		line-height: 8rem;
-	}
+
+  .mainBlog__main-layout h3 {
+    font-size: 3rem;
+  }
+
+  .mainBlog__bodyText {
+    font-size: 3.5rem;
+    line-height: 8rem;
+  }
 
   .mainBlog__img_center img {
     width: 90%;
   }
-
 }
 
-/* index.html 768px med breakpoint */
-
-@media(min-width: 768px) {
-  
-
-  .index__navItems {
-    font-size: 3rem;
-    padding-left: 12px;
-    }
-
-  .index__intro--gridLayout {
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 1fr 2fr 2fr;
-    grid-template-areas: "blockOne mainPicture blockTwo" "blockThree personalDesc blockFour" "blockFive personalDesc blockSix" "treehouseImg treehouseImg treehouseImg";
-    justify-content: space-around;
-  }
-
-    .index__blocks-layout {
-        display: block;
-        background-color: var(--block-color);
-    }
-
-    .index__omahaPic {
-        order: -1;
-    }
-
-    .index__personalDesc {
-        font-size: 30px;
-        align-self: stretch;
-    }
-
-    footer {
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
-
-		.index__headerLogoWrapper{
-		  margin-top: 5px;
-		}
-
-    .index__headerLogo {
-        width: 60px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-  .index__projectGridLayout {
-    grid-template-columns: 48% 48%;
-    grid-template-rows: 4rem repeat(4, 24%);
-    grid-column-gap: 2rem;
-    margin: 0 10px;
-    padding-bottom: 7em;
-  }
-
-    #projectHead {
-        grid-column: span 2;
-				font-size: 4rem;
-    }
-
-		.index__projectTitle {
-		  min-height: 60px;
-		}
-
-		.index__projectDesc {
-			height: 100px;
-		}
-
-    #treehouseImg {
-        margin-top: 0;
-        padding-top: 50px;
-    }
-
 /* mainBlog page med breakpoint 768px */
+@media (min-width: 768px) {
+  .mainBlog_body {
+    font: 1.2rem 'Lato', sans-serif;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "mainBlog-blog mainBlog-header" "mainBlog-blog mainBlog-header";
+  }
+
+  .mainBlog__header-layout nav {
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 100;
+  }
+
+  .mainBlog__nav-list {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .mainBlog__nav-list li:nth-child(n + 2){
+    padding-left: 8px;
+  }
 
   .mainBlog__main-layout {
     width: 95%;
     height: 500px;
     margin: 0 auto;
-    border: 3px solid var(--block-color);   
+    border: 3px solid var(--block-color);
     height: 20%;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -451,75 +489,16 @@ code{
   .mainBlog__bodyText {
     line-height: 2;
   }
-
 }
 
 /* Breakpoints for large size 1024px */
 @media (min-width: 1024px) {
 
-  .index__intro--gridLayout {
-    grid-template-columns: 10% 10% 40% 40%;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
-    grid-template-areas:  "blockOne blockOne blockOne blockOne" 
-                          "blockTwo personalDesc personalDesc blockFour" 
-                          "blockTwo personalDesc personalDesc blockFour" 
-                          "blockTwo blockThree blockThree blockThree";
-    grid-column-gap: 0;
-    min-height: 89vh;
-    margin-top: 73px;
-  }
-
-
-    .index__omahaPic .index__blockSix {
-        opacity: 0;
-    }
-
-    .index__headerLogo {
-        width: 75px;
-        height: 50px;
-        border-radius: 5px;
-    }
-
-  .index__personalDesc {
-    font-size: 2.5rem;
-  }
-
-  .index__projectGridLayout {
-    grid-template-columns: 32% 32% 32%;
-    grid-template-rows: 4rem repeat(3, 32%);
-    grid-column-gap: 1.3rem;
-  }
-
-    #projectHead {
-        grid-column: span 3;
-    }
-
   /* mainBlog page large breakpoint 1024px */
 
-		.mainBlog__main-layout{
-		  width: 70%;
-			font-size: 22px;
-		}
-
-  .mainBlog__blogWrapper {
-    padding-top: 120px;
-  }
-}
-
-/* Breakpoints for large size 1280px */
-@media (min-width: 1280px) {
-
- .index__personalDesc {
-    font-size: 2.4rem;
+  .mainBlog__main-layout {
+    width: 80%;
+    font-size: 24px;
   }
 
-}
-
-/* Adjustment for Banner on Index page for larger screens */
-
-@media (min-height: 800px) {
-  .index__intro--gridLayout{
-	  min-height: 93vh;
-		min-width: 100vw;
-	}
 }

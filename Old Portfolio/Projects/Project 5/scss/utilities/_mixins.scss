@@ -1,0 +1,26 @@
+@mixin font-size($size){
+	font-size: #{$size};
+}
+
+@mixin font-weight($weight){
+	font-weight: #{$weight};
+}
+
+@mixin color($color){
+	color: #{$color};
+}
+
+//Use in scss/layout/_footer.scss in footer-nav rule line 57
+@mixin all($size, $weight, $color){
+	font-size: #{$size};
+	font-weight: #{$weight};
+	color: #{$color};
+}
+
+@mixin embed($extend){
+	@if $extend == "centered"{
+	   text-align: center;
+	}@else if $extend == "marginCenter"{
+		margin: 0 auto;
+	}
+}
