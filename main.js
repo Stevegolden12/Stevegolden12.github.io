@@ -10,6 +10,6 @@ function cardFlip(){
 /* The setTimeOut function implements the cardFlip card with a one second delay */
 /* The function works with the animation/keyfrom in main.css */
 
-setTimeout(cardFlip, 1000);
+setTimeout(cardFlip, 4000);
 
 
