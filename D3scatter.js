@@ -39,4 +39,4 @@ setTimeout(function () {
   clearInterval(Circles);
   d3.selectAll("circle")
     .remove();
-}, 7000);
+}, 4300);
