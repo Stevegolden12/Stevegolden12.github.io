@@ -170,8 +170,8 @@ li:hover {
 /* Projects Page */
 .projects__mainWrapper{
   display: grid;
-  grid-auto-columns: 90% 10%;
-  grid-auto-rows: auto 1fr;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     'productTitle projectsMainNav' 
     'cardProjects projectsMainNav';
@@ -199,7 +199,6 @@ li:hover {
 }
 
 .card-img-top {
-  height: 15%;
   max-height: 156px;
 }
 
@@ -315,12 +314,11 @@ li:hover {
 
 .mainBlog__main-layout {
   width: 95%;
+  height: auto;
   font-size: 1.5rem;
-  height: 500px;
   margin: 0 auto;
   border: 3px solid var(--block-color);
   background-color: var(--mainBlog-bkgrd);
-  height: 20%;
   padding-bottom: 20px;
   margin-bottom: 30px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
@@ -484,10 +482,8 @@ code {
 
   .mainBlog__main-layout {
     width: 95%;
-    height: 500px;
     margin: 0 auto;
     border: 3px solid var(--block-color);
-    height: 20%;
     padding-bottom: 20px;
     margin-bottom: 30px;
   }
