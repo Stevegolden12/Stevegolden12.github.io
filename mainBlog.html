@@ -41,6 +41,35 @@
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Feb-7-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">D3: Adding SVG Shapes</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">2/7/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">In D3 Many charts and graphs are made with using SVG predefined shape element tags in HTML.  Two shape elements tags that I have seen often is “Rectangle <rect>” and “Circle <circle>”. In order to use them within D3 you must append them within a SVG.  The following is an example:</p>
+      <div id="mainBlog-020719" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            Data = [1, 2, 3]                                           </br>
+                                                                       </br>
+            d3.select(“body”)  //select the body                       </br>
+            .append(“svg”) //adding an svg html tag to the body         </br>
+            .selectAll(“rect”) //selecting all the rect html tags even though there are none at this point       </br>
+            .data(data)  //Get the data array                          </br>
+            .enter()  //Links the data to a set of “rect”              </br>
+            .append(“rect”) //Creates the set of “rect”s to the DOM    </br>
+                                                                       </br>
+          </code>                                               
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">The output is three rect tags created within the SVG</p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-020719">Show Post</button>
+      </div>
+    </article>
+
+
     <!-- Main Blog Jan-24-19 -->
 
     <article class="mainBlog__main-layout">
@@ -59,7 +88,7 @@
             &nbsp;&nbsp;&lt;/ul>                  </br>
             &lt;script>               </br>
             const dataset = [1, 2];   </br>
-                                      </br>
+            </br>
             d3.selectAll("li")        </br>
             &nbsp;&nbsp;.data(dataset)            </br>
             &nbsp;&nbsp;.text(dataset);           </br>
@@ -69,19 +98,19 @@
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">
           This connects the data to this what we selected and in this case it is the list items.  Each value will link to an list item tag.  You might see a problem right now that we have 2 values and 3 list items.  So what is going to happen?  Well the following is the output:
-          <br/>
+          <br />
           <ul>
             <li>1,2</li>
             <li>1,2</li>
-            <li></li> 
+            <li></li>
           </ul>
 
           The above result is because the dataset links to the first two list items.  Then the text method adds the full dataset to both of link lists.
 
         </p>
-        </div>
-        <div class="mainBlog__button-collaspe">
-           <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-012419">Show Post</button>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-012419">Show Post</button>
       </div>
     </article>
     <!-- Main Blog Jan-17-19 -->
