@@ -25,18 +25,18 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog Jan-31-19 >
+     < Main Blog Feb-14-19 >
 
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
      <h3 class="mainBlog__title">1/31/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-013119" class="collapse">
+       <div id="mainBlog-021419" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-013119">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-021419">Show Post</button>
       </div>
   </article>
   -->
@@ -44,28 +44,54 @@
     <!-- Main Blog Feb-7-19 -->
 
     <article class="mainBlog__main-layout">
-      <h2 class="mainBlog__title">D3: Adding SVG Shapes</h2>
+      <h2 class="mainBlog__title">D3: Attr and Style</h2>
       <h3 class="mainBlog__title">by Steve Golden</h3>
       <h3 class="mainBlog__title">2/7/19 at 2 p.m.</h3>
-      <p class="mainBlog__bodyText">In D3 Many charts and graphs are made with using SVG predefined shape element tags in HTML.  Two shape elements tags that I have seen often is “Rectangle <rect>” and “Circle <circle>”. In order to use them within D3 you must append them within a SVG.  The following is an example:</p>
+      <p class="mainBlog__bodyText">So you have selected an element, you have made it so an element was append to the selected element, and you might have even use a set of data to add multiple elements at a time. How do you adjust that element you just created?  This is where attr and style come in.  Whenever you need to add an attribute or change a styling for an element you will use this two D3 methods.</p>
       <div id="mainBlog-020719" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">When you create an element you will chain either attr or style with it.   You will pass two parameters within either of these methods.  The first parameter will be the what attribute name will be in quotes.  Examples of this are: “width”, “height”, “x”, “y”, and  “margin”.  The second parameter will be the how much of the first parameter.  Also most parameters that need a px for measurement is default. In addition, quotes are optional only if you are not going to specify the measure which will be px.  Below is an real world example of how this would work:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            &nbsp;&nbsp; d3.select('body')                                </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.append('svg')                        </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.attr('width', '900')                 </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.attr('height', '600')                </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;.style('background-color', 'red')     </br>
+          </code>
+        </p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p class="mainBlog__bodyText mainBlog__topMargin">For me there is always confusion on when to use .attr() or .style() and the best advice I have read on this is this rule.  If your altering an element for what it is you want to use .attr().  If you altering an element to change its appearance than you use .style().  Also to make it even more confusing is some elements you add will work with both methods and most must take a particular method.</p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-020719">Show Post</button>
+      </div>
+    </article>
+    -->
+
+    <!-- Main Blog Jan-31-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">D3: Adding SVG Shapes</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">1/31/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">In D3 Many charts and graphs are made with using SVG predefined shape element tags in HTML.  Two shape elements tags that I have seen often is “Rectangle <rect>” and “Circle <circle>”. In order to use them within D3 you must append them within a SVG.  The following is an example:</p>
+      <div id="mainBlog-013119" class="collapse">
         <p class="mainBlog__bodyText mainBlog__topMargin">
           <code>
             Data = [1, 2, 3]                                           </br>
-                                                                       </br>
+            </br>
             d3.select(“body”)  //select the body                       </br>
             .append(“svg”) //adding an svg html tag to the body         </br>
             .selectAll(“rect”) //selecting all the rect html tags even though there are none at this point       </br>
             .data(data)  //Get the data array                          </br>
             .enter()  //Links the data to a set of “rect”              </br>
             .append(“rect”) //Creates the set of “rect”s to the DOM    </br>
-                                                                       </br>
-          </code>                                               
+            </br>
+          </code>
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">The output is three rect tags created within the SVG</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-020719">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-013119">Show Post</button>
       </div>
     </article>
 
