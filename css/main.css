@@ -55,55 +55,34 @@ li:hover {
   background-position: center;
 }
 
-.card__face--back {
+.card__face--back {  
   transform: rotateY( 180deg );
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 0 33% 0;
-  grid-template-areas: 'bCTop' 'bCMid' 'bCBtm';
-  grid-row-gap: 33%;
   transition: grid-row-gap 3s;
   animation: back-and-forth 5s 5s;
+  
 }
 
-/* Works in combination with the CardFlip function in main.js */
-@keyframes back-and-forth {
-  /* Svg in the center */
-  0% {
-    grid-row-gap: 33%;    
-  }
-  /* Svg moves towards the top of page */
-  33% {
-    grid-row-gap: 0%;
-    }
-  /* Svg moves towards the bottom of the page */
-  66% {
-    grid-row-gap: 66%;
-  }
-  /* Svg moves just past the center" */
-  85% {
-    grid-row-gap: 30%;
-  }
-  /* Svg gently moves to the center */
-  100% {
-    grid-row-gap: 33%;
-  }
+/* Globe */
+#worldmap {
+  margin: 100px 0 0 20px;
 }
 
-.index__backCardTop {
-  grid-area: bCTop;
+  #worldmap svg {
+    background: rgba(50,167,224,0.4);
+    border-radius: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index: -1;
+  }
+
+.land {
+  fill: rgba(188,188,188,.94);
 }
 
-.index__backCardMid {
-  background-image: url(../img/mandala.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  grid-area: bCMid;
+#globesarecool {
+  color: #fff;
 }
 
-.index__backCardBtm {
-  grid-area: bCBtm;
-}
+
 
 .card.is-flipped {
   transform: rotateY(180deg);
@@ -116,6 +95,7 @@ li:hover {
   justify-content: center;
   align-content: center;
   grid-row-gap: 10px;
+  z-index: 1;
 }
 
 .index__mainText {
@@ -142,6 +122,7 @@ li:hover {
   justify-content: flex-end;
   align-items: center;
   margin: auto;
+  z-index: 1;
 }
 
 .index__navLinks {
@@ -504,3 +485,4 @@ code {
   }
 
 }
+
