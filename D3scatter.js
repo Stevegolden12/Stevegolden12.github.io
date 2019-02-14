@@ -1,21 +1,21 @@
 
-var height = window.innerHeight
+var dotHeight = window.innerHeight
   || document.documentElement.clientHeight
   || document.body.clientHeight;
 
 var width = document.getElementsByClassName("card__face")[0].offsetWidth;   
 console.log(width);
-
+console.log(dotHeight);
 
 const svgContainer = d3.select(".card__face")
   .append("svg")
-  .attr("width", 100+"%")
-  .attr("height", height+"px") 
+  .attr("width", width+"px")
+  .attr("height", dotHeight+"px") 
 
 function makeCircle() {
 
   const right = Math.floor(Math.random() * width)
-  const bottom = Math.floor(Math.random() * height)
+  const bottom = Math.floor(Math.random() * dotHeight)
   const c = Math.floor(Math.random() * 360)
   const s = Math.floor(Math.random() * 30) + 50;
   const l = Math.floor(Math.random() * 30) + 50;
