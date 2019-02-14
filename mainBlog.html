@@ -25,22 +25,71 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog Feb-14-19 >
+     < Main Blog Feb-21-19 >
 
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">1/31/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">2/21/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-021419" class="collapse">
+       <div id="mainBlog-022119" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-021419">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022119">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Feb-14-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">D3 Changing Values based on Data</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">2/14/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">One the most important concepts in D3 is using data to change values of style and attribute methods like width and x.  In order to use data this way you will add/chain the method, add the property to target, and with the value using a callback function with the data.  Below is an example:</p>
+      <div id="mainBlog-021419" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const dataset = ["Three", Five", “Seven"];    </br>
+                                                          </br>
+            const ul = d3.select("body")                  </br>
+            .append("ul")                                 </br>
+            .selectAll("li")                              </br>
+            .data(dataset)                                </br>
+            .enter()                                      </br>
+            .append("li")                                 </br>
+            .text((d)=>d);                                </br>
+
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          Output:
+            <ul>
+              <li>Three</li>
+              <li>Five</li>
+              <li>Seven</li>
+            </ul>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">We can add strings to the data to change the output.  In order to do that we will using the “+” and a string value.  A way to do this is changing the above .text method:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            .text((d)=>d + “ cookies”;
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          Output:
+            <ul>
+              <li>Three cookies</li>
+              <li>Five cookies</li>
+              <li>Seven cookies</li>
+            </ul>
+        </p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-021419">Show Post</button>
+      </div>
+    </article>
     <!-- Main Blog Feb-7-19 -->
 
     <article class="mainBlog__main-layout">
@@ -59,7 +108,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;.style('background-color', 'red')     </br>
           </code>
         </p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p class="mainBlog__bodyText mainBlog__topMargin">For me there is always confusion on when to use .attr() or .style() and the best advice I have read on this is this rule.  If your altering an element for what it is you want to use .attr().  If you altering an element to change its appearance than you use .style().  Also to make it even more confusing is some elements you add will work with both methods and most must take a particular method.</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">For me there is always confusion on when to use .attr() or .style() and the best advice I have read on this is this rule.  If your altering an element for what it is you want to use .attr().  If you altering an element to change its appearance than you use .style().  Also to make it even more confusing is some elements you add will work with both methods and most must take a particular method.</p>
       </div>
       <div class="mainBlog__button-collaspe">
         <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-020719">Show Post</button>
