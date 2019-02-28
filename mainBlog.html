@@ -25,22 +25,59 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog Feb-28-19 >
+     < Main Blog March-7-19 >
 
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">2/28/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">3/7/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-022819" class="collapse">
+       <div id="mainBlog-030719" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022819">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-030719">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog Feb-28-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Express.js: Installing, importing, and Starting a Server</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">2/28/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">In order to install Express.js we will be using npm.  First you will have to go the directory you want to use it in.  Install and save it as a dependency.  The following code in cli (command line interface) will do that:</p>
+      <div id="mainBlog-022819" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            npm install express --save  </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">To import Express.js you will use “require” and going to make an instance of the express.  Below is the two lines of code to install and make an instance of express:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const express = require(‘express’); //Importing the Library to the file   </br>
+            const app = express();  //Making an instance of express.js                </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Now that Express.js has been installed, going to start the server.  In Express one of the methods it has is listen. Listen does what it saids, lets Express “listen” to a certain port for the internet connection waiting for instructions.  Listen method has two arguments.  First being the port being used and the second is a callback function. Good practice is to have a console.log within the callback function when first setup to check it is working correctly.  Below is an example:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            /*    3000 is the port, which is a typical port to use, sometimes you will see a number off this because it might be conflicting with another connection */
+                                                                      </br>
+            app.listen(3000,()=>{                                     </br>
+            console.log(“Express.listen is working”)                  </br>
+            })                                                        </br>
+                                                                      </br>
+          </code>
+        </p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022819">Show Post</button>
+      </div>
+    </article>
+
     <!-- Main Blog Feb-21-19 -->
 
     <article class="mainBlog__main-layout">
