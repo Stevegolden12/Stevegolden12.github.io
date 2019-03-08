@@ -25,22 +25,59 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog March-7-19 >
+     < Main Blog March-14-19 >
 
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">3/7/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">3/14/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-030719" class="collapse">
+       <div id="mainBlog-031419" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-030719">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-031419">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog March-7-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Express Routing: GET</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">3/7/19 at 10 p.m.</h3>
+      <p class="mainBlog__bodyText">The two most use actions when sending and receiving data are GET and POST.  Typically you use GET when the information does not need to be secure.  An example of this is when you are searching a site for certain items.  When the information you are sending or receiving needs to be protected that is when you would use POST.  Sending personal information to the user would an example of using POST.</p>
+      <div id="mainBlog-030719" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          Express makes it very easy to use GET because that is the method to use GET.  With using the GET method there are two arguments that you will need to use.  First one is the route or destination, which will tell the method when to start the function.  Let's say use you ‘/hello’, when you put the web address in and put ‘/hello’ at the end of the web address this will let express know to use this method.  Like www.<site name>.com/hello.
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Second argument is the callback function.  This also takes two arguments of its own, the first being request and the second being response.  Names are representative of what they do.  Request is asking the server for information and response is the data the server brings back.  Also there are methods that you can use with these callback function arguments.  One of them is send, which will send the information you want to the web browser.  Below is an example of GET in use from express documentation. </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const express = require(‘express’); //Importing the Library to the file                       </br>
+            const app = express(); //Making an instance of express.js                                     </br>
+                                                                                                          </br>
+            //Tells Express to create a server with anything that comes from port 3000 on the computer.   </br>
+            app.listen(3000,()=>{                                                                         </br>
+            console.log(“Express.listen is working”)                                                      </br>
+            })                                                                                            </br>
+                                                                                                          </br>
+            // GET request is made to the homepage                                                        </br>
+            app.get('/', function (req, res) {                                                            </br>
+            res.send('hello world') //Send the text hello world as a response back to the web browser.    </br>
+            })                                                                                            </br>
+                                                                                                          </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Output: hello world</p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-030719">Show Post</button>
+      </div>
+    </article>
+
+
     <!-- Main Blog Feb-28-19 -->
 
     <article class="mainBlog__main-layout">
@@ -65,11 +102,11 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           <code>
             /*    3000 is the port, which is a typical port to use, sometimes you will see a number off this because it might be conflicting with another connection */
-                                                                      </br>
+            </br>
             app.listen(3000,()=>{                                     </br>
             console.log(“Express.listen is working”)                  </br>
             })                                                        </br>
-                                                                      </br>
+            </br>
           </code>
         </p>
       </div>
