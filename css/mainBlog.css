@@ -191,8 +191,10 @@
 }
 
 /* blogMain.html small breakpoint desk/labtops*/
-#mainBlog__header-layout {
+.mainBlog__header-layout {
+  background-color:blue;
   padding: 0;
+  margin-top: 10px;
 }
 
 .mainBlog__headerLogoWrapper-lMargin {
