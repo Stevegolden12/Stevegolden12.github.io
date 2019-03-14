@@ -25,21 +25,44 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog March-14-19 >
+     < Main Blog March-21-19 >
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">3/14/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">3/21/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-031419" class="collapse">
+       <div id="mainBlog-032119" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-031419">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-032119">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog March-14-19 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">C.R.U.D. in Express</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">3/14/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">There are four main operations when it comes to sending and receiving data between the client and the database. These actions are represented in the acronym <b>CRUD</b>.  The first of these actions is <b>Creating</b>/Adding data to the Database via the client.  Second is <b>reading</b> data from the database to the client.  The third is <b>updating</b> the data to the database from the client.  Lastly is <b>deleting</b> data to the database from the client.</p>
+      <div id="mainBlog-031419" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">When dealing with these operations in Express there are four main action words that correspond to them.  When you are Creating data you will use the POST word because this will hide data to help prevent the data being stolen.  If all you need to do is read the data from the database then you will use GET.  GET is similar to POST yet the data is shown in the URL.  You use GET for non-sensitive information and POST for important information. When updating the information you will probably want to use the PUT action word in Express.  Removing data from the database you want to use the DELETE action word. Below is a list of each operation and corresponding EXPRESS action/method:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <ul class="mainBlog__bodyText_listItem">
+            <li>Create    -   POST</li>
+            <li>Reading   -   GET</li>
+            <li>Updating  -   PUT</li>
+            <li>Delete    -   DELETE</li>
+          </ul>
+        </p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-031419">Show Post</button>
+      </div>
+    </article>
+
+
     <!-- Main Blog March-7-19 -->
 
     <article class="mainBlog__main-layout">
