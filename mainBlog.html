@@ -25,22 +25,112 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog Feb-21-19 >
-
+     < Main Blog March-14-19 >
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">2/21/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">3/14/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-022119" class="collapse">
+       <div id="mainBlog-031419" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022119">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-031419">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog March-7-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Express Routing: GET</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">3/7/19 at 10 p.m.</h3>
+      <p class="mainBlog__bodyText">The two most use actions when sending and receiving data are GET and POST.  Typically you use GET when the information does not need to be secure.  An example of this is when you are searching a site for certain items.  When the information you are sending or receiving needs to be protected that is when you would use POST.  Sending personal information to the user would an example of using POST.</p>
+      <div id="mainBlog-030719" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          Express makes it very easy to use GET because that is the method to use GET.  With using the GET method there are two arguments that you will need to use.  First one is the route or destination, which will tell the method when to start the function.  Let's say use you ‘/hello’, when you put the web address in and put ‘/hello’ at the end of the web address this will let express know to use this method.  Like www.<site name>.com/hello.
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Second argument is the callback function.  This also takes two arguments of its own, the first being request and the second being response.  Names are representative of what they do.  Request is asking the server for information and response is the data the server brings back.  Also there are methods that you can use with these callback function arguments.  One of them is send, which will send the information you want to the web browser.  Below is an example of GET in use from express documentation. </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const express = require(‘express’); //Importing the Library to the file                       </br>
+            const app = express(); //Making an instance of express.js                                     </br>
+            </br>
+            //Tells Express to create a server with anything that comes from port 3000 on the computer.   </br>
+            app.listen(3000,()=>{                                                                         </br>
+            console.log(“Express.listen is working”)                                                      </br>
+            })                                                                                            </br>
+            </br>
+            // GET request is made to the homepage                                                        </br>
+            app.get('/', function (req, res) {                                                            </br>
+            res.send('hello world') //Send the text hello world as a response back to the web browser.    </br>
+            })                                                                                            </br>
+            </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Output: hello world</p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-030719">Show Post</button>
+      </div>
+    </article>
+
+
+    <!-- Main Blog Feb-28-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Express.js: Installing, importing, and Starting a Server</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">2/28/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">In order to install Express.js we will be using npm.  First you will have to go the directory you want to use it in.  Install and save it as a dependency.  The following code in cli (command line interface) will do that:</p>
+      <div id="mainBlog-022819" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            npm install express --save  </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">To import Express.js you will use “require” and going to make an instance of the express.  Below is the two lines of code to install and make an instance of express:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const express = require(‘express’); //Importing the Library to the file   </br>
+            const app = express();  //Making an instance of express.js                </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">Now that Express.js has been installed, going to start the server.  In Express one of the methods it has is listen. Listen does what it saids, lets Express “listen” to a certain port for the internet connection waiting for instructions.  Listen method has two arguments.  First being the port being used and the second is a callback function. Good practice is to have a console.log within the callback function when first setup to check it is working correctly.  Below is an example:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            /*    3000 is the port, which is a typical port to use, sometimes you will see a number off this because it might be conflicting with another connection */
+            </br>
+            app.listen(3000,()=>{                                     </br>
+            console.log(“Express.listen is working”)                  </br>
+            })                                                        </br>
+            </br>
+          </code>
+        </p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022819">Show Post</button>
+      </div>
+    </article>
+
+    <!-- Main Blog Feb-21-19 -->
+
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">What is Express.JS?</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">2/21/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">In the Express.JS documentation states, “Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.” So the next question is what is a web application framework.  Best definition I found is from MuleSoft, “it is a way to connect applications, data, and devices through APIs that exposes some or all of their assets and data on the network. That network allows other consumers from other parts of the business to come in and discover and use those assets. </p>
+      <div id="mainBlog-022119" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">Building an application network involves developing reusable assets, and then encouraging those in the business to reuse and self-serve those assets. Then, they can get used and reused in different ways inside the organization. Connections can then be built between these assets...”</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          Sounds confusing right?  For me, Express.js is a template to make web applications where you add other libraries and/or languages creating a robust web application that suits your needs.  Express.js does this with a variety of methods and middleware to make it easy to connect these other libraries and/or languages.  This only works because Express is very lightweight so when adding other parts they do not slow the application too much. In addition because of the size and it being free and open-source doesn’t limit you with what other assets to use.  Express has been around long enough there are frameworks built on Express like GraphQL, Feathers, and Kraken.
+        </p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-022119">Show Post</button>
+      </div>
+    </article>
     <!-- Main Blog Feb-14-19 -->
 
     <article class="mainBlog__main-layout">
@@ -52,7 +142,7 @@
         <p class="mainBlog__bodyText mainBlog__topMargin">
           <code>
             const dataset = ["Three", Five", “Seven"];    </br>
-                                                          </br>
+            </br>
             const ul = d3.select("body")                  </br>
             .append("ul")                                 </br>
             .selectAll("li")                              </br>
@@ -65,11 +155,11 @@
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">
           Output:
-            <ul>
-              <li>Three</li>
-              <li>Five</li>
-              <li>Seven</li>
-            </ul>
+          <ul>
+            <li>Three</li>
+            <li>Five</li>
+            <li>Seven</li>
+          </ul>
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">We can add strings to the data to change the output.  In order to do that we will using the “+” and a string value.  A way to do this is changing the above .text method:</p>
         <p class="mainBlog__bodyText mainBlog__topMargin">
@@ -79,11 +169,11 @@
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">
           Output:
-            <ul>
-              <li>Three cookies</li>
-              <li>Five cookies</li>
-              <li>Seven cookies</li>
-            </ul>
+          <ul>
+            <li>Three cookies</li>
+            <li>Five cookies</li>
+            <li>Seven cookies</li>
+          </ul>
         </p>
       </div>
       <div class="mainBlog__button-collaspe">
