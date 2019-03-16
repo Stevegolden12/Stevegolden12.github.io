@@ -9,12 +9,14 @@ console.log(dotHeight);
 
 const svgContainer = d3.select(".card__face")
   .append("svg")
-  .attr("width", width+"px")
-  .attr("height", dotHeight+"px") 
+  .attr("width", width + "px")
+  .attr("height", dotHeight + "px") 
+
+console.log("width:" + width);
+console.log("height:" + dotHeight)
 
 function makeCircle() {
-
-  const right = Math.floor(Math.random() * width)
+  const right = Math.floor(Math.random() * (width + 200))
   const bottom = Math.floor(Math.random() * dotHeight)
   const c = Math.floor(Math.random() * 360)
   const s = Math.floor(Math.random() * 30) + 50;
@@ -32,7 +34,7 @@ function makeCircle() {
 var Circles;
 
 setTimeout(function () { 
-return Circles = setInterval(function () { makeCircle(); }, 10);
+ return Circles = setInterval(function () { makeCircle(); }, 10);
 }, 1000);
 
 setTimeout(function () {
