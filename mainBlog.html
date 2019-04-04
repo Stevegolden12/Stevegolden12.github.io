@@ -25,21 +25,46 @@
   <main class="mainBlog__blogWrapper">
     <div class="mainBlog__blog-title">Blog</div>
     <!--Template for blog posts
-     < Main Blog April-4-19 >
+     < Main Blog April-11-19 >
   <article class="mainBlog__main-layout">
    <h2 class="mainBlog__title">Blog Title</h2>
      <h3 class="mainBlog__title">by Steve Golden</h3>
-     <h3 class="mainBlog__title">4/4/19 at 2 p.m.</h3>
+     <h3 class="mainBlog__title">4/11/19 at 2 p.m.</h3>
       <p class="mainBlog__bodyText">Text</p>
-       <div id="mainBlog-040419" class="collapse">
+       <div id="mainBlog-041119" class="collapse">
       <p class="mainBlog__bodyText mainBlog__topMargin">Text</p>
       </div>
       <div class="mainBlog__button-collaspe">
-        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-040419">Show Post</button>
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-041119">Show Post</button>
       </div>
   </article>
   -->
     <!-- Easy lookup for ansi character codes for displaying code: space: &nbsp; <: &lt; >:  &gt; ": &#8220;-->
+    <!-- Main Blog April-4-19 -->
+    <article class="mainBlog__main-layout">
+      <h2 class="mainBlog__title">Middleware in Express</h2>
+      <h3 class="mainBlog__title">by Steve Golden</h3>
+      <h3 class="mainBlog__title">4/4/19 at 2 p.m.</h3>
+      <p class="mainBlog__bodyText">Wikipedia definition of middleware is, “is computer software that provides services to software applications beyond those available from the operating system. It can be described as "software glue". Middleware makes it easier for software developers to implement communication and input/output, so they can focus on the specific purpose of their application.  Since Express is not opinionated, it lets developer choose how to handle certain aspects.  Express takes advantage of middleware to do that.  </p>
+      <div id="mainBlog-040419" class="collapse">
+        <p class="mainBlog__bodyText mainBlog__topMargin">When you “use” middleware you will use the app.use() method in Express.  First you will want to add the middle to the file and next is call it.  The basic syntax of this will be the following:</p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">
+          <code>
+            const &lt;variable&gt; = require(‘&lt;middleware&gt;’)    </br>
+                                                                      </br>  
+            app.use(&lt;route&gt;, callback function(req, res, next){ </br>
+            //code                                                    </br>
+            next();                                                   </br>
+            })                                                        </br>
+                                                                      </br>
+          </code>
+        </p>
+        <p class="mainBlog__bodyText mainBlog__topMargin">A couple of things to note:  First is that the order of the middleware to each other matters.  If you need something to do be done in a certain order than you must put it above something else.  When you use middleware if your using the basic syntax above you need to put the next() at the bottom because it links to the next middleware.  Lastly, many middleware does not have the above the syntax so always look at the middleware documentation you want to use for implementation.</p>
+      </div>
+      <div class="mainBlog__button-collaspe">
+        <button type="button" class="btn btn-info center-text" data-toggle="collapse" data-target="#mainBlog-040419">Show Post</button>
+      </div>
+    </article>
     <!-- Main Blog March-28-19 -->
     <article class="mainBlog__main-layout">
       <h2 class="mainBlog__title">Express.js:  Dynamic routing Regex Validation</h2>
@@ -51,11 +76,11 @@
           <code>
             const express = require(‘express’)                            </br>
             const app = express();                                        </br>
-                                                                          </br>
+            </br>
             app.get('/user/:age([0-9]{2})', function(req, res){           </br>
             &nbsp;&nbsp;res.send('The user age is : ' + req.params.age);  </br>
             })                                                            </br>
-                                                                          </br>
+            </br>
           </code>
         </p>
         <p class="mainBlog__bodyText mainBlog__topMargin">In addition you can add another route which must be after the above one and give an error message about if the dynamic route was not validated.  The logic behind this is that the first route accepts all the routes that are accepted by the validation.  The rest of the routes would then be ones that are not accepted values.  We will use the * all wildcard for the next route.</p>
@@ -64,7 +89,7 @@
             app.get('/user/*', function(req, res){                                </br>
             &nbsp;&nbsp;res.send('Age is invalid. The age must between 0 and 99') </br>
             })                                                                    </br>
-                                                                                  </br>
+            </br>
           </code>
         </p>
       </div>
