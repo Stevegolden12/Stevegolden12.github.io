@@ -130,9 +130,13 @@ li:hover {
   padding: 0;
 }
 
-.index__navLinks li:nth-child(n+2) {
-  padding-top: 125%;
+.index__navLinks {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
 
 .fas,
 .fab {
