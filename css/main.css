@@ -491,3 +491,11 @@ code {
 
 }
 
+/* Breakpoints for extra large size 1200px */
+@media (min-width: 1200px) {
+
+  .mainBlog__main-layout {
+    width: 70%;
+    font-size: 30px;
+  }
+}
