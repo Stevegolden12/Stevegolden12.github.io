@@ -63,6 +63,7 @@ li:hover {
 }
 
 /* Globe */
+
 #worldmap {
   margin: 100px 0 0 20px;
 }
@@ -72,6 +73,7 @@ li:hover {
     border-radius: 200px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
     z-index: -1;
+    margin-top: 73%;
   }
 
 .land {
@@ -440,9 +442,16 @@ code {
   }
 }
 
-/* mainBlog page med breakpoint 768px */
+
 @media (min-width: 768px) {
-  .mainBlog_body {
+  /* index page med breakpoint 768px */
+
+  #worldmap svg {
+    margin-top: 64%;
+  }
+
+    /* mainBlog page med breakpoint 768px */
+    .mainBlog_body {
     font: 1.2rem 'Lato', sans-serif;
     display: grid;
     grid-template-columns: 10fr 1fr;
@@ -481,6 +490,10 @@ code {
 
 /* Breakpoints for large size 1024px */
 @media (min-width: 1024px) {
+  /* index page large breakpoint 1024px */
+  #worldmap svg {
+    margin-top: 48%;
+  }
 
   /* mainBlog page large breakpoint 1024px */
 
@@ -493,6 +506,10 @@ code {
 
 /* Breakpoints for extra large size 1200px */
 @media (min-width: 1200px) {
+  /* index page large breakpoint 1024px */
+  #worldmap svg {
+    margin-top: 37%;
+  }
 
   .mainBlog__main-layout {
     width: 70%;
