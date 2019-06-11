@@ -1,0 +1,14 @@
+.index__titleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.index__chartWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  text-align: center;
+  width: 1000px;
+}
