@@ -18,6 +18,7 @@ li:hover {
   display: grid;
   grid-template-columns: 2fr 3fr 1fr;
   grid-template-rows: 1fr;
+  grid-gap: 10px;
   grid-template-areas:
     'leftCol mCol rightCol';
   height: 100vh;
@@ -50,16 +51,18 @@ li:hover {
 }
 
 .card__face--front {
-  background-image: url(../img/mandala.svg);
+  background-image: url(../img/pinata.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.card__face--back {  
+.card__face--back {
   transform: rotateY( 180deg );
   transition: grid-row-gap 3s;
   animation: back-and-forth 5s 5s;
-  
+  background-image: url(../img/candy.svg);
+  margin: 0 10% 10% 0;
+  background-size: 20%;
 }
 
 /* Globe */
