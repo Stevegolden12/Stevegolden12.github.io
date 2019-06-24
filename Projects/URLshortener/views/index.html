@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="../public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>URL Shortener Microservice</h2>
+        <h3>How to use this site:</h3>
+        <ul>
+          <li>In the box below type in the web address you like to be shortened. Depening on the url 3 things will happen:</li>
+          <ol>
+            <li>
+              If the url is correct and has not already have a urlshortener already then you will get the following message: <br />
+              'The (url) can be access by using [this_project_url]/number/(shorturl)'.
+            </li>
+            <li>
+              If the url is correct and has a urlshortener already then you will get the following message: </br>
+              'The (url) is in the database and can be access by using [this_project_url]/number/(shorturl)' 
+            </li>
+            <li>
+              If the url is not valid you will get the following message: </br>
+              '{ "error": "invalid URL" }'
+            </li>
+          </ol>
+          <li>The shortened url can be accesed by using [this_project_url]/number/(shorturl)</li>
+        </ul>
+        
+        <h3>Short URL Creation</h3>
+        <p>
+          Please enter the web address you like to be shortened.
+        </p>
+        <form action="api/shorturl/new" method="POST">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="Your url here">
+          <input type="submit" value="Submit">
+        </form>       
+      </div>
+   </body>
+
+</html>
