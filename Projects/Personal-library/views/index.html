@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+  <title>Personal Library</title>
+  <meta name="description" content="A cool thing made with HyperDev">
+  <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+  <header><h1>Personal Library</h1></header>
+  <hr id="titleLine">
+  <section id="formSection">
+    <div id="sampleui">
+      <form id="newBookForm" class="border shadoweffect" method="post" action="/api/books/check/">
+        <fieldset>
+          <legend>Add new book:</legend>
+          <input type="text" id="bookTitleToAdd" name="createTitle" placeholder="New Book Title" style="width: 295px">
+          <input type="text" id="bookCommentToAdd" name="createComment" placeholder="comment" style="width: 295px">
+          <button type="submit" value="Submit" id="newBook">Submit New Book!</button>
+        </fieldset>
+      </form>      
+      <form id="getAllBookForm" class="border shadoweffect" method="get" action="/api/books/check/">
+        <fieldset>
+          <legend>Get all book listings:</legend>
+          <button type="submit" value="Submit" id="getEveryBook">Get every Book!</button>
+        </fieldset>
+      </form>
+      <form id="getBookWithIdForm" class="border shadoweffect" method="get" action="/api/books/check/:id">
+        <fieldset>
+          <legend>Get book with id:</legend>
+          <input type="text" id="bookWithIdToGet" name="getIdForBook" placeholder="Book id" style="width: 295px">
+          <br />
+          <button type="submit" value="Submit" id="getBookWithId">Get book!</button>
+        </fieldset>
+      </form>
+      <form id="addCommentWithIdForm" class="border shadoweffect" method="post" action="/api/books/check/:id">
+        <fieldset>
+          <legend>Add comment to Book:</legend>
+          <input type="text" id="bookIdToPostUpdateComment" name="postIdForComment" placeholder="Book id" style="width: 295px">
+          <input type="text" id="bookCommentToUpdate" name="updateComment" placeholder="Make comment" style="width: 295px">
+          <br />
+          <button type="submit" value="Submit" id="addCommentWithId">Add comment!</button>
+        </fieldset>
+      </form>
+      <form id="removeBookWithIdForm" class="border shadoweffect" method="POST" action="/api/books/check/:id?_method=DELETE">
+        <fieldset>
+          <legend>Remove book with id:</legend>
+          <input type="text" id="removebookWithId" name="IdForRemoveBook" placeholder="Book id" style="width: 295px">
+          <input type="hidden" id="rmvbookWithId" name="_method" placeholder="" style="width: 295px">
+          <br>
+          <button type="submit" value="Submit" id="removeBookWithId">Remove book</button>
+        </fieldset>
+      </form>
+      <form id="removeAllBooks" class="border shadoweffect" method="POST" action="/api/books/check?_method=DELETE">
+        <fieldset>
+          <legend>Delete all books:</legend>
+          <button id="deleteAllBooks">Delete all books...</button>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+          integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+          crossorigin="anonymous"></script>
+  <script src="/public/client.js"></script>
+  <script>
+    /*
+    *  For #sampleposting to update form action url to test inputs book id
+    */
+    $(function () {
+      $('#commentTest').submit(function () {
+        var id = $('#idinputtest').val();
+        $(this).attr('action', "/api/books/" + id);
+      });
+    });
+  </script>
+</body>
+</html>

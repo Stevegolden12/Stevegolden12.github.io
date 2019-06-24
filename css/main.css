@@ -200,7 +200,8 @@ li:hover {
   justify-content: space-around;
 }
 
-.projects__htmlCSS {
+.projects_MongoDB_card_height {
+  min-height: 147px;
 }
 
 .projects__mainNav {

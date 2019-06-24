@@ -2,13 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\img",
-    "\\js",
-    "\\Old Portfolio",
-    "\\Old Portfolio\\css",
-    "\\Old Portfolio\\Projects (2)",
-    "\\Projects"
+    "\\Projects",
+    "\\Projects\\Exercise-tracker\\views",
+    "\\Projects\\URLshortener"
   ],
-  "SelectedNode": "\\Prototype",
+  "SelectedNode": "\\Projects\\URLshortener\\server.js",
   "PreviewInSolutionExplorer": false
 }
