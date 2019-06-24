@@ -1,0 +1,27 @@
+:root {
+  --background-color: hsl(0, 0%, 99%);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  height: 1rem;
+}
+
+#testui {
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 678px) {
+  #userstories {
+    font-size: 18px;
+  }
+}

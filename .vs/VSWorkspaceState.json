@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\img",
-    "\\js",
-    "\\Old Portfolio",
-    "\\Old Portfolio\\css",
-    "\\Old Portfolio\\Projects (2)",
-    "\\Projects"
+    "\\Projects",
+    "\\Projects\\Issue-tracker\\views",
+    "\\Projects\\metric-imperial-converter\\views",
+    "\\Projects\\Personal-library\\views"
   ],
-  "SelectedNode": "\\Prototype",
+  "SelectedNode": "\\Projects\\metric-imperial-converter",
   "PreviewInSolutionExplorer": false
 }

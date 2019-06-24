@@ -1,0 +1,87 @@
+/****** Main Styling ******/
+:root {
+  --main-color: hsl(211, 98%, 33%);
+  --background-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 0%);
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--main-color);
+  background-color: var(--background-color);
+  text-align: center;
+  line-height: 1.4em;
+}
+
+.container {
+	padding: 0;
+	margin-top: 40px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+.footer {
+	margin-top: 40px;
+}
+
+.user-stories {
+  position: relative;
+  text-align: justify;
+  max-width: 700px;
+  margin: 15px auto;
+}
+code {
+  font-family: monospace;
+  padding: 2px;
+  color: var(--main-color);
+  background-color: var(--background-color);
+}
+ol {
+	list-style-position: inside;
+}
+ul {
+	list-style-type: none;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+.user-stories li {
+  margin-bottom: 1em;
+}
+
+a {
+	color: var(--main-color);
+}
+
+form {
+  border: solid 1px var(--main-color);
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  color: var(--text-color);
+}
+
+input[type=text] {
+  width: 220px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+} 
