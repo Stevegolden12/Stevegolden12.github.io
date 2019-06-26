@@ -195,6 +195,7 @@ li:hover {
 .projects__ReactWrapper,
 .projects__javaScriptWrapper,
 .projects__htmlCSSWrapper,
+.projects__D3Wrapper, 
 .projects__mongodbAndExpressWrapper {
   display: flex;
   flex-wrap: wrap;
