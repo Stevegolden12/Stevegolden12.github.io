@@ -194,7 +194,8 @@ li:hover {
 
 .projects__ReactWrapper,
 .projects__javaScriptWrapper,
-.projects__htmlCSSWrapper {
+.projects__htmlCSSWrapper,
+.projects__mongodbAndExpressWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
