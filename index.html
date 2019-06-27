@@ -12,13 +12,13 @@
 </head>
 <body>
   <main class="index__mainWrapper">
-    <section class="index__leftCol">
+    <section class="index__leftCol">    
       <div class="scene">
         <div class="card">
           <div class="card__face card__face--front"></div>
-          <div class="card__face card__face--back">
+          <canvas id="falling" class="card__face card__face--back">
             <div id="worldmap"></div>
-          </div>
+          </canvas>
         </div>
       </div>
     </section>
@@ -43,6 +43,7 @@
   <script src="main.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
-  <script src="D3scatter.js"></script> 
+  <script src="D3scatter.js"></script>
+  <script src="./js/falling.js"></script>
 </body>
 </html>
