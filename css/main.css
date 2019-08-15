@@ -16,86 +16,13 @@ li:hover {
 
 .index__mainWrapper {
   display: grid;
-  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-columns: 5fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 10px;
   grid-template-areas:
-    'leftCol mCol rightCol';
+    'mCol rightCol';
   height: 100vh;
 }
-
-.index__leftCol {
-  grid-area: leftCol;
-}
-
-/* card Flip */
-.scene {
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  perspective: 600px;
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card__face {
-  position: absolute;
-  min-height: 100%;
-  max-height: 100vh;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.card__face--front {
-  background-image: url(../img/pinata.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.card__face--back {
-  transform: rotateY( 180deg );
-  transition: grid-row-gap 3s;
-  animation: back-and-forth 5s 5s;
-  background-image: url(../img/candy.svg);
-  margin: 0 10% 10% 0;
-  background-size: 50%;
-}
-
-/* Globe */
-
-#worldmap {
-  margin: 100px 0 0 20px;
-}
-
-  #worldmap svg {
-    background: rgba(50,167,224,0.4);
-    border-radius: 200px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    z-index: -1;
-    margin-top: 73%;
-  }
-
-.land {
-  fill: rgba(188,188,188,.94);
-}
-
-#globesarecool {
-  color: #fff;
-}
-
-
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
-/* end of card flip*/
 
 .index__middleCol {
   grid-area: mCol;
@@ -457,13 +384,6 @@ code {
 @media (min-width: 768px) {
   /* index page med breakpoint 768px */
 
-  .card__face--back {
-    background-size: 33.3333%
-  }
-
-  #worldmap svg {
-    margin-top: 64%;
-  }
 
     /* mainBlog page med breakpoint 768px */
     .mainBlog_body {
@@ -506,13 +426,6 @@ code {
 /* Breakpoints for large size 1024px */
 @media (min-width: 1024px) {
   /* index page large breakpoint 1024px */
-  .card__face--back {
-    background-size: 25%
-  }
-
-  #worldmap svg {
-    margin-top: 48%;
-  }
 
   /* mainBlog page large breakpoint 1024px */
 
@@ -526,9 +439,6 @@ code {
 /* Breakpoints for extra large size 1200px */
 @media (min-width: 1200px) {
   /* index page large breakpoint 1024px */
-  #worldmap svg {
-    margin-top: 37%;
-  }
 
   .mainBlog__main-layout {
     width: 70%;
