@@ -32,7 +32,7 @@ a:hover {
 .allPages__topNav {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .allPages__topNav-Name {
@@ -422,7 +422,9 @@ code {
 
 @media (min-width: 768px) {
   /* index page med breakpoint 768px */
-
+  .allPages__topNav {
+    font-size: 24px;
+  }
 
     /* mainBlog page med breakpoint 768px */
     .mainBlog_body {
