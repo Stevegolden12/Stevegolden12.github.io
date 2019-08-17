@@ -16,24 +16,23 @@ a:hover {
   text-decoration: none;
 }
 
-.fas:hover {
-  text-decoration: none;
-}
 
 .index__mainWrapper {
   display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns:1fr;
+  grid-template-rows: 100px 1fr ;
   grid-gap: 10px;
   grid-template-areas:
-    'mCol rightCol';
+    'topNav'
+    'mCol';
   height: 100vh;
 }
 
 .allPages__topNav {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;  
+  font-size: 18px; 
+  grid-area: topNav;
 }
 
 .allPages__topNav-Name {
@@ -47,10 +46,16 @@ a:hover {
   list-style: none;
 }
 
-  .allPages_topNavLinks-layout li {
-    margin-right: 10px;
-    padding-bottom: 2px;
-  }
+.allPages_topNavLinks-layout li {
+  margin-right: 10px;
+  padding-bottom: 2px;
+  height: 25px;
+}
+
+.projects__topNavLink li:hover {
+  height: 35px;
+}
+
 
 a {
   color: var(--navLinkColor);
@@ -95,57 +100,13 @@ a {
   font-size: 2vmax;
 }
 
-.index__rightCol {
-  grid-area: rightCol;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  margin: auto;
-  z-index: 1;
-  max-height: 100vh;
-}
-
-.index__navLinks {
-  list-style: none;
-  padding: 0;
-}
-
-.index__navLinks {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-
-.fas,
-.fab {
-  text-decoration: none;
-  font-size: 5vmax;
-  color: var(--navLogoColor);
-}
-
-  .fas:hover,
-  .fab:hover {
-    text-decoration: none;
-    font-size: 6vmax;
-    color: var(--navLogoColorHover);    
-  }
 
 /* Projects Page */
 .projects__mainWrapper{
-  display: grid;
-  grid-template-columns: 90% 10%;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    'productTitle projectsMainNav' 
-    'cardProjects projectsMainNav';
   height: 100vh;
 }
 
 .projects__title {
-  grid-area: productTitle;
   text-align: center;
   font-size: 4vmax;
 }
@@ -155,7 +116,6 @@ a {
 }
 
 .projects__cardProjects {
-  grid-area: cardProjects;
   display: grid;
 }
 
@@ -181,30 +141,6 @@ a {
 .projects_MongoDB_card_height {
   min-height: 147px;
 }
-
-.projects__mainNav {
-  grid-area: projectsMainNav;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-
-.projects__mainNavWrapper {
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  height: 100%;
-}
-
-
-.projects__navLinks {
-  list-style: none;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
-}
-
 
 /* blogMain.html small breakpoint desk/labtops*/
 .mainBlog_body {
