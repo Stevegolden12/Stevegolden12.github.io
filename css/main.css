@@ -5,6 +5,7 @@ body {
   --codetag-color: hsl(332, 79%, 36%);
   --navLinkColor: hsl(0, 0%, 0%);
   --navLinkColorVisited: hsla(0, 0%, 0%, .5);
+  --buttonBackgroundColor: hsl(0,0%,100%);  
 }
 
 - /* link hover underline reset */
@@ -97,7 +98,10 @@ a {
 }
 
 .index__projectButton {
-  font-size: 2vmax;
+  font-size: 2.5vmax;
+  border-radius: 5px;
+  background-color: var(----buttonBackgroundColor);
+  box-shadow: 3px 5px 1px grey;
 }
 
 
